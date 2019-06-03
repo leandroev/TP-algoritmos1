@@ -21,11 +21,11 @@ tiempo obtenerTiempo(tuple<tiempo, gps> medicion) {
 }
 
 gps obtenerEsquinaSuperior(celda c) {
-    return get<0>(c);
+    return get<1>(c);
 }
 
 gps obtenerEsquinaInferior(celda c) {
-    return get<1>(c);
+    return get<0>(c);
 }
 
 nombre obtenerNombre(celda c) {
