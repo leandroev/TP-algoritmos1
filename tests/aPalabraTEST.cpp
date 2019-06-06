@@ -4,7 +4,5 @@
 
 using namespace std;
 
-abc 
-acb
-EQ_ASSERTED
+
 

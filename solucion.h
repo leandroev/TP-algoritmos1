@@ -17,6 +17,9 @@ void escribirRecorridos(vector<recorrido> recorridos, string nombreArchivo);
 // NO ES NECESARIO IMPLEMENTAR:
 void completarHuecos(viaje& v, vector<int> faltantes);
 
+//Auxiliares
+viaje ordenarViaje(viaje v);
+double velocidad(tuple<tiempo, gps> t1, tuple<tiempo, gps> t2);
 
 
 
