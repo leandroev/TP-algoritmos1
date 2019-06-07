@@ -7,6 +7,43 @@
 
 using namespace std;
 
+//############################  	Funciones auxiliares 	  #####################################\\
+
+viaje ordenarViaje(viaje v){
+    int longitud = v.size();
+    viaje res;
+    tuple<tiempo, gps> elem;
+    tiempo temp = 0;
+    for (int i = 0; i < longitud; ++i){
+        elem = v[i];
+        for (int j = 0; j < longitud; ++j){
+            if(obtenerTiempo(elem) > obtenerTiempo(v[j]) && obtenerTiempo(v[j]) > temp){
+                elem = v[j];
+            }
+        }
+        temp = obtenerTiempo(elem);
+        res.push_back(elem);
+    }
+    return res;
+}
+
+double velocidad(tuple<tiempo, gps> t1, tuple<tiempo, gps> t2){
+    double dist = distEnKM(obtenerPosicion(t1),obtenerPosicion(t2));
+    double time = (obtenerTiempo(t2) - obtenerTiempo(t1))/3600;
+    return dist/time;
+}
+
+nombre obtenerNombreDeGps(gps posicion, grilla g){
+    for (int j = 0; j < g.size(); ++j) {
+        gps gps_inf(obtenerEsquinaInferior(g[j]));
+        gps gps_sup(obtenerEsquinaSuperior(g[j]));
+        if(obtenerLatitud(gps_inf) <= obtenerLatitud(posicion) && obtenerLatitud(posicion) < obtenerLatitud(gps_sup) && obtenerLongitud(gps_inf) <= obtenerLongitud(posicion) && obtenerLongitud(posicion) < obtenerLongitud(gps_sup)){
+            return obtenerNombre(g[j]);
+        }
+    }
+}
+
+// #######################################################################################################################################################################################################
 void escribirGrilla(grilla g, string nombreArchivo){
 
 }
@@ -77,46 +114,54 @@ int flota(vector<viaje> f, tiempo t0, tiempo tf) {
 
 /************************************ EJERCICIO recorridoCubierto *******************************/
 vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
-
+    vector<gps> no_cubiertos;
+    for (int i = 0; i < r.size(); ++i) {
+        for (int j = 0; j < v.size(); ++j) {
+            if(distEnKM(r[i],obtenerPosicion(v[j])) >= u ){
+                no_cubiertos.push_back(r[i]);
+            }
+        }
+    }
+    return no_cubiertos;
 }
 
 /************************************** EJERCICIO construirGrilla *******************************/
 grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
-
+    grilla g;
+    int lado = (obtenerLatitud(esq2) - obtenerLatitud(esq1))/n;
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= m; ++j) {
+            nombre name(i,j);
+            gps esq_inf((i-1)*lado + obtenerLatitud(esq1),(j-1)*lado + obtenerLongitud(esq1));
+            gps esq_sup((i)*lado + obtenerLatitud(esq1),(j)*lado + obtenerLongitud(esq1));
+            celda cel(esq_inf, esq_sup, name);
+            g.push_back(cel);
+        }
+    }
+    return  g;
 }
 
 /***************************************** EJERCICIO aPalabra **********************************/
 vector<nombre> aPalabra(recorrido t, grilla g) {
-
+    vector<nombre> secu_nombres;
+    for (int i = 0; i < t.size(); ++i) {
+        nombre name = obtenerNombreDeGps(t[i],g);
+        secu_nombres.push_back(name);
+    }
+    return secu_nombres;
 }
 
 /************************************* EJERCICIO cantidadDeSaltos ******************************/
 int cantidadDeSaltos(grilla g, viaje v) {
-
+    viaje ordenado = ordenarViaje(v);
+    int saltos = 0;
+    for(int i = 1; i < ordenado.size(); ++i) {
+        nombre n1(obtenerNombreDeGps(obtenerPosicion(ordenado[i-1]),g));
+        nombre n2(obtenerNombreDeGps(obtenerPosicion(ordenado[i]),g));
+        int distancia_celdas = abs(get<0>(n1) - get<0>(n2)) + abs(get<1>(n1) - get<1>(n2)) -1;
+        if(distancia_celdas > 1){
+            saltos++;
+        }
+    }
 }
 
-//######################### 	Funciones auxiliares 	#####################################\\
-
-viaje ordenarViaje(viaje v){
-	int longitud = v.size();
-	viaje res;
-	tuple<tiempo, gps> elem;
-    tiempo temp = 0;
-    for (int i = 0; i < longitud; ++i){
-        elem = v[i];
-		for (int j = 0; j < longitud; ++j){
-			if(obtenerTiempo(elem) > obtenerTiempo(v[j]) && obtenerTiempo(v[j]) > temp){
-				elem = v[j];
-			}
-		}
-		temp = obtenerTiempo(elem);
-		res.push_back(elem);
-	}
-	return res;
-}
-
-double velocidad(tuple<tiempo, gps> t1, tuple<tiempo, gps> t2){
-    double dist = distEnKM(obtenerPosicion(t1),obtenerPosicion(t2));
-    double time = (obtenerTiempo(t2) - obtenerTiempo(t1))/3600;
-    return dist/time;
-}

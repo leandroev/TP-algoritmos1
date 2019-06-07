@@ -13,6 +13,9 @@ gps desviarPunto(gps p, double desvioMtsLatitud, double desvioMtsLongitud);
 double distMts(gps posicion1, gps posicion2);
 gps puntoGps(double latitud, double longitud);
 tuple<tiempo, gps> medicion(tiempo t, gps g);
+gps obtenerEsquinaSuperior(celda c);
+gps obtenerEsquinaInferior(celda c);
+nombre obtenerNombre(celda c);
 
 
 
