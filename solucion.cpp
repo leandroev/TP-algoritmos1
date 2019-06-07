@@ -10,19 +10,18 @@ using namespace std;
 //############################  	Funciones auxiliares 	  #####################################\\
 
 viaje ordenarViaje(viaje v){
-    int longitud = v.size();
     viaje res;
-    tuple<tiempo, gps> elem;
-    tiempo temp = 0;
-    for (int i = 0; i < longitud; ++i){
-        elem = v[i];
-        for (int j = 0; j < longitud; ++j){
-            if(obtenerTiempo(elem) > obtenerTiempo(v[j]) && obtenerTiempo(v[j]) > temp){
-                elem = v[j];
+    tiempo tiempo_anterior = -1;
+    tuple<tiempo, gps> actual;
+    for (int i = 0; i < v.size(); ++i){
+        actual = v[0];
+        for (int j = 0; j < v.size(); ++j) {
+            if( obtenerTiempo(actual) < obtenerTiempo(v[j]) && obtenerTiempo(actual) <= tiempo_anterior || obtenerTiempo(actual) > obtenerTiempo(v[j]) && obtenerTiempo(v[j]) > tiempo_anterior){
+                actual = v[j];
             }
         }
-        temp = obtenerTiempo(elem);
-        res.push_back(elem);
+        tiempo_anterior = obtenerTiempo(actual);
+        res.push_back(actual);
     }
     return res;
 }
@@ -37,7 +36,8 @@ nombre obtenerNombreDeGps(gps posicion, grilla g){
     for (int j = 0; j < g.size(); ++j) {
         gps gps_inf(obtenerEsquinaInferior(g[j]));
         gps gps_sup(obtenerEsquinaSuperior(g[j]));
-        if(obtenerLatitud(gps_inf) <= obtenerLatitud(posicion) && obtenerLatitud(posicion) < obtenerLatitud(gps_sup) && obtenerLongitud(gps_inf) <= obtenerLongitud(posicion) && obtenerLongitud(posicion) < obtenerLongitud(gps_sup)){
+        bool esCeldaDeCoordenada = obtenerLatitud(gps_inf) <= obtenerLatitud(posicion) && obtenerLatitud(posicion) < obtenerLatitud(gps_sup) && obtenerLongitud(gps_inf) <= obtenerLongitud(posicion) && obtenerLongitud(posicion) < obtenerLongitud(gps_sup);
+        if(esCeldaDeCoordenada){
             return obtenerNombre(g[j]);
         }
     }
@@ -82,9 +82,9 @@ tiempo tiempoTotal(viaje v) {
 /************++*********************** EJERCICIO distanciaTotal ************++*********************/
 distancia distanciaTotal(viaje v) {
     viaje ordenado = ordenarViaje(v);   // === >>  esto es O(n^2)
-    distancia total = 0;
+    distancia total = 0.0;
     for (int i = 1; i < ordenado.size(); ++i) { // ==== >> esto es O(n)
-        total += distEnKM(obtenerPosicion(ordenado[i-1]),obtenerPosicion(ordenado[i]));
+        total += abs(distEnKM(obtenerPosicion(ordenado[i-1]),obtenerPosicion(ordenado[i])));
     }
     // ==== O(n) + O(n^2) = O(n^2)
     return total;
@@ -116,10 +116,14 @@ int flota(vector<viaje> f, tiempo t0, tiempo tf) {
 vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
     vector<gps> no_cubiertos;
     for (int i = 0; i < r.size(); ++i) {
+    	bool cubierto = false;
         for (int j = 0; j < v.size(); ++j) {
-            if(distEnKM(r[i],obtenerPosicion(v[j])) >= u ){
-                no_cubiertos.push_back(r[i]);
+            if(distMts(obtenerPosicion(v[j]),r[i]) < u ){
+                cubierto = true;
             }
+        }
+        if(!cubierto){
+        	no_cubiertos.push_back(r[i]);
         }
     }
     return no_cubiertos;
