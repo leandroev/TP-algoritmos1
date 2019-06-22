@@ -1,11 +1,3 @@
-#include "../solucion.h"
-#include "../auxiliares.h"
-#include "gtest/gtest.h"
-
-using namespace std;
-
-
-
 #include "../../src/ej1/esPrimo.h"
 #include "../../lib/gtest/gtest.h"
 

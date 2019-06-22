@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="mi_proyecto" targetName="mi_proyecto" />
+      <config projectName="mi_proyecto" targetName="gtest" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="678bf079-1f0e-4ffd-9b84-13684c7dcd29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Laboratorio01/.idea/Laboratorio01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../labo05/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../labo10/ejerciicos.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/ejercicios.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/CMakeFiles/taller.dir/test/cases.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/taller.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../L04-TallerDebugging/taller/cmake-build-debug/taller.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/ejercicios.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/ejercicios.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/CMakeFiles/labo05.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/labo05" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/labo05" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labo05/cmake-build-debug/labo05.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../labo05/cmake-build-debug/labo05.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/labo07.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/labo07.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/gtest.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/gtest.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/gtest.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/gtest.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/gtest.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/gtest.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/gtest.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/gtest.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/gtest.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/gtest.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/gtest.dir/lib/gtest/gtest-all.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej1/esPrimo.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej1/esPrimo.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej1/esPrimo.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej2/llenarTaxis.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej2/llenarTaxis.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej2/llenarTaxis.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej2/puntaje.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej2/puntaje.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej2/puntaje.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej3/baldosasDelPiso.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej3/baldosasDelPiso.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej3/baldosasDelPiso.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej3/contandoDragones.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej3/contandoDragones.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej3/contandoDragones.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej3/sandia.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej3/sandia.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/src/ej3/sandia.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/correrTests.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/correrTests.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/correrTests.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej1/esPrimoTEST.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej1/esPrimoTEST.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej1/esPrimoTEST.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej2/llenarTaxisTEST.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej2/llenarTaxisTEST.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej2/llenarTaxisTEST.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej2/puntajeTEST.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej2/puntajeTEST.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej2/puntajeTEST.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej3/baldosasDelPisoTEST.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej3/baldosasDelPisoTEST.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej3/baldosasDelPisoTEST.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej3/contandoDragonesTEST.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej3/contandoDragonesTEST.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej3/contandoDragonesTEST.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej3/sandiaTEST.cpp.gcda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej3/sandiaTEST.cpp.gcno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir/test/ej3/sandiaTEST.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/cmake-build-debug/mi_proyecto.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/taller/cmake-build-debug/mi_proyecto.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller/test/ej1/esPrimoTEST.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/taller/test/ej1/esPrimoTEST.cpp" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/taller/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejemplo/run.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/taller/src/ej1/esPrimo.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taller/src/ej2/puntaje.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taller/src/ej2/llenarTaxis.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taller/src/ej1/esPrimo.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taller/src/ej3/baldosasDelPiso.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taller/src/ej3/contandoDragones.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taller/src/ej3/sandia.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taller/src/ej3/contandoDragones.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taller/test/ej2/puntajeTEST.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/taller/test/ej1/esPrimoTEST.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
+    <option name="y" value="51" />
+    <option name="width" value="1079" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mi_proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="labo07" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mi_proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="labo07" type="462c0819:PsiDirectoryNode" />
+              <item name="cobertura" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mi_proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="labo07" type="462c0819:PsiDirectoryNode" />
+              <item name="cobertura" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mi_proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="labo07" type="462c0819:PsiDirectoryNode" />
+              <item name="taller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mi_proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="labo07" type="462c0819:PsiDirectoryNode" />
+              <item name="taller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mi_proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="labo07" type="462c0819:PsiDirectoryNode" />
+              <item name="taller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ej1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mi_proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="labo07" type="462c0819:PsiDirectoryNode" />
+              <item name="taller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ej2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mi_proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="labo07" type="462c0819:PsiDirectoryNode" />
+              <item name="taller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ej3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mi_proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="labo07" type="462c0819:PsiDirectoryNode" />
+              <item name="taller" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mi_proyecto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="labo07" type="462c0819:PsiDirectoryNode" />
+              <item name="taller" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="ej1" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Laboratorio01" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Google Test.mi_proyecto">
+    <configuration name="mi_proyecto" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mi_proyecto" TARGET_NAME="mi_proyecto" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mi_proyecto" RUN_TARGET_NAME="mi_proyecto" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mi_proyecto" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="Google Test.mi_proyecto" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="678bf079-1f0e-4ffd-9b84-13684c7dcd29" name="Default Changelist" comment="" />
+      <created>1559001109267</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559001109267</updated>
+      <workItem from="1559001110432" duration="96000" />
+      <workItem from="1559001639346" duration="8000" />
+      <workItem from="1559596326871" duration="149000" />
+      <workItem from="1559596837650" duration="1192000" />
+      <workItem from="1560198915527" duration="458000" />
+      <workItem from="1560200865786" duration="292000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2195000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26342005" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="CMake" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/taller/lib/gtest/gtest.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/lib/gtest/gtest-all.cc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/test/ej2/llenarTaxisTEST.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coverage.info">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/test/ej1/esPrimoTEST.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/test/ej2/puntajeTEST.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejemplo/run.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/src/ej3/contandoDragones.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/src/ej3/sandia.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/src/ej3/contandoDragones.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/src/ej3/baldosasDelPiso.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/src/ej2/puntaje.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/src/ej2/llenarTaxis.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/src/ej1/esPrimo.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller/src/ej1/esPrimo.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>

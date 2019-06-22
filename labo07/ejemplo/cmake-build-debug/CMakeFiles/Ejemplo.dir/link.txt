@@ -1,0 +1,1 @@
+/usr/bin/c++  -pthread -g  -g --coverage CMakeFiles/Ejemplo.dir/run.cpp.o CMakeFiles/Ejemplo.dir/src/runEj.cpp.o CMakeFiles/Ejemplo.dir/src/ej/miEjemplo.cpp.o CMakeFiles/Ejemplo.dir/test/runTEST.cpp.o CMakeFiles/Ejemplo.dir/test/ej/ejTEST.cpp.o  -o Ejemplo libgtest.a 
