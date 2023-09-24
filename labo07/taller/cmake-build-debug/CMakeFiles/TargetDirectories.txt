@@ -1,4 +1,0 @@
-/home/ltoconas/labo/algolaboo/labo07/taller/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ltoconas/labo/algolaboo/labo07/taller/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ltoconas/labo/algolaboo/labo07/taller/cmake-build-debug/CMakeFiles/gtest.dir
-/home/ltoconas/labo/algolaboo/labo07/taller/cmake-build-debug/CMakeFiles/mi_proyecto.dir

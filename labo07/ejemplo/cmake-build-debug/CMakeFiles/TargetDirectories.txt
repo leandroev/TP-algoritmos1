@@ -1,4 +1,0 @@
-/home/ltoconas/Downloads/labo07/ejemplo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ltoconas/Downloads/labo07/ejemplo/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ltoconas/Downloads/labo07/ejemplo/cmake-build-debug/CMakeFiles/gtest.dir
-/home/ltoconas/Downloads/labo07/ejemplo/cmake-build-debug/CMakeFiles/Ejemplo.dir

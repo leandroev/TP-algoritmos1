@@ -1,1 +1,0 @@
-int puntaje(int b);
