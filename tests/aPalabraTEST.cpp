@@ -4,22 +4,35 @@
 
 using namespace std;
 
+TEST(aPalabraTEST, trayecto_vacio){
+    gps esq1 = puntoGps(0,15);
+    gps esq2 = puntoGps(90,150);
+    grilla g = construirGrilla(esq1,esq2,10,15);
 
-
-#include "../../src/ej1/esPrimo.h"
-#include "../../lib/gtest/gtest.h"
-
-TEST(EsPrimoTest, NumeroPrimo) {
-	ASSERT_EQ(true, esPrimo(7)); //ES un primo, va adar true
-	ASSERT_EQ(true, esPrimo(2)); //idem
+    recorrido trayecto;
+    vector<nombre> nombres = aPalabra(trayecto, g);
+    ASSERT_EQ(nombres.size(), 0);
 }
 
-TEST(EsPrimoTest, NumeroCompuesto) {
-	ASSERT_EQ(false, esPrimo(6)); //no es primo, 2,3 6 son divisores
-	ASSERT_EQ(false, esPrimo(10)); //idem, con 2,5, y 10
+TEST(aPalabraTEST, trayecto_de_enteros){
+    gps esq1 = puntoGps(0,15);
+    gps esq2 = puntoGps(90,150);
+    grilla g = construirGrilla(esq1,esq2,2,3);
+    // grilla_esq_inf = (1,1)=(0,15), (1,2)=(0,60), (1,3)=(0,105), (2,1)=(45,15), (2,2)=(45,60), (2,3)=(45,105)
+    // grilla_esq_sup = (1,1)=(45,60), (1,2)=(45,105), (1,3)=(45,150), (2,1)=(90,60), (2,2)=(90,105), (2,3)=(90,150)
+
+    double alto_celda = (get<0>(esq2) - get<0>(esq1))/2;
+    double ancho_celda = (get<1>(esq2) - get<1>(esq1))/3;
+    ASSERT_DOUBLE_EQ(alto_celda, ancho_celda);
+
+    recorrido trayecto = {puntoGps(20,15),
+                          puntoGps(60,30),
+                          puntoGps(80,130),
+                          puntoGps(65,100),
+                          };
+
+    vector<nombre> nombres = aPalabra(trayecto, g);
+    vector<nombre> nombres_esperado = {make_tuple(1,1),make_tuple(2,1),make_tuple(2,3),make_tuple(2,2)};
+    ASSERT_EQ(nombres,nombres_esperado);
 }
 
-TEST(EsPrimoTest, CasosBorde) {
-	ASSERT_EQ(false, esPrimo(1)); // no es primo, 1 no tiene dos divisores
-	ASSERT_EQ(false, esPrimo(0)); // no es primo
-}

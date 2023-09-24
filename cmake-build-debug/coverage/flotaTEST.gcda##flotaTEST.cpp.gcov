@@ -1,0 +1,1436 @@
+        -:    0:Source:C:/Users/Lean-zabi-chan/Desktop/transporteUrbano/tests/flotaTEST.cpp
+        -:    0:Graph:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\flotaTEST.gcno
+        -:    0:Data:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\flotaTEST.gcda
+        -:    0:Runs:1
+        -:    1:#include "../solucion.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        2:    7:TEST(flotaTEST, sin_viajes){
+        1:    8:    vector<viaje> viajes;
+       1*:    9:    ASSERT_EQ(flota(viajes,0,10),0);
+        1:   10:}
+------------------
+_ZN25flotaTEST_sin_viajes_Test8TestBodyEv:
+function _ZN25flotaTEST_sin_viajes_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+        1:    7:TEST(flotaTEST, sin_viajes){
+        1:    8:    vector<viaje> viajes;
+        1:    8-block  0
+call    0 returned 1
+       1*:    9:    ASSERT_EQ(flota(viajes,0,10),0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:    9-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:    9-block  2
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:    9-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:    9-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:    9-block  5
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:    9-block  6
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:    9-block  7
+call   25 never executed
+call   26 never executed
+        1:    9-block  8
+        1:    9-block  9
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0
+        1:    9-block 10
+    $$$$$:    9-block 11
+call   30 never executed
+    $$$$$:    9-block 12
+    $$$$$:    9-block 13
+    $$$$$:    9-block 14
+    $$$$$:    9-block 15
+call   31 never executed
+    $$$$$:    9-block 16
+    $$$$$:    9-block 17
+call   32 never executed
+    $$$$$:    9-block 18
+    $$$$$:    9-block 19
+call   33 never executed
+        1:   10:}
+        1:   10-block  0
+        1:   10-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   10-block  2
+call    3 never executed
+------------------
+_ZN25flotaTEST_sin_viajes_TestC1Ev:
+function _ZN25flotaTEST_sin_viajes_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    7:TEST(flotaTEST, sin_viajes){
+        1:    7-block  0
+call    0 returned 1
+------------------
+        -:   11:
+        2:   12:TEST(flotaTEST, viajes_terminaron_antes){
+        1:   13:    viaje v1 = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   14:               medicion(1.0,puntoGps(0.0,0.0)),
+        1:   15:               medicion(4.0,puntoGps(0.00002,0.00001)),
+        4:   16:    };
+        1:   17:    viaje v2 = {medicion(15.0,puntoGps(0.00001,0.00002)),
+        1:   18:               medicion(1.0,puntoGps(0.0,0.0)),
+        1:   19:               medicion(10.0,puntoGps(0.00002,0.00001)),
+        4:   20:    };
+        1:   21:    viaje v3 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+        1:   22:               medicion(20.0,puntoGps(0.0,0.0)),
+        1:   23:               medicion(8.0,puntoGps(0.00002,0.00001)),
+        4:   24:    };
+        5:   25:    vector<viaje> viajes={v2,v3,v1};
+        -:   26:
+       1*:   27:    ASSERT_EQ(flota(viajes,0.1,0.5),0);
+        2:   28:}
+------------------
+_ZN38flotaTEST_viajes_terminaron_antes_Test8TestBodyEv:
+function _ZN38flotaTEST_viajes_terminaron_antes_Test8TestBodyEv called 1 returned 100% blocks executed 49%
+        1:   12:TEST(flotaTEST, viajes_terminaron_antes){
+        1:   13:    viaje v1 = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   13-block  1
+        1:   14:               medicion(1.0,puntoGps(0.0,0.0)),
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   14-block  1
+        1:   15:               medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   15-block  1
+        4:   16:    };
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   16-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   16-block  3
+        1:   16-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   16-block  5
+    $$$$$:   16-block  6
+        1:   17:    viaje v2 = {medicion(15.0,puntoGps(0.00001,0.00002)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   17-block  0
+        1:   18:               medicion(1.0,puntoGps(0.0,0.0)),
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   18-block  1
+        1:   19:               medicion(10.0,puntoGps(0.00002,0.00001)),
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   19-block  1
+        4:   20:    };
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   20-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   20-block  3
+        1:   20-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   20-block  5
+    $$$$$:   20-block  6
+        1:   21:    viaje v3 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   21-block  0
+        1:   22:               medicion(20.0,puntoGps(0.0,0.0)),
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   22-block  1
+        1:   23:               medicion(8.0,puntoGps(0.00002,0.00001)),
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   23-block  1
+        4:   24:    };
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   24-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   24-block  3
+        1:   24-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   24-block  5
+    $$$$$:   24-block  6
+        5:   25:    vector<viaje> viajes={v2,v3,v1};
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   25-block  1
+branch  3 taken 3 (fallthrough)
+branch  4 taken 1
+        3:   25-block  2
+call    5 returned 3
+    $$$$$:   25-block  3
+    $$$$$:   25-block  4
+    $$$$$:   25-block  5
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   25-block  6
+call    8 never executed
+    $$$$$:   25-block  7
+        -:   26:
+       1*:   27:    ASSERT_EQ(flota(viajes,0.1,0.5),0);
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   27-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   27-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   27-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   27-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   27-block  6
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:   27-block  7
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:   27-block  8
+call   25 never executed
+call   26 never executed
+        1:   27-block  9
+        1:   27-block 10
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0
+        1:   27-block 11
+    $$$$$:   27-block 12
+call   30 never executed
+    $$$$$:   27-block 13
+    $$$$$:   27-block 14
+    $$$$$:   27-block 15
+    $$$$$:   27-block 16
+call   31 never executed
+    $$$$$:   27-block 17
+    $$$$$:   27-block 18
+call   32 never executed
+    $$$$$:   27-block 19
+    $$$$$:   27-block 20
+call   33 never executed
+        2:   28:}
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   28-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   28-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   28-block  2
+        1:   28-block  3
+        1:   28-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   28-block  5
+        1:   28-block  6
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:   28-block  7
+        1:   28-block  8
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:   28-block  9
+        1:   28-block 10
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:   28-block 11
+branch 21 never executed (fallthrough)
+branch 22 never executed
+    $$$$$:   28-block 12
+    $$$$$:   28-block 13
+branch 23 never executed (fallthrough)
+branch 24 never executed
+    $$$$$:   28-block 14
+call   25 never executed
+    $$$$$:   28-block 15
+call   26 never executed
+    $$$$$:   28-block 16
+call   27 never executed
+    $$$$$:   28-block 17
+call   28 never executed
+    $$$$$:   28-block 18
+call   29 never executed
+------------------
+_ZN38flotaTEST_viajes_terminaron_antes_TestC1Ev:
+function _ZN38flotaTEST_viajes_terminaron_antes_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   12:TEST(flotaTEST, viajes_terminaron_antes){
+        1:   12-block  0
+call    0 returned 1
+------------------
+        -:   29:
+        2:   30:TEST(flotaTEST, viaje_comenzaron_tarde){
+        1:   31:    viaje v1 = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   32:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   33:                medicion(4.0,puntoGps(0.00002,0.00001)),
+        4:   34:    };
+        1:   35:    viaje v2 = {medicion(15.0,puntoGps(0.00001,0.00002)),
+        1:   36:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   37:                medicion(10.0,puntoGps(0.00002,0.00001)),
+        4:   38:    };
+        1:   39:    viaje v3 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+        1:   40:                medicion(20.0,puntoGps(0.0,0.0)),
+        1:   41:                medicion(8.0,puntoGps(0.00002,0.00001)),
+        4:   42:    };
+        5:   43:    vector<viaje> viajes={v3,v2,v1};
+        -:   44:
+       1*:   45:    ASSERT_EQ(flota(viajes,90.0,100.0),0);
+        2:   46:}
+------------------
+_ZN37flotaTEST_viaje_comenzaron_tarde_Test8TestBodyEv:
+function _ZN37flotaTEST_viaje_comenzaron_tarde_Test8TestBodyEv called 1 returned 100% blocks executed 49%
+        1:   30:TEST(flotaTEST, viaje_comenzaron_tarde){
+        1:   31:    viaje v1 = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   31-block  1
+        1:   32:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   32-block  1
+        1:   33:                medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   33-block  1
+        4:   34:    };
+        1:   34-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   34-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   34-block  3
+        1:   34-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   34-block  5
+    $$$$$:   34-block  6
+        1:   35:    viaje v2 = {medicion(15.0,puntoGps(0.00001,0.00002)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   35-block  0
+        1:   36:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   36-block  1
+        1:   37:                medicion(10.0,puntoGps(0.00002,0.00001)),
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   37-block  1
+        4:   38:    };
+        1:   38-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   38-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   38-block  3
+        1:   38-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   38-block  5
+    $$$$$:   38-block  6
+        1:   39:    viaje v3 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   39-block  0
+        1:   40:                medicion(20.0,puntoGps(0.0,0.0)),
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   40-block  1
+        1:   41:                medicion(8.0,puntoGps(0.00002,0.00001)),
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   41-block  1
+        4:   42:    };
+        1:   42-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   42-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   42-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   42-block  3
+        1:   42-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   42-block  5
+    $$$$$:   42-block  6
+        5:   43:    vector<viaje> viajes={v3,v2,v1};
+        1:   43-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   43-block  1
+branch  3 taken 3 (fallthrough)
+branch  4 taken 1
+        3:   43-block  2
+call    5 returned 3
+    $$$$$:   43-block  3
+    $$$$$:   43-block  4
+    $$$$$:   43-block  5
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   43-block  6
+call    8 never executed
+    $$$$$:   43-block  7
+        -:   44:
+       1*:   45:    ASSERT_EQ(flota(viajes,90.0,100.0),0);
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   45-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   45-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   45-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   45-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   45-block  6
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:   45-block  7
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:   45-block  8
+call   25 never executed
+call   26 never executed
+        1:   45-block  9
+        1:   45-block 10
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0
+        1:   45-block 11
+    $$$$$:   45-block 12
+call   30 never executed
+    $$$$$:   45-block 13
+    $$$$$:   45-block 14
+    $$$$$:   45-block 15
+    $$$$$:   45-block 16
+call   31 never executed
+    $$$$$:   45-block 17
+    $$$$$:   45-block 18
+call   32 never executed
+    $$$$$:   45-block 19
+    $$$$$:   45-block 20
+call   33 never executed
+        2:   46:}
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   46-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   46-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   46-block  2
+        1:   46-block  3
+        1:   46-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   46-block  5
+        1:   46-block  6
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:   46-block  7
+        1:   46-block  8
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:   46-block  9
+        1:   46-block 10
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:   46-block 11
+branch 21 never executed (fallthrough)
+branch 22 never executed
+    $$$$$:   46-block 12
+    $$$$$:   46-block 13
+branch 23 never executed (fallthrough)
+branch 24 never executed
+    $$$$$:   46-block 14
+call   25 never executed
+    $$$$$:   46-block 15
+call   26 never executed
+    $$$$$:   46-block 16
+call   27 never executed
+    $$$$$:   46-block 17
+call   28 never executed
+    $$$$$:   46-block 18
+call   29 never executed
+------------------
+_ZN37flotaTEST_viaje_comenzaron_tarde_TestC1Ev:
+function _ZN37flotaTEST_viaje_comenzaron_tarde_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   30:TEST(flotaTEST, viaje_comenzaron_tarde){
+        1:   30-block  0
+call    0 returned 1
+------------------
+        -:   47:
+        2:   48:TEST(flotaTEST, todos_los_viajes_en_horario){
+        1:   49:    viaje v1 = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   50:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   51:                medicion(4.0,puntoGps(0.00002,0.00001)),
+        4:   52:    };
+        1:   53:    viaje v2 = {medicion(15.0,puntoGps(0.00001,0.00002)),
+        1:   54:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   55:                medicion(10.0,puntoGps(0.00002,0.00001)),
+        4:   56:    };
+        1:   57:    viaje v3 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+        1:   58:                medicion(20.0,puntoGps(0.0,0.0)),
+        1:   59:                medicion(8.0,puntoGps(0.00002,0.00001)),
+        4:   60:    };
+        5:   61:    vector<viaje> viajes={v2,v1,v3};
+        -:   62:
+       1*:   63:    ASSERT_EQ(flota(viajes,0.1,20.5),3);
+        2:   64:}
+------------------
+_ZN42flotaTEST_todos_los_viajes_en_horario_Test8TestBodyEv:
+function _ZN42flotaTEST_todos_los_viajes_en_horario_Test8TestBodyEv called 1 returned 100% blocks executed 49%
+        1:   48:TEST(flotaTEST, todos_los_viajes_en_horario){
+        1:   49:    viaje v1 = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   49-block  1
+        1:   50:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   50-block  1
+        1:   51:                medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   51-block  1
+        4:   52:    };
+        1:   52-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   52-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   52-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   52-block  3
+        1:   52-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   52-block  5
+    $$$$$:   52-block  6
+        1:   53:    viaje v2 = {medicion(15.0,puntoGps(0.00001,0.00002)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   53-block  0
+        1:   54:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   54-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   54-block  1
+        1:   55:                medicion(10.0,puntoGps(0.00002,0.00001)),
+        1:   55-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   55-block  1
+        4:   56:    };
+        1:   56-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   56-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   56-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   56-block  3
+        1:   56-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   56-block  5
+    $$$$$:   56-block  6
+        1:   57:    viaje v3 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   57-block  0
+        1:   58:                medicion(20.0,puntoGps(0.0,0.0)),
+        1:   58-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   58-block  1
+        1:   59:                medicion(8.0,puntoGps(0.00002,0.00001)),
+        1:   59-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   59-block  1
+        4:   60:    };
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   60-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   60-block  3
+        1:   60-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   60-block  5
+    $$$$$:   60-block  6
+        5:   61:    vector<viaje> viajes={v2,v1,v3};
+        1:   61-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   61-block  1
+branch  3 taken 3 (fallthrough)
+branch  4 taken 1
+        3:   61-block  2
+call    5 returned 3
+    $$$$$:   61-block  3
+    $$$$$:   61-block  4
+    $$$$$:   61-block  5
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   61-block  6
+call    8 never executed
+    $$$$$:   61-block  7
+        -:   62:
+       1*:   63:    ASSERT_EQ(flota(viajes,0.1,20.5),3);
+        1:   63-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   63-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   63-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   63-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   63-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   63-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   63-block  6
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:   63-block  7
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:   63-block  8
+call   25 never executed
+call   26 never executed
+        1:   63-block  9
+        1:   63-block 10
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0
+        1:   63-block 11
+    $$$$$:   63-block 12
+call   30 never executed
+    $$$$$:   63-block 13
+    $$$$$:   63-block 14
+    $$$$$:   63-block 15
+    $$$$$:   63-block 16
+call   31 never executed
+    $$$$$:   63-block 17
+    $$$$$:   63-block 18
+call   32 never executed
+    $$$$$:   63-block 19
+    $$$$$:   63-block 20
+call   33 never executed
+        2:   64:}
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   64-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   64-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   64-block  2
+        1:   64-block  3
+        1:   64-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   64-block  5
+        1:   64-block  6
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:   64-block  7
+        1:   64-block  8
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:   64-block  9
+        1:   64-block 10
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:   64-block 11
+branch 21 never executed (fallthrough)
+branch 22 never executed
+    $$$$$:   64-block 12
+    $$$$$:   64-block 13
+branch 23 never executed (fallthrough)
+branch 24 never executed
+    $$$$$:   64-block 14
+call   25 never executed
+    $$$$$:   64-block 15
+call   26 never executed
+    $$$$$:   64-block 16
+call   27 never executed
+    $$$$$:   64-block 17
+call   28 never executed
+    $$$$$:   64-block 18
+call   29 never executed
+------------------
+_ZN42flotaTEST_todos_los_viajes_en_horario_TestC1Ev:
+function _ZN42flotaTEST_todos_los_viajes_en_horario_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   48:TEST(flotaTEST, todos_los_viajes_en_horario){
+        1:   48-block  0
+call    0 returned 1
+------------------
+        -:   65:
+        2:   66:TEST(flotaTEST, algunos_son_flota){
+        1:   67:    viaje v1 = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   68:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   69:                medicion(4.0,puntoGps(0.00002,0.00001)),
+        4:   70:    };
+        1:   71:    viaje v2 = {medicion(15.0,puntoGps(0.00001,0.00002)),
+        1:   72:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   73:                medicion(10.0,puntoGps(0.00002,0.00001)),
+        4:   74:    };
+        1:   75:    viaje v3 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+        1:   76:                medicion(20.0,puntoGps(0.0,0.0)),
+        1:   77:                medicion(8.0,puntoGps(0.00002,0.00001)),
+        4:   78:    };
+        1:   79:    viaje v4 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+        1:   80:                medicion(12.0,puntoGps(0.0,0.0)),
+        1:   81:                medicion(15.0,puntoGps(0.00002,0.00001)),
+        4:   82:    };
+        6:   83:    vector<viaje> viajes={v2,v1,v4,v3};
+        -:   84:
+       1*:   85:    ASSERT_EQ(flota(viajes,11.0,14.5),3);
+        2:   86:}
+------------------
+_ZN32flotaTEST_algunos_son_flota_Test8TestBodyEv:
+function _ZN32flotaTEST_algunos_son_flota_Test8TestBodyEv called 1 returned 100% blocks executed 51%
+        1:   66:TEST(flotaTEST, algunos_son_flota){
+        1:   67:    viaje v1 = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   67-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   67-block  1
+        1:   68:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   68-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   68-block  1
+        1:   69:                medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   69-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   69-block  1
+        4:   70:    };
+        1:   70-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   70-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   70-block  3
+        1:   70-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   70-block  5
+    $$$$$:   70-block  6
+        1:   71:    viaje v2 = {medicion(15.0,puntoGps(0.00001,0.00002)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   71-block  0
+        1:   72:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   72-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   72-block  1
+        1:   73:                medicion(10.0,puntoGps(0.00002,0.00001)),
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   73-block  1
+        4:   74:    };
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   74-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   74-block  3
+        1:   74-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   74-block  5
+    $$$$$:   74-block  6
+        1:   75:    viaje v3 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   75-block  0
+        1:   76:                medicion(20.0,puntoGps(0.0,0.0)),
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   76-block  1
+        1:   77:                medicion(8.0,puntoGps(0.00002,0.00001)),
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   77-block  1
+        4:   78:    };
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   78-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   78-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   78-block  3
+        1:   78-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   78-block  5
+    $$$$$:   78-block  6
+        1:   79:    viaje v4 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   79-block  0
+        1:   80:                medicion(12.0,puntoGps(0.0,0.0)),
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   80-block  1
+        1:   81:                medicion(15.0,puntoGps(0.00002,0.00001)),
+        1:   81-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   81-block  1
+        4:   82:    };
+        1:   82-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   82-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   82-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   82-block  3
+        1:   82-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   82-block  5
+    $$$$$:   82-block  6
+        6:   83:    vector<viaje> viajes={v2,v1,v4,v3};
+        1:   83-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   83-block  1
+branch  3 taken 4 (fallthrough)
+branch  4 taken 1
+        4:   83-block  2
+call    5 returned 4
+    $$$$$:   83-block  3
+    $$$$$:   83-block  4
+    $$$$$:   83-block  5
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   83-block  6
+call    8 never executed
+    $$$$$:   83-block  7
+        -:   84:
+       1*:   85:    ASSERT_EQ(flota(viajes,11.0,14.5),3);
+        1:   85-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   85-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   85-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   85-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   85-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   85-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   85-block  6
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:   85-block  7
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:   85-block  8
+call   25 never executed
+call   26 never executed
+        1:   85-block  9
+        1:   85-block 10
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0
+        1:   85-block 11
+    $$$$$:   85-block 12
+call   30 never executed
+    $$$$$:   85-block 13
+    $$$$$:   85-block 14
+    $$$$$:   85-block 15
+    $$$$$:   85-block 16
+call   31 never executed
+    $$$$$:   85-block 17
+    $$$$$:   85-block 18
+call   32 never executed
+    $$$$$:   85-block 19
+    $$$$$:   85-block 20
+call   33 never executed
+        2:   86:}
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   86-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   86-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   86-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   86-block  3
+        1:   86-block  4
+        1:   86-block  5
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:   86-block  6
+        1:   86-block  7
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:   86-block  8
+        1:   86-block  9
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   86-block 10
+        1:   86-block 11
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   86-block 12
+        1:   86-block 13
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0
+    $$$$$:   86-block 14
+branch 27 never executed (fallthrough)
+branch 28 never executed
+    $$$$$:   86-block 15
+    $$$$$:   86-block 16
+branch 29 never executed (fallthrough)
+branch 30 never executed
+    $$$$$:   86-block 17
+call   31 never executed
+    $$$$$:   86-block 18
+call   32 never executed
+    $$$$$:   86-block 19
+call   33 never executed
+    $$$$$:   86-block 20
+call   34 never executed
+    $$$$$:   86-block 21
+call   35 never executed
+    $$$$$:   86-block 22
+call   36 never executed
+------------------
+_ZN32flotaTEST_algunos_son_flota_TestC1Ev:
+function _ZN32flotaTEST_algunos_son_flota_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   66:TEST(flotaTEST, algunos_son_flota){
+        1:   66-block  0
+call    0 returned 1
+------------------
+        -:   87:
+        2:   88:TEST(flotaTEST, viajes_repetidos_cuentan){
+        1:   89:    viaje v1 = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   90:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   91:                medicion(4.0,puntoGps(0.00002,0.00001)),
+        4:   92:    };
+        1:   93:    viaje v2 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+        1:   94:                medicion(20.0,puntoGps(0.0,0.0)),
+        1:   95:                medicion(8.0,puntoGps(0.00002,0.00001)),
+        4:   96:    };
+        -:   97:
+        7:   98:    vector<viaje> viajes={v2,v1,v1,v2,v1};
+        -:   99:
+       1*:  100:    ASSERT_EQ(flota(viajes,0.1,7.5),3);
+        2:  101:}
+------------------
+_ZN39flotaTEST_viajes_repetidos_cuentan_Test8TestBodyEv:
+function _ZN39flotaTEST_viajes_repetidos_cuentan_Test8TestBodyEv called 1 returned 100% blocks executed 49%
+        1:   88:TEST(flotaTEST, viajes_repetidos_cuentan){
+        1:   89:    viaje v1 = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   89-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   89-block  1
+        1:   90:                medicion(1.0,puntoGps(0.0,0.0)),
+        1:   90-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   90-block  1
+        1:   91:                medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   91-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   91-block  1
+        4:   92:    };
+        1:   92-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   92-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   92-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   92-block  3
+        1:   92-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   92-block  5
+    $$$$$:   92-block  6
+        1:   93:    viaje v2 = {medicion(10.0,puntoGps(0.00001,0.00002)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   93-block  0
+        1:   94:                medicion(20.0,puntoGps(0.0,0.0)),
+        1:   94-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   94-block  1
+        1:   95:                medicion(8.0,puntoGps(0.00002,0.00001)),
+        1:   95-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   95-block  1
+        4:   96:    };
+        1:   96-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   96-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   96-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   96-block  3
+        1:   96-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   96-block  5
+    $$$$$:   96-block  6
+        -:   97:
+        7:   98:    vector<viaje> viajes={v2,v1,v1,v2,v1};
+        1:   98-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   98-block  1
+branch  3 taken 5 (fallthrough)
+branch  4 taken 1
+        5:   98-block  2
+call    5 returned 5
+    $$$$$:   98-block  3
+    $$$$$:   98-block  4
+    $$$$$:   98-block  5
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   98-block  6
+call    8 never executed
+    $$$$$:   98-block  7
+        -:   99:
+       1*:  100:    ASSERT_EQ(flota(viajes,0.1,7.5),3);
+        1:  100-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  100-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  100-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  100-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:  100-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  100-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  100-block  6
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:  100-block  7
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:  100-block  8
+call   25 never executed
+call   26 never executed
+        1:  100-block  9
+        1:  100-block 10
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0
+        1:  100-block 11
+    $$$$$:  100-block 12
+call   30 never executed
+    $$$$$:  100-block 13
+    $$$$$:  100-block 14
+    $$$$$:  100-block 15
+    $$$$$:  100-block 16
+call   31 never executed
+    $$$$$:  100-block 17
+    $$$$$:  100-block 18
+call   32 never executed
+    $$$$$:  100-block 19
+    $$$$$:  100-block 20
+call   33 never executed
+        2:  101:}
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  101-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  101-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  101-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  101-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  101-block  4
+        1:  101-block  5
+        1:  101-block  6
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:  101-block  7
+        1:  101-block  8
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  101-block  9
+        1:  101-block 10
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+    $$$$$:  101-block 11
+branch 24 never executed (fallthrough)
+branch 25 never executed
+    $$$$$:  101-block 12
+    $$$$$:  101-block 13
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    $$$$$:  101-block 14
+call   28 never executed
+    $$$$$:  101-block 15
+call   29 never executed
+    $$$$$:  101-block 16
+call   30 never executed
+    $$$$$:  101-block 17
+call   31 never executed
+------------------
+_ZN39flotaTEST_viajes_repetidos_cuentan_TestC1Ev:
+function _ZN39flotaTEST_viajes_repetidos_cuentan_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   88:TEST(flotaTEST, viajes_repetidos_cuentan){
+        1:   88-block  0
+call    0 returned 1
+------------------
+        -:  102:

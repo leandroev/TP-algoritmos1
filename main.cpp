@@ -13,9 +13,9 @@ int main(int argc, char **argv) {
     cout << "Recorridos grabados en ./transporteUrbano/recorridos.csv" << endl;
 
     // Descomentar cuando implementen la grilla
-    //    grilla g = construirGrilla( CORDOBA_ESQ1, CORDOBA_ESQ2, 18, 25);
-    //    escribirGrilla(g, "grilla.csv");
-    //    cout << "Grilla grabada en ./transporteUrbano/grilla.csv" << endl;
+    grilla g = construirGrilla( CORDOBA_ESQ1, CORDOBA_ESQ2, 18, 25);
+    escribirGrilla(g, "grilla.csv");
+    cout << "Grilla grabada en ./transporteUrbano/grilla.csv" << endl;
 
     RUN_ALL_TESTS();
 

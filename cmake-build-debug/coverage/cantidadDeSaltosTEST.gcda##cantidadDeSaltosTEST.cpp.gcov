@@ -1,0 +1,905 @@
+        -:    0:Source:C:/Users/Lean-zabi-chan/Desktop/transporteUrbano/tests/cantidadDeSaltosTEST.cpp
+        -:    0:Graph:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\cantidadDeSaltosTEST.gcno
+        -:    0:Data:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\cantidadDeSaltosTEST.gcda
+        -:    0:Runs:1
+        -:    1:#include "../solucion.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        2:    7:TEST(cantidadDeSaltosTEST, viaje_sin_ordenar_sin_saltos) {
+        1:    8:    gps esq1 = puntoGps(0, 15);
+        1:    9:    gps esq2 = puntoGps(90, 150);
+        1:   10:    grilla g = construirGrilla(esq1, esq2, 2, 3);
+        -:   11:// grilla_esq_inf = (1,1)=(0,15), (1,2)=(0,60), (1,3)=(0,105), (2,1)=(45,15), (2,2)=(45,60), (2,3)=(45,105)
+        -:   12:// grilla_esq_sup = (1,1)=(45,60), (1,2)=(45,105), (1,3)=(45,150), (2,1)=(90,60), (2,2)=(90,105), (2,3)=(90,150)
+        -:   13:
+        -:   14:    recorrido trayecto = {puntoGps(20, 15),
+        -:   15:                          puntoGps(60, 30),
+        -:   16:                          puntoGps(80, 130),
+        -:   17:                          puntoGps(30, 110),
+        2:   18:    };
+        -:   19:
+        1:   20:    viaje v;
+        2:   21:    vector<int> desorden_viaje = {3,2,0,5};
+        5:   22:    for (int j = 0; j < trayecto.size() ; ++j) {
+        4:   23:        v.push_back(medicion(desorden_viaje[j],trayecto[j]));
+        -:   24:    }
+        -:   25:
+        1:   26:    vector<nombre> nombres = aPalabra(trayecto, g); //{(2,3),(2,1),(1,1),(1,3)}
+       1*:   27:    ASSERT_EQ(cantidadDeSaltos(g,v),0);
+        1:   28:}
+------------------
+_ZN54cantidadDeSaltosTEST_viaje_sin_ordenar_sin_saltos_Test8TestBodyEv:
+function _ZN54cantidadDeSaltosTEST_viaje_sin_ordenar_sin_saltos_Test8TestBodyEv called 1 returned 100% blocks executed 52%
+        1:    7:TEST(cantidadDeSaltosTEST, viaje_sin_ordenar_sin_saltos) {
+        1:    8:    gps esq1 = puntoGps(0, 15);
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9:    gps esq2 = puntoGps(90, 150);
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    grilla g = construirGrilla(esq1, esq2, 2, 3);
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   11:// grilla_esq_inf = (1,1)=(0,15), (1,2)=(0,60), (1,3)=(0,105), (2,1)=(45,15), (2,2)=(45,60), (2,3)=(45,105)
+        -:   12:// grilla_esq_sup = (1,1)=(45,60), (1,2)=(45,105), (1,3)=(45,150), (2,1)=(90,60), (2,2)=(90,105), (2,3)=(90,150)
+        -:   13:
+        -:   14:    recorrido trayecto = {puntoGps(20, 15),
+        -:   15:                          puntoGps(60, 30),
+        -:   16:                          puntoGps(80, 130),
+        -:   17:                          puntoGps(30, 110),
+        2:   18:    };
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   18-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   18-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   18-block  4
+        1:   18-block  5
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+    $$$$$:   18-block  6
+    $$$$$:   18-block  7
+        -:   19:
+        1:   20:    viaje v;
+call    0 returned 1
+        2:   21:    vector<int> desorden_viaje = {3,2,0,5};
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   21-block  1
+    $$$$$:   21-block  2
+        5:   22:    for (int j = 0; j < trayecto.size() ; ++j) {
+        5:   22-block  0
+call    0 returned 5
+branch  1 taken 4
+branch  2 taken 1 (fallthrough)
+        4:   23:        v.push_back(medicion(desorden_viaje[j],trayecto[j]));
+        4:   23-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+branch  3 taken 4 (fallthrough)
+branch  4 taken 0 (throw)
+        4:   23-block  1
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   23-block  2
+    $$$$$:   23-block  3
+        -:   24:    }
+        -:   25:
+        1:   26:    vector<nombre> nombres = aPalabra(trayecto, g); //{(2,3),(2,1),(1,1),(1,3)}
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   26-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   26-block  3
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   26-block  4
+call   11 never executed
+    $$$$$:   26-block  5
+    $$$$$:   26-block  6
+call   12 never executed
+    $$$$$:   26-block  7
+       1*:   27:    ASSERT_EQ(cantidadDeSaltos(g,v),0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   27-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   27-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   27-block  3
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+branch 15 taken 0 (fallthrough)
+branch 16 taken 1
+    %%%%%:   27-block  4
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   27-block  5
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:   27-block  6
+call   23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed (throw)
+    %%%%%:   27-block  7
+call   26 never executed
+branch 27 never executed (fallthrough)
+branch 28 never executed (throw)
+    %%%%%:   27-block  8
+call   29 never executed
+call   30 never executed
+        1:   27-block  9
+        1:   27-block 10
+call   31 returned 1
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0
+        1:   27-block 11
+    $$$$$:   27-block 12
+call   34 never executed
+    $$$$$:   27-block 13
+    $$$$$:   27-block 14
+call   35 never executed
+    $$$$$:   27-block 15
+    $$$$$:   27-block 16
+    $$$$$:   27-block 17
+    $$$$$:   27-block 18
+call   36 never executed
+    $$$$$:   27-block 19
+    $$$$$:   27-block 20
+call   37 never executed
+    $$$$$:   27-block 21
+    $$$$$:   27-block 22
+call   38 never executed
+        1:   28:}
+        1:   28-block  0
+        1:   28-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   28-block  2
+        1:   28-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   28-block  4
+        1:   28-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   28-block  6
+        1:   28-block  7
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   28-block  8
+        1:   28-block  9
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+    $$$$$:   28-block 10
+call   15 never executed
+    $$$$$:   28-block 11
+call   16 never executed
+    $$$$$:   28-block 12
+call   17 never executed
+    $$$$$:   28-block 13
+call   18 never executed
+    $$$$$:   28-block 14
+call   19 never executed
+------------------
+_ZN54cantidadDeSaltosTEST_viaje_sin_ordenar_sin_saltos_TestC1Ev:
+function _ZN54cantidadDeSaltosTEST_viaje_sin_ordenar_sin_saltos_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    7:TEST(cantidadDeSaltosTEST, viaje_sin_ordenar_sin_saltos) {
+        1:    7-block  0
+call    0 returned 1
+------------------
+        -:   29:
+        2:   30:TEST(cantidadDeSaltosTEST, viaje_sin_ordenar_con_saltos) {
+        1:   31:    gps esq1 = puntoGps(0, 15);
+        1:   32:    gps esq2 = puntoGps(90, 150);
+        1:   33:    grilla g = construirGrilla(esq1, esq2, 2, 3);
+        -:   34:// grilla_esq_inf = (1,1)=(0,15), (1,2)=(0,60), (1,3)=(0,105), (2,1)=(45,15), (2,2)=(45,60), (2,3)=(45,105)
+        -:   35:// grilla_esq_sup = (1,1)=(45,60), (1,2)=(45,105), (1,3)=(45,150), (2,1)=(90,60), (2,2)=(90,105), (2,3)=(90,150)
+        -:   36:
+        -:   37:    recorrido trayecto = {puntoGps(20, 15),
+        -:   38:                          puntoGps(60, 30),
+        -:   39:                          puntoGps(80, 130),
+        -:   40:                          puntoGps(30, 110),
+        2:   41:    };
+        -:   42:
+        1:   43:    viaje v;
+        2:   44:    vector<int> desorden_viaje = {3,0,5,2};
+        5:   45:    for (int j = 0; j < trayecto.size() ; ++j) {
+        4:   46:        v.push_back(medicion(desorden_viaje[j],trayecto[j]));
+        -:   47:    }
+        -:   48:
+        1:   49:    vector<nombre> nombres = aPalabra(trayecto, g); //<(2,1),(1,3),(1,1),(2,3)>
+        -:   50:
+       1*:   51:    ASSERT_EQ(cantidadDeSaltos(g,v),2);
+        1:   52:}
+------------------
+_ZN54cantidadDeSaltosTEST_viaje_sin_ordenar_con_saltos_Test8TestBodyEv:
+function _ZN54cantidadDeSaltosTEST_viaje_sin_ordenar_con_saltos_Test8TestBodyEv called 1 returned 100% blocks executed 52%
+        1:   30:TEST(cantidadDeSaltosTEST, viaje_sin_ordenar_con_saltos) {
+        1:   31:    gps esq1 = puntoGps(0, 15);
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32:    gps esq2 = puntoGps(90, 150);
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33:    grilla g = construirGrilla(esq1, esq2, 2, 3);
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   34:// grilla_esq_inf = (1,1)=(0,15), (1,2)=(0,60), (1,3)=(0,105), (2,1)=(45,15), (2,2)=(45,60), (2,3)=(45,105)
+        -:   35:// grilla_esq_sup = (1,1)=(45,60), (1,2)=(45,105), (1,3)=(45,150), (2,1)=(90,60), (2,2)=(90,105), (2,3)=(90,150)
+        -:   36:
+        -:   37:    recorrido trayecto = {puntoGps(20, 15),
+        -:   38:                          puntoGps(60, 30),
+        -:   39:                          puntoGps(80, 130),
+        -:   40:                          puntoGps(30, 110),
+        2:   41:    };
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   41-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   41-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   41-block  4
+        1:   41-block  5
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+    $$$$$:   41-block  6
+    $$$$$:   41-block  7
+        -:   42:
+        1:   43:    viaje v;
+call    0 returned 1
+        2:   44:    vector<int> desorden_viaje = {3,0,5,2};
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   44-block  1
+    $$$$$:   44-block  2
+        5:   45:    for (int j = 0; j < trayecto.size() ; ++j) {
+        5:   45-block  0
+call    0 returned 5
+branch  1 taken 4
+branch  2 taken 1 (fallthrough)
+        4:   46:        v.push_back(medicion(desorden_viaje[j],trayecto[j]));
+        4:   46-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+branch  3 taken 4 (fallthrough)
+branch  4 taken 0 (throw)
+        4:   46-block  1
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   46-block  2
+    $$$$$:   46-block  3
+        -:   47:    }
+        -:   48:
+        1:   49:    vector<nombre> nombres = aPalabra(trayecto, g); //<(2,1),(1,3),(1,1),(2,3)>
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   49-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   49-block  3
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   49-block  4
+call   11 never executed
+    $$$$$:   49-block  5
+    $$$$$:   49-block  6
+call   12 never executed
+    $$$$$:   49-block  7
+        -:   50:
+       1*:   51:    ASSERT_EQ(cantidadDeSaltos(g,v),2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   51-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   51-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   51-block  3
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+branch 15 taken 0 (fallthrough)
+branch 16 taken 1
+    %%%%%:   51-block  4
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   51-block  5
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:   51-block  6
+call   23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed (throw)
+    %%%%%:   51-block  7
+call   26 never executed
+branch 27 never executed (fallthrough)
+branch 28 never executed (throw)
+    %%%%%:   51-block  8
+call   29 never executed
+call   30 never executed
+        1:   51-block  9
+        1:   51-block 10
+call   31 returned 1
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0
+        1:   51-block 11
+    $$$$$:   51-block 12
+call   34 never executed
+    $$$$$:   51-block 13
+    $$$$$:   51-block 14
+call   35 never executed
+    $$$$$:   51-block 15
+    $$$$$:   51-block 16
+    $$$$$:   51-block 17
+    $$$$$:   51-block 18
+call   36 never executed
+    $$$$$:   51-block 19
+    $$$$$:   51-block 20
+call   37 never executed
+    $$$$$:   51-block 21
+    $$$$$:   51-block 22
+call   38 never executed
+        1:   52:}
+        1:   52-block  0
+        1:   52-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   52-block  2
+        1:   52-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   52-block  4
+        1:   52-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   52-block  6
+        1:   52-block  7
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   52-block  8
+        1:   52-block  9
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+    $$$$$:   52-block 10
+call   15 never executed
+    $$$$$:   52-block 11
+call   16 never executed
+    $$$$$:   52-block 12
+call   17 never executed
+    $$$$$:   52-block 13
+call   18 never executed
+    $$$$$:   52-block 14
+call   19 never executed
+------------------
+_ZN54cantidadDeSaltosTEST_viaje_sin_ordenar_con_saltos_TestC1Ev:
+function _ZN54cantidadDeSaltosTEST_viaje_sin_ordenar_con_saltos_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   30:TEST(cantidadDeSaltosTEST, viaje_sin_ordenar_con_saltos) {
+        1:   30-block  0
+call    0 returned 1
+------------------
+        -:   53:
+        -:   54:
+        2:   55:TEST(cantidadDeSaltosTEST, viaje_ordenado_sin_saltos) {
+        1:   56:    gps esq1 = puntoGps(0, 15);
+        1:   57:    gps esq2 = puntoGps(90, 150);
+        1:   58:    grilla g = construirGrilla(esq1, esq2, 2, 3);
+        -:   59:// grilla_esq_inf = (1,1)=(0,15), (1,2)=(0,60), (1,3)=(0,105), (2,1)=(45,15), (2,2)=(45,60), (2,3)=(45,105)
+        -:   60:// grilla_esq_sup = (1,1)=(45,60), (1,2)=(45,105), (1,3)=(45,150), (2,1)=(90,60), (2,2)=(90,105), (2,3)=(90,150)
+        -:   61:
+        -:   62:    recorrido trayecto = {puntoGps(20, 15),
+        -:   63:                          puntoGps(60, 30),
+        -:   64:                          puntoGps(80, 130),
+        -:   65:                          puntoGps(30, 110),
+        2:   66:    };
+        -:   67:
+        1:   68:    viaje v;
+        5:   69:    for (int j = 0; j < trayecto.size() ; ++j) {
+        4:   70:        v.push_back(medicion(j,trayecto[j]));
+        -:   71:    }
+        -:   72:
+        1:   73:    vector<nombre> nombres = aPalabra(trayecto, g); //{(1,1),(2,1),(2,3),(1,3)};
+       1*:   74:    ASSERT_EQ(cantidadDeSaltos(g,v),0);
+        1:   75:}
+------------------
+_ZN51cantidadDeSaltosTEST_viaje_ordenado_sin_saltos_Test8TestBodyEv:
+function _ZN51cantidadDeSaltosTEST_viaje_ordenado_sin_saltos_Test8TestBodyEv called 1 returned 100% blocks executed 52%
+        1:   55:TEST(cantidadDeSaltosTEST, viaje_ordenado_sin_saltos) {
+        1:   56:    gps esq1 = puntoGps(0, 15);
+        1:   56-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   57:    gps esq2 = puntoGps(90, 150);
+        1:   57-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   58:    grilla g = construirGrilla(esq1, esq2, 2, 3);
+        1:   58-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   59:// grilla_esq_inf = (1,1)=(0,15), (1,2)=(0,60), (1,3)=(0,105), (2,1)=(45,15), (2,2)=(45,60), (2,3)=(45,105)
+        -:   60:// grilla_esq_sup = (1,1)=(45,60), (1,2)=(45,105), (1,3)=(45,150), (2,1)=(90,60), (2,2)=(90,105), (2,3)=(90,150)
+        -:   61:
+        -:   62:    recorrido trayecto = {puntoGps(20, 15),
+        -:   63:                          puntoGps(60, 30),
+        -:   64:                          puntoGps(80, 130),
+        -:   65:                          puntoGps(30, 110),
+        2:   66:    };
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   66-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   66-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   66-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   66-block  4
+        1:   66-block  5
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+    $$$$$:   66-block  6
+    $$$$$:   66-block  7
+        -:   67:
+        1:   68:    viaje v;
+call    0 returned 1
+        5:   69:    for (int j = 0; j < trayecto.size() ; ++j) {
+        5:   69-block  0
+call    0 returned 5
+branch  1 taken 4
+branch  2 taken 1 (fallthrough)
+        4:   70:        v.push_back(medicion(j,trayecto[j]));
+        4:   70-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   70-block  1
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:   70-block  2
+    $$$$$:   70-block  3
+        -:   71:    }
+        -:   72:
+        1:   73:    vector<nombre> nombres = aPalabra(trayecto, g); //{(1,1),(2,1),(2,3),(1,3)};
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   73-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   73-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   73-block  3
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   73-block  4
+call   11 never executed
+    $$$$$:   73-block  5
+    $$$$$:   73-block  6
+call   12 never executed
+    $$$$$:   73-block  7
+       1*:   74:    ASSERT_EQ(cantidadDeSaltos(g,v),0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   74-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   74-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   74-block  3
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+branch 15 taken 0 (fallthrough)
+branch 16 taken 1
+    %%%%%:   74-block  4
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   74-block  5
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:   74-block  6
+call   23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed (throw)
+    %%%%%:   74-block  7
+call   26 never executed
+branch 27 never executed (fallthrough)
+branch 28 never executed (throw)
+    %%%%%:   74-block  8
+call   29 never executed
+call   30 never executed
+        1:   74-block  9
+        1:   74-block 10
+call   31 returned 1
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0
+        1:   74-block 11
+    $$$$$:   74-block 12
+call   34 never executed
+    $$$$$:   74-block 13
+    $$$$$:   74-block 14
+call   35 never executed
+    $$$$$:   74-block 15
+    $$$$$:   74-block 16
+    $$$$$:   74-block 17
+    $$$$$:   74-block 18
+call   36 never executed
+    $$$$$:   74-block 19
+    $$$$$:   74-block 20
+call   37 never executed
+    $$$$$:   74-block 21
+    $$$$$:   74-block 22
+call   38 never executed
+        1:   75:}
+        1:   75-block  0
+        1:   75-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   75-block  2
+        1:   75-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   75-block  4
+        1:   75-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   75-block  6
+        1:   75-block  7
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+    $$$$$:   75-block  8
+call   12 never executed
+    $$$$$:   75-block  9
+call   13 never executed
+    $$$$$:   75-block 10
+call   14 never executed
+    $$$$$:   75-block 11
+call   15 never executed
+------------------
+_ZN51cantidadDeSaltosTEST_viaje_ordenado_sin_saltos_TestC1Ev:
+function _ZN51cantidadDeSaltosTEST_viaje_ordenado_sin_saltos_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   55:TEST(cantidadDeSaltosTEST, viaje_ordenado_sin_saltos) {
+        1:   55-block  0
+call    0 returned 1
+------------------
+        -:   76:
+        2:   77:TEST(cantidadDeSaltosTEST, viaje_ordenado_con_saltos) {
+        1:   78:    gps esq1 = puntoGps(0, 15);
+        1:   79:    gps esq2 = puntoGps(90, 150);
+        1:   80:    grilla g = construirGrilla(esq1, esq2, 2, 3);
+        -:   81:// grilla_esq_inf = (1,1)=(0,15), (1,2)=(0,60), (1,3)=(0,105), (2,1)=(45,15), (2,2)=(45,60), (2,3)=(45,105)
+        -:   82:// grilla_esq_sup = (1,1)=(45,60), (1,2)=(45,105), (1,3)=(45,150), (2,1)=(90,60), (2,2)=(90,105), (2,3)=(90,150)
+        -:   83:
+        -:   84:    recorrido trayecto = {puntoGps(60, 30),
+        -:   85:                          puntoGps(30, 110),
+        -:   86:                          puntoGps(20, 15),
+        -:   87:                          puntoGps(80, 130)
+        2:   88:    };
+        -:   89:
+        1:   90:    viaje v;
+        5:   91:    for (int j = 0; j < trayecto.size() ; ++j) {
+        4:   92:        v.push_back(medicion(j,trayecto[j]));
+        -:   93:    }
+        -:   94:
+        1:   95:    vector<nombre> nombres = aPalabra(trayecto, g); //<(2,1),(1,3),(1,1),(2,3)>
+       1*:   96:    ASSERT_EQ(cantidadDeSaltos(g,v),2);
+        1:   97:}
+------------------
+_ZN51cantidadDeSaltosTEST_viaje_ordenado_con_saltos_Test8TestBodyEv:
+function _ZN51cantidadDeSaltosTEST_viaje_ordenado_con_saltos_Test8TestBodyEv called 1 returned 100% blocks executed 52%
+        1:   77:TEST(cantidadDeSaltosTEST, viaje_ordenado_con_saltos) {
+        1:   78:    gps esq1 = puntoGps(0, 15);
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   79:    gps esq2 = puntoGps(90, 150);
+        1:   79-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   80:    grilla g = construirGrilla(esq1, esq2, 2, 3);
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   81:// grilla_esq_inf = (1,1)=(0,15), (1,2)=(0,60), (1,3)=(0,105), (2,1)=(45,15), (2,2)=(45,60), (2,3)=(45,105)
+        -:   82:// grilla_esq_sup = (1,1)=(45,60), (1,2)=(45,105), (1,3)=(45,150), (2,1)=(90,60), (2,2)=(90,105), (2,3)=(90,150)
+        -:   83:
+        -:   84:    recorrido trayecto = {puntoGps(60, 30),
+        -:   85:                          puntoGps(30, 110),
+        -:   86:                          puntoGps(20, 15),
+        -:   87:                          puntoGps(80, 130)
+        2:   88:    };
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   88-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   88-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   88-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   88-block  4
+        1:   88-block  5
+        1:   88-block  6
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+    $$$$$:   88-block  7
+    $$$$$:   88-block  8
+        -:   89:
+        1:   90:    viaje v;
+call    0 returned 1
+        5:   91:    for (int j = 0; j < trayecto.size() ; ++j) {
+        5:   91-block  0
+call    0 returned 5
+branch  1 taken 4
+branch  2 taken 1 (fallthrough)
+        4:   92:        v.push_back(medicion(j,trayecto[j]));
+        4:   92-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   92-block  1
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:   92-block  2
+    $$$$$:   92-block  3
+        -:   93:    }
+        -:   94:
+        1:   95:    vector<nombre> nombres = aPalabra(trayecto, g); //<(2,1),(1,3),(1,1),(2,3)>
+        1:   95-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   95-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   95-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   95-block  3
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   95-block  4
+call   11 never executed
+    $$$$$:   95-block  5
+    $$$$$:   95-block  6
+call   12 never executed
+    $$$$$:   95-block  7
+       1*:   96:    ASSERT_EQ(cantidadDeSaltos(g,v),2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   96-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   96-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   96-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   96-block  3
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+branch 15 taken 0 (fallthrough)
+branch 16 taken 1
+    %%%%%:   96-block  4
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   96-block  5
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:   96-block  6
+call   23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed (throw)
+    %%%%%:   96-block  7
+call   26 never executed
+branch 27 never executed (fallthrough)
+branch 28 never executed (throw)
+    %%%%%:   96-block  8
+call   29 never executed
+call   30 never executed
+        1:   96-block  9
+        1:   96-block 10
+call   31 returned 1
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0
+        1:   96-block 11
+    $$$$$:   96-block 12
+call   34 never executed
+    $$$$$:   96-block 13
+    $$$$$:   96-block 14
+call   35 never executed
+    $$$$$:   96-block 15
+    $$$$$:   96-block 16
+    $$$$$:   96-block 17
+    $$$$$:   96-block 18
+call   36 never executed
+    $$$$$:   96-block 19
+    $$$$$:   96-block 20
+call   37 never executed
+    $$$$$:   96-block 21
+    $$$$$:   96-block 22
+call   38 never executed
+        1:   97:}
+        1:   97-block  0
+        1:   97-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   97-block  2
+        1:   97-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   97-block  4
+        1:   97-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   97-block  6
+        1:   97-block  7
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+    $$$$$:   97-block  8
+call   12 never executed
+    $$$$$:   97-block  9
+call   13 never executed
+    $$$$$:   97-block 10
+call   14 never executed
+    $$$$$:   97-block 11
+call   15 never executed
+------------------
+_ZN51cantidadDeSaltosTEST_viaje_ordenado_con_saltos_TestC1Ev:
+function _ZN51cantidadDeSaltosTEST_viaje_ordenado_con_saltos_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   77:TEST(cantidadDeSaltosTEST, viaje_ordenado_con_saltos) {
+        1:   77-block  0
+call    0 returned 1
+------------------

@@ -1,0 +1,349 @@
+        -:    0:Source:C:/Users/Lean-zabi-chan/Desktop/transporteUrbano/tests/aPalabraTEST.cpp
+        -:    0:Graph:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\aPalabraTEST.gcno
+        -:    0:Data:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\aPalabraTEST.gcda
+        -:    0:Runs:1
+        -:    1:#include "../solucion.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        2:    7:TEST(aPalabraTEST, trayecto_vacio){
+        1:    8:    gps esq1 = puntoGps(0,15);
+        1:    9:    gps esq2 = puntoGps(90,150);
+        1:   10:    grilla g = construirGrilla(esq1,esq2,10,15);
+        -:   11:
+        1:   12:    recorrido trayecto;
+        1:   13:    vector<nombre> nombres = aPalabra(trayecto, g);
+       1*:   14:    ASSERT_EQ(nombres.size(), 0);
+        1:   15:}
+------------------
+_ZN32aPalabraTEST_trayecto_vacio_Test8TestBodyEv:
+function _ZN32aPalabraTEST_trayecto_vacio_Test8TestBodyEv called 1 returned 100% blocks executed 47%
+        1:    7:TEST(aPalabraTEST, trayecto_vacio){
+        1:    8:    gps esq1 = puntoGps(0,15);
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9:    gps esq2 = puntoGps(90,150);
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    grilla g = construirGrilla(esq1,esq2,10,15);
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   11:
+        1:   12:    recorrido trayecto;
+        1:   12-block  0
+call    0 returned 1
+        1:   13:    vector<nombre> nombres = aPalabra(trayecto, g);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   13-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   13-block  2
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   13-block  3
+call   11 never executed
+    $$$$$:   13-block  4
+    $$$$$:   13-block  5
+call   12 never executed
+    $$$$$:   13-block  6
+       1*:   14:    ASSERT_EQ(nombres.size(), 0);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   14-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   14-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   14-block  2
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   14-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   14-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   14-block  5
+call   19 never executed
+call   20 never executed
+        1:   14-block  6
+        1:   14-block  7
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   14-block  8
+    $$$$$:   14-block  9
+    $$$$$:   14-block 10
+    $$$$$:   14-block 11
+call   24 never executed
+    $$$$$:   14-block 12
+    $$$$$:   14-block 13
+call   25 never executed
+    $$$$$:   14-block 14
+    $$$$$:   14-block 15
+call   26 never executed
+        1:   15:}
+        1:   15-block  0
+        1:   15-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   15-block  2
+        1:   15-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   15-block  4
+        1:   15-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+    $$$$$:   15-block  6
+call    9 never executed
+    $$$$$:   15-block  7
+call   10 never executed
+    $$$$$:   15-block  8
+call   11 never executed
+------------------
+_ZN32aPalabraTEST_trayecto_vacio_TestC1Ev:
+function _ZN32aPalabraTEST_trayecto_vacio_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    7:TEST(aPalabraTEST, trayecto_vacio){
+        1:    7-block  0
+call    0 returned 1
+------------------
+        -:   16:
+        2:   17:TEST(aPalabraTEST, trayecto_de_enteros){
+        1:   18:    gps esq1 = puntoGps(0,15);
+        1:   19:    gps esq2 = puntoGps(90,150);
+        1:   20:    grilla g = construirGrilla(esq1,esq2,2,3);
+        -:   21:    // grilla_esq_inf = (1,1)=(0,15), (1,2)=(0,60), (1,3)=(0,105), (2,1)=(45,15), (2,2)=(45,60), (2,3)=(45,105)
+        -:   22:    // grilla_esq_sup = (1,1)=(45,60), (1,2)=(45,105), (1,3)=(45,150), (2,1)=(90,60), (2,2)=(90,105), (2,3)=(90,150)
+        -:   23:
+        1:   24:    double alto_celda = (get<0>(esq2) - get<0>(esq1))/2;
+        1:   25:    double ancho_celda = (get<1>(esq2) - get<1>(esq1))/3;
+       1*:   26:    ASSERT_DOUBLE_EQ(alto_celda, ancho_celda);
+        -:   27:
+        -:   28:    recorrido trayecto = {puntoGps(20,15),
+        -:   29:                          puntoGps(60,30),
+        -:   30:                          puntoGps(80,130),
+        -:   31:                          puntoGps(65,100),
+        2:   32:                          };
+        -:   33:
+        1:   34:    vector<nombre> nombres = aPalabra(trayecto, g);
+        2:   35:    vector<nombre> nombres_esperado = {make_tuple(1,1),make_tuple(2,1),make_tuple(2,3),make_tuple(2,2)};
+       1*:   36:    ASSERT_EQ(nombres,nombres_esperado);
+        1:   37:}
+------------------
+_ZN37aPalabraTEST_trayecto_de_enteros_Test8TestBodyEv:
+function _ZN37aPalabraTEST_trayecto_de_enteros_Test8TestBodyEv called 1 returned 100% blocks executed 47%
+        1:   17:TEST(aPalabraTEST, trayecto_de_enteros){
+        1:   18:    gps esq1 = puntoGps(0,15);
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19:    gps esq2 = puntoGps(90,150);
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20:    grilla g = construirGrilla(esq1,esq2,2,3);
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   21:    // grilla_esq_inf = (1,1)=(0,15), (1,2)=(0,60), (1,3)=(0,105), (2,1)=(45,15), (2,2)=(45,60), (2,3)=(45,105)
+        -:   22:    // grilla_esq_sup = (1,1)=(45,60), (1,2)=(45,105), (1,3)=(45,150), (2,1)=(90,60), (2,2)=(90,105), (2,3)=(90,150)
+        -:   23:
+        1:   24:    double alto_celda = (get<0>(esq2) - get<0>(esq1))/2;
+        1:   24-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   25:    double ancho_celda = (get<1>(esq2) - get<1>(esq1))/3;
+call    0 returned 1
+call    1 returned 1
+       1*:   26:    ASSERT_DOUBLE_EQ(alto_celda, ancho_celda);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   26-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   26-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   26-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   26-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   26-block  5
+call   18 never executed
+call   19 never executed
+        1:   26-block  6
+        1:   26-block  7
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+        1:   26-block  8
+    $$$$$:   26-block  9
+call   23 never executed
+    $$$$$:   26-block 10
+    $$$$$:   26-block 11
+call   24 never executed
+    $$$$$:   26-block 12
+    $$$$$:   26-block 13
+call   25 never executed
+        -:   27:
+        -:   28:    recorrido trayecto = {puntoGps(20,15),
+        -:   29:                          puntoGps(60,30),
+        -:   30:                          puntoGps(80,130),
+        -:   31:                          puntoGps(65,100),
+        2:   32:                          };
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   32-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   32-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   32-block  4
+        1:   32-block  5
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+    $$$$$:   32-block  6
+    $$$$$:   32-block  7
+    $$$$$:   32-block  8
+call   15 never executed
+        -:   33:
+        1:   34:    vector<nombre> nombres = aPalabra(trayecto, g);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   34-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   34-block  2
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   34-block  3
+call   11 never executed
+    $$$$$:   34-block  4
+    $$$$$:   34-block  5
+call   12 never executed
+    $$$$$:   34-block  6
+    $$$$$:   34-block  7
+call   13 never executed
+        2:   35:    vector<nombre> nombres_esperado = {make_tuple(1,1),make_tuple(2,1),make_tuple(2,3),make_tuple(2,2)};
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   35-block  1
+    $$$$$:   35-block  2
+    $$$$$:   35-block  3
+call    3 never executed
+       1*:   36:    ASSERT_EQ(nombres,nombres_esperado);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   36-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   36-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   36-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   36-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   36-block  5
+call   18 never executed
+call   19 never executed
+        1:   36-block  6
+        1:   36-block  7
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+        1:   36-block  8
+    $$$$$:   36-block  9
+call   23 never executed
+    $$$$$:   36-block 10
+    $$$$$:   36-block 11
+call   24 never executed
+    $$$$$:   36-block 12
+    $$$$$:   36-block 13
+call   25 never executed
+        1:   37:}
+        1:   37-block  0
+        1:   37-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   37-block  2
+call    3 never executed
+------------------
+_ZN37aPalabraTEST_trayecto_de_enteros_TestC1Ev:
+function _ZN37aPalabraTEST_trayecto_de_enteros_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   17:TEST(aPalabraTEST, trayecto_de_enteros){
+        1:   17-block  0
+call    0 returned 1
+------------------
+        -:   38:

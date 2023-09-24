@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\transporteUrbanoTest.dir/objects.a
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ar.exe qc CMakeFiles\transporteUrbanoTest.dir/objects.a @CMakeFiles\transporteUrbanoTest.dir\objects1.rsp
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE -g -g --coverage -Wl,--whole-archive CMakeFiles\transporteUrbanoTest.dir/objects.a -Wl,--no-whole-archive -o C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\transporteUrbanoTest.exe -Wl,--out-implib,C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\libtransporteUrbanoTest.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\transporteUrbanoTest.dir\linkLibs.rsp

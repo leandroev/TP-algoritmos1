@@ -1,0 +1,645 @@
+        -:    0:Source:C:/Users/Lean-zabi-chan/Desktop/transporteUrbano/tests/construirGrillaTEST.cpp
+        -:    0:Graph:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\construirGrillaTEST.gcno
+        -:    0:Data:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\construirGrillaTEST.gcda
+        -:    0:Runs:1
+        -:    1:#include "../solucion.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        2:    7:TEST(construirGrillaTEST, grilla_1x1){
+        1:    8:    gps esq1 = puntoGps(-90, -50);
+        1:    9:    gps esq2 = puntoGps(0, 40);
+        1:   10:    grilla g = construirGrilla(esq1, esq2, 1, 1);
+        -:   11:
+        1:   12:    double alto_celda = (get<0>(esq2) - get<0>(esq1)) / 1;
+        1:   13:    double ancho_celda = (get<1>(esq2) - get<1>(esq1)) / 1;
+       1*:   14:    ASSERT_DOUBLE_EQ(alto_celda, ancho_celda);
+       1*:   15:    ASSERT_EQ(g.size(),1);
+        1:   16:}
+------------------
+_ZN35construirGrillaTEST_grilla_1x1_Test8TestBodyEv:
+function _ZN35construirGrillaTEST_grilla_1x1_Test8TestBodyEv called 1 returned 100% blocks executed 43%
+        1:    7:TEST(construirGrillaTEST, grilla_1x1){
+        1:    8:    gps esq1 = puntoGps(-90, -50);
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9:    gps esq2 = puntoGps(0, 40);
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    grilla g = construirGrilla(esq1, esq2, 1, 1);
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   11:
+        1:   12:    double alto_celda = (get<0>(esq2) - get<0>(esq1)) / 1;
+        1:   12-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   13:    double ancho_celda = (get<1>(esq2) - get<1>(esq1)) / 1;
+call    0 returned 1
+call    1 returned 1
+       1*:   14:    ASSERT_DOUBLE_EQ(alto_celda, ancho_celda);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   14-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   14-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   14-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   14-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   14-block  5
+call   18 never executed
+call   19 never executed
+        1:   14-block  6
+        1:   14-block  7
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+        1:   14-block  8
+    $$$$$:   14-block  9
+call   23 never executed
+    $$$$$:   14-block 10
+    $$$$$:   14-block 11
+call   24 never executed
+    $$$$$:   14-block 12
+    $$$$$:   14-block 13
+call   25 never executed
+       1*:   15:    ASSERT_EQ(g.size(),1);
+        1:   15-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   15-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   15-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   15-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   15-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   15-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   15-block  6
+call   19 never executed
+call   20 never executed
+        1:   15-block  7
+        1:   15-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   15-block  9
+    $$$$$:   15-block 10
+    $$$$$:   15-block 11
+    $$$$$:   15-block 12
+call   24 never executed
+    $$$$$:   15-block 13
+    $$$$$:   15-block 14
+call   25 never executed
+    $$$$$:   15-block 15
+    $$$$$:   15-block 16
+call   26 never executed
+        1:   16:}
+        1:   16-block  0
+        1:   16-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   16-block  2
+call    3 never executed
+------------------
+_ZN35construirGrillaTEST_grilla_1x1_TestC1Ev:
+function _ZN35construirGrillaTEST_grilla_1x1_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    7:TEST(construirGrillaTEST, grilla_1x1){
+        1:    7-block  0
+call    0 returned 1
+------------------
+        -:   17:
+        2:   18:TEST(construirGrillaTEST, varias_celdas) {
+        1:   19:    gps esq1 = puntoGps(0, 15);
+        1:   20:    gps esq2 = puntoGps(90, 150);
+        1:   21:    grilla g = construirGrilla(esq1, esq2, 10, 15);
+        -:   22:
+        1:   23:    double alto_celda = (get<0>(esq2) - get<0>(esq1)) / 2;
+        1:   24:    double ancho_celda = (get<1>(esq2) - get<1>(esq1)) / 3;
+       1*:   25:    ASSERT_DOUBLE_EQ(alto_celda, ancho_celda);
+       1*:   26:    ASSERT_EQ(g.size(),150);
+        1:   27:}
+------------------
+_ZN38construirGrillaTEST_varias_celdas_Test8TestBodyEv:
+function _ZN38construirGrillaTEST_varias_celdas_Test8TestBodyEv called 1 returned 100% blocks executed 43%
+        1:   18:TEST(construirGrillaTEST, varias_celdas) {
+        1:   19:    gps esq1 = puntoGps(0, 15);
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20:    gps esq2 = puntoGps(90, 150);
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21:    grilla g = construirGrilla(esq1, esq2, 10, 15);
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   22:
+        1:   23:    double alto_celda = (get<0>(esq2) - get<0>(esq1)) / 2;
+        1:   23-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   24:    double ancho_celda = (get<1>(esq2) - get<1>(esq1)) / 3;
+call    0 returned 1
+call    1 returned 1
+       1*:   25:    ASSERT_DOUBLE_EQ(alto_celda, ancho_celda);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   25-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   25-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   25-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   25-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   25-block  5
+call   18 never executed
+call   19 never executed
+        1:   25-block  6
+        1:   25-block  7
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+        1:   25-block  8
+    $$$$$:   25-block  9
+call   23 never executed
+    $$$$$:   25-block 10
+    $$$$$:   25-block 11
+call   24 never executed
+    $$$$$:   25-block 12
+    $$$$$:   25-block 13
+call   25 never executed
+       1*:   26:    ASSERT_EQ(g.size(),150);
+        1:   26-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   26-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   26-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   26-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   26-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   26-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   26-block  6
+call   19 never executed
+call   20 never executed
+        1:   26-block  7
+        1:   26-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   26-block  9
+    $$$$$:   26-block 10
+    $$$$$:   26-block 11
+    $$$$$:   26-block 12
+call   24 never executed
+    $$$$$:   26-block 13
+    $$$$$:   26-block 14
+call   25 never executed
+    $$$$$:   26-block 15
+    $$$$$:   26-block 16
+call   26 never executed
+        1:   27:}
+        1:   27-block  0
+        1:   27-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   27-block  2
+call    3 never executed
+------------------
+_ZN38construirGrillaTEST_varias_celdas_TestC1Ev:
+function _ZN38construirGrillaTEST_varias_celdas_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   18:TEST(construirGrillaTEST, varias_celdas) {
+        1:   18-block  0
+call    0 returned 1
+------------------
+        -:   28:
+        2:   29:TEST(construirGrilla, pocas_celdas) {
+        1:   30:    gps esq1 = puntoGps(0, 15);
+        1:   31:    gps esq2 = puntoGps(90, 150);
+        1:   32:    grilla g = construirGrilla(esq1, esq2, 2, 3);
+        -:   33:
+        1:   34:    double alto_celda = (get<0>(esq2) - get<0>(esq1)) / 2;
+        1:   35:    double ancho_celda = (get<1>(esq2) - get<1>(esq1)) / 3;
+       1*:   36:    ASSERT_DOUBLE_EQ(alto_celda, ancho_celda);
+       1*:   37:    ASSERT_EQ(g.size(),6);
+        1:   38:}
+------------------
+_ZN33construirGrilla_pocas_celdas_Test8TestBodyEv:
+function _ZN33construirGrilla_pocas_celdas_Test8TestBodyEv called 1 returned 100% blocks executed 43%
+        1:   29:TEST(construirGrilla, pocas_celdas) {
+        1:   30:    gps esq1 = puntoGps(0, 15);
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   31:    gps esq2 = puntoGps(90, 150);
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32:    grilla g = construirGrilla(esq1, esq2, 2, 3);
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   33:
+        1:   34:    double alto_celda = (get<0>(esq2) - get<0>(esq1)) / 2;
+        1:   34-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   35:    double ancho_celda = (get<1>(esq2) - get<1>(esq1)) / 3;
+call    0 returned 1
+call    1 returned 1
+       1*:   36:    ASSERT_DOUBLE_EQ(alto_celda, ancho_celda);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   36-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   36-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   36-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   36-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   36-block  5
+call   18 never executed
+call   19 never executed
+        1:   36-block  6
+        1:   36-block  7
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+        1:   36-block  8
+    $$$$$:   36-block  9
+call   23 never executed
+    $$$$$:   36-block 10
+    $$$$$:   36-block 11
+call   24 never executed
+    $$$$$:   36-block 12
+    $$$$$:   36-block 13
+call   25 never executed
+       1*:   37:    ASSERT_EQ(g.size(),6);
+        1:   37-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   37-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   37-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   37-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   37-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   37-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   37-block  6
+call   19 never executed
+call   20 never executed
+        1:   37-block  7
+        1:   37-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   37-block  9
+    $$$$$:   37-block 10
+    $$$$$:   37-block 11
+    $$$$$:   37-block 12
+call   24 never executed
+    $$$$$:   37-block 13
+    $$$$$:   37-block 14
+call   25 never executed
+    $$$$$:   37-block 15
+    $$$$$:   37-block 16
+call   26 never executed
+        1:   38:}
+        1:   38-block  0
+        1:   38-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   38-block  2
+call    3 never executed
+------------------
+_ZN33construirGrilla_pocas_celdas_TestC1Ev:
+function _ZN33construirGrilla_pocas_celdas_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   29:TEST(construirGrilla, pocas_celdas) {
+        1:   29-block  0
+call    0 returned 1
+------------------
+        -:   39:
+        2:   40:TEST(construirGrillaTEST, interseccion_esq_sup_con_esq_inf) {
+        1:   41:    gps esq1 = puntoGps(0, 15);
+        1:   42:    gps esq2 = puntoGps(90, 150);
+        1:   43:    grilla g = construirGrilla(esq1, esq2, 10, 15);
+        -:   44:
+        1:   45:    double lado_celda = (get<0>(esq2) - get<0>(esq1)) / 10;
+        -:   46:
+        1:   47:    bool esquinas_validas = true;
+       1*:   48:    for (int i = 1; i < g.size(); ++i) {
+        1:   49:        gps esq_inf_anterior = obtenerEsquinaInferior(g[i-1]);
+        1:   50:        gps esq_sup_anterior = obtenerEsquinaSuperior(g[i-1]);
+        1:   51:        gps esq_inf_actual = obtenerEsquinaInferior(g[i]);
+        1:   52:        gps esq_sup_actual = obtenerEsquinaSuperior(g[i]);
+        -:   53:
+        1:   54:        if(obtenerLatitud(esq_inf_actual) != (obtenerLatitud(esq_inf_anterior)+lado_celda) ){
+        1:   55:            bool esquinas_validas = false;
+        1:   56:            break;
+        -:   57:        }
+    #####:   58:        if(obtenerLongitud(esq_inf_actual) != (obtenerLongitud(esq_inf_anterior)+lado_celda) ){
+    #####:   59:            bool esquinas_validas = false;
+    #####:   60:            break;
+        -:   61:        }
+    #####:   62:        if(obtenerLatitud(esq_sup_actual) != (obtenerLatitud(esq_sup_anterior)+lado_celda) ){
+    #####:   63:            bool esquinas_validas = false;
+    #####:   64:            break;
+        -:   65:        }
+    #####:   66:        if(obtenerLongitud(esq_sup_actual) != (obtenerLongitud(esq_sup_anterior)+lado_celda) ){
+    #####:   67:            bool esquinas_validas = false;
+    #####:   68:            break;
+        -:   69:        }
+        -:   70:    }
+       1*:   71:    ASSERT_TRUE(esquinas_validas);
+        1:   72:}
+------------------
+_ZN57construirGrillaTEST_interseccion_esq_sup_con_esq_inf_Test8TestBodyEv:
+function _ZN57construirGrillaTEST_interseccion_esq_sup_con_esq_inf_Test8TestBodyEv called 1 returned 100% blocks executed 47%
+        1:   40:TEST(construirGrillaTEST, interseccion_esq_sup_con_esq_inf) {
+        1:   41:    gps esq1 = puntoGps(0, 15);
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   42:    gps esq2 = puntoGps(90, 150);
+        1:   42-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43:    grilla g = construirGrilla(esq1, esq2, 10, 15);
+        1:   43-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   44:
+        1:   45:    double lado_celda = (get<0>(esq2) - get<0>(esq1)) / 10;
+        1:   45-block  0
+call    0 returned 1
+call    1 returned 1
+        -:   46:
+        1:   47:    bool esquinas_validas = true;
+       1*:   48:    for (int i = 1; i < g.size(); ++i) {
+    %%%%%:   48-block  0
+        1:   48-block  1
+call    0 returned 1
+branch  1 taken 1
+branch  2 taken 0 (fallthrough)
+        1:   49:        gps esq_inf_anterior = obtenerEsquinaInferior(g[i-1]);
+        1:   49-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   50:        gps esq_sup_anterior = obtenerEsquinaSuperior(g[i-1]);
+        1:   50-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   51:        gps esq_inf_actual = obtenerEsquinaInferior(g[i]);
+        1:   51-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   52:        gps esq_sup_actual = obtenerEsquinaSuperior(g[i]);
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        -:   53:
+        1:   54:        if(obtenerLatitud(esq_inf_actual) != (obtenerLatitud(esq_inf_anterior)+lado_celda) ){
+        1:   54-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   54-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   54-block  2
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+        1:   55:            bool esquinas_validas = false;
+        1:   56:            break;
+        1:   56-block  0
+        1:   56-block  1
+        -:   57:        }
+    #####:   58:        if(obtenerLongitud(esq_inf_actual) != (obtenerLongitud(esq_inf_anterior)+lado_celda) ){
+    %%%%%:   58-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   58-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   58-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   59:            bool esquinas_validas = false;
+    #####:   60:            break;
+    %%%%%:   60-block  0
+        -:   61:        }
+    #####:   62:        if(obtenerLatitud(esq_sup_actual) != (obtenerLatitud(esq_sup_anterior)+lado_celda) ){
+    %%%%%:   62-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   62-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   62-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   63:            bool esquinas_validas = false;
+    #####:   64:            break;
+    %%%%%:   64-block  0
+        -:   65:        }
+    #####:   66:        if(obtenerLongitud(esq_sup_actual) != (obtenerLongitud(esq_sup_anterior)+lado_celda) ){
+    %%%%%:   66-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   66-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   66-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   67:            bool esquinas_validas = false;
+    #####:   68:            break;
+    %%%%%:   68-block  0
+        -:   69:        }
+        -:   70:    }
+       1*:   71:    ASSERT_TRUE(esquinas_validas);
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   71-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   71-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   71-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   71-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   71-block  6
+call   19 never executed
+call   20 never executed
+call   21 never executed
+        1:   71-block  7
+        1:   71-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   71-block  9
+    $$$$$:   71-block 10
+call   25 never executed
+    $$$$$:   71-block 11
+call   26 never executed
+    $$$$$:   71-block 12
+    $$$$$:   71-block 13
+    $$$$$:   71-block 14
+call   27 never executed
+    $$$$$:   71-block 15
+    $$$$$:   71-block 16
+call   28 never executed
+        1:   72:}
+        1:   72-block  0
+        1:   72-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   72-block  2
+call    3 never executed
+------------------
+_ZN57construirGrillaTEST_interseccion_esq_sup_con_esq_inf_TestC1Ev:
+function _ZN57construirGrillaTEST_interseccion_esq_sup_con_esq_inf_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   40:TEST(construirGrillaTEST, interseccion_esq_sup_con_esq_inf) {
+        1:   40-block  0
+call    0 returned 1
+------------------

@@ -1,6 +1,7 @@
 #ifndef TRANSPORTEURBANO_SOLUCION_H
 #define TRANSPORTEURBANO_SOLUCION_H
 #include "definiciones.h"
+#include <string>
 bool excesoDeVelocidad(viaje v);
 tiempo tiempoTotal(viaje v);
 distancia distanciaTotal(viaje v);
@@ -17,10 +18,12 @@ void escribirRecorridos(vector<recorrido> recorridos, string nombreArchivo);
 // NO ES NECESARIO IMPLEMENTAR:
 void completarHuecos(viaje& v, vector<int> faltantes);
 
-//Auxiliares
-viaje ordenarViaje(viaje v);
+//********* Auxiliares **********
+viaje ordenar_viaje(viaje v);
+int obtener_indice_menor_tiempo(viaje v, int d, int h);
+void swap_elementos_viaje(viaje& v, int i, int j);
 double velocidad(tuple<tiempo, gps> t1, tuple<tiempo, gps> t2);
-
-
+nombre obtener_nombre_de_gps(gps posicion, grilla g_grilla);
+bool es_cubierto(viaje v, tiempo inicial, tiempo final);
 
 #endif //TRANSPORTEURBANO_SOLUCION_H

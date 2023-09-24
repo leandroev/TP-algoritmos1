@@ -1,0 +1,554 @@
+        -:    0:Source:C:/Users/Lean-zabi-chan/Desktop/transporteUrbano/tests/excesoDeVelocidadTEST.cpp
+        -:    0:Graph:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\excesoDeVelocidadTEST.gcno
+        -:    0:Data:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\excesoDeVelocidadTEST.gcda
+        -:    0:Runs:1
+        -:    1:#include "../solucion.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:
+        2:    8:TEST(excesoDeVelocidadTEST, viaje_normal_desordenado){
+        1:    9:    viaje v = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   10:               medicion(1.0,puntoGps(0.0,0.0)),
+        1:   11:               medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   12:               medicion(6.3,puntoGps(0.00004,0.00011))
+        5:   13:    };
+        -:   14:
+       1*:   15:    ASSERT_FALSE(excesoDeVelocidad(v));
+        1:   16:}
+------------------
+_ZN51excesoDeVelocidadTEST_viaje_normal_desordenado_Test8TestBodyEv:
+function _ZN51excesoDeVelocidadTEST_viaje_normal_desordenado_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:    8:TEST(excesoDeVelocidadTEST, viaje_normal_desordenado){
+        1:    9:    viaje v = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:    9-block  1
+        1:   10:               medicion(1.0,puntoGps(0.0,0.0)),
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   10-block  1
+        1:   11:               medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   11-block  1
+        1:   12:               medicion(6.3,puntoGps(0.00004,0.00011))
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   12-block  1
+        5:   13:    };
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   13-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   13-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   13-block  4
+        1:   13-block  5
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+    $$$$$:   13-block  6
+    $$$$$:   13-block  7
+        -:   14:
+       1*:   15:    ASSERT_FALSE(excesoDeVelocidad(v));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   15-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   15-block  2
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   15-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   15-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   15-block  5
+call   19 never executed
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:   15-block  6
+call   23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed (throw)
+    %%%%%:   15-block  7
+call   26 never executed
+call   27 never executed
+call   28 never executed
+        1:   15-block  8
+        1:   15-block  9
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0
+        1:   15-block 10
+    $$$$$:   15-block 11
+call   32 never executed
+    $$$$$:   15-block 12
+    $$$$$:   15-block 13
+    $$$$$:   15-block 14
+call   33 never executed
+    $$$$$:   15-block 15
+call   34 never executed
+    $$$$$:   15-block 16
+    $$$$$:   15-block 17
+    $$$$$:   15-block 18
+call   35 never executed
+    $$$$$:   15-block 19
+    $$$$$:   15-block 20
+call   36 never executed
+        1:   16:}
+        1:   16-block  0
+        1:   16-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   16-block  2
+call    3 never executed
+------------------
+_ZN51excesoDeVelocidadTEST_viaje_normal_desordenado_TestC1Ev:
+function _ZN51excesoDeVelocidadTEST_viaje_normal_desordenado_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    8:TEST(excesoDeVelocidadTEST, viaje_normal_desordenado){
+        1:    8-block  0
+call    0 returned 1
+------------------
+        -:   17:
+        2:   18:TEST(excesoDeVelocidadTEST, viaje_normal_ordenado){
+        1:   19:    viaje v = {medicion(1.0,puntoGps(0.0,0.0)),
+        1:   20:               medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   21:               medicion(6.3,puntoGps(0.00004,0.00011)),
+        1:   22:               medicion(7.0,puntoGps(0.00001,0.00002))
+        5:   23:    };
+        -:   24:
+       1*:   25:    ASSERT_FALSE(excesoDeVelocidad(v));
+        1:   26:}
+------------------
+_ZN48excesoDeVelocidadTEST_viaje_normal_ordenado_Test8TestBodyEv:
+function _ZN48excesoDeVelocidadTEST_viaje_normal_ordenado_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:   18:TEST(excesoDeVelocidadTEST, viaje_normal_ordenado){
+        1:   19:    viaje v = {medicion(1.0,puntoGps(0.0,0.0)),
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   19-block  1
+        1:   20:               medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   20-block  1
+        1:   21:               medicion(6.3,puntoGps(0.00004,0.00011)),
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   21-block  1
+        1:   22:               medicion(7.0,puntoGps(0.00001,0.00002))
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   22-block  1
+        5:   23:    };
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   23-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   23-block  4
+        1:   23-block  5
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+    $$$$$:   23-block  6
+    $$$$$:   23-block  7
+        -:   24:
+       1*:   25:    ASSERT_FALSE(excesoDeVelocidad(v));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   25-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   25-block  2
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   25-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   25-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   25-block  5
+call   19 never executed
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:   25-block  6
+call   23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed (throw)
+    %%%%%:   25-block  7
+call   26 never executed
+call   27 never executed
+call   28 never executed
+        1:   25-block  8
+        1:   25-block  9
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0
+        1:   25-block 10
+    $$$$$:   25-block 11
+call   32 never executed
+    $$$$$:   25-block 12
+    $$$$$:   25-block 13
+    $$$$$:   25-block 14
+call   33 never executed
+    $$$$$:   25-block 15
+call   34 never executed
+    $$$$$:   25-block 16
+    $$$$$:   25-block 17
+    $$$$$:   25-block 18
+call   35 never executed
+    $$$$$:   25-block 19
+    $$$$$:   25-block 20
+call   36 never executed
+        1:   26:}
+        1:   26-block  0
+        1:   26-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   26-block  2
+call    3 never executed
+------------------
+_ZN48excesoDeVelocidadTEST_viaje_normal_ordenado_TestC1Ev:
+function _ZN48excesoDeVelocidadTEST_viaje_normal_ordenado_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   18:TEST(excesoDeVelocidadTEST, viaje_normal_ordenado){
+        1:   18-block  0
+call    0 returned 1
+------------------
+        -:   27:
+        2:   28:TEST(excesoDeVelocidadTEST, viaje_rapido_desordenado){
+        1:   29:    viaje v = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   30:               medicion(1.0,puntoGps(1.0,0.0)),
+        1:   31:               medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   32:               medicion(6.3,puntoGps(1.002,0.0041))
+        5:   33:    };
+       1*:   34:    ASSERT_TRUE(excesoDeVelocidad(v));
+        1:   35:}
+------------------
+_ZN51excesoDeVelocidadTEST_viaje_rapido_desordenado_Test8TestBodyEv:
+function _ZN51excesoDeVelocidadTEST_viaje_rapido_desordenado_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:   28:TEST(excesoDeVelocidadTEST, viaje_rapido_desordenado){
+        1:   29:    viaje v = {medicion(7.0,puntoGps(0.00001,0.00002)),
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   29-block  1
+        1:   30:               medicion(1.0,puntoGps(1.0,0.0)),
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   30-block  1
+        1:   31:               medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   31-block  1
+        1:   32:               medicion(6.3,puntoGps(1.002,0.0041))
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   32-block  1
+        5:   33:    };
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   33-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   33-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   33-block  4
+        1:   33-block  5
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+    $$$$$:   33-block  6
+    $$$$$:   33-block  7
+       1*:   34:    ASSERT_TRUE(excesoDeVelocidad(v));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   34-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   34-block  2
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   34-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   34-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   34-block  5
+call   19 never executed
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:   34-block  6
+call   23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed (throw)
+    %%%%%:   34-block  7
+call   26 never executed
+call   27 never executed
+call   28 never executed
+        1:   34-block  8
+        1:   34-block  9
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0
+        1:   34-block 10
+    $$$$$:   34-block 11
+call   32 never executed
+    $$$$$:   34-block 12
+    $$$$$:   34-block 13
+    $$$$$:   34-block 14
+call   33 never executed
+    $$$$$:   34-block 15
+call   34 never executed
+    $$$$$:   34-block 16
+    $$$$$:   34-block 17
+    $$$$$:   34-block 18
+call   35 never executed
+    $$$$$:   34-block 19
+    $$$$$:   34-block 20
+call   36 never executed
+        1:   35:}
+        1:   35-block  0
+        1:   35-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   35-block  2
+call    3 never executed
+------------------
+_ZN51excesoDeVelocidadTEST_viaje_rapido_desordenado_TestC1Ev:
+function _ZN51excesoDeVelocidadTEST_viaje_rapido_desordenado_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   28:TEST(excesoDeVelocidadTEST, viaje_rapido_desordenado){
+        1:   28-block  0
+call    0 returned 1
+------------------
+        -:   36:
+        2:   37:TEST(excesoDeVelocidadTEST, viaje_rapido_ordenado){
+        1:   38:    viaje v = {medicion(1.0,puntoGps(0.0,0.0)),
+        1:   39:               medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   40:               medicion(6.3,puntoGps(1.002,0.0041)),
+        1:   41:               medicion(7.0,puntoGps(0.00001,0.00002))
+        5:   42:    };
+       1*:   43:    ASSERT_TRUE(excesoDeVelocidad(v));
+        1:   44:}
+------------------
+_ZN48excesoDeVelocidadTEST_viaje_rapido_ordenado_Test8TestBodyEv:
+function _ZN48excesoDeVelocidadTEST_viaje_rapido_ordenado_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:   37:TEST(excesoDeVelocidadTEST, viaje_rapido_ordenado){
+        1:   38:    viaje v = {medicion(1.0,puntoGps(0.0,0.0)),
+        1:   38-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   38-block  1
+        1:   39:               medicion(4.0,puntoGps(0.00002,0.00001)),
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   39-block  1
+        1:   40:               medicion(6.3,puntoGps(1.002,0.0041)),
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   40-block  1
+        1:   41:               medicion(7.0,puntoGps(0.00001,0.00002))
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   41-block  1
+        5:   42:    };
+        1:   42-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   42-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   42-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   42-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   42-block  4
+        1:   42-block  5
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+    $$$$$:   42-block  6
+    $$$$$:   42-block  7
+       1*:   43:    ASSERT_TRUE(excesoDeVelocidad(v));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   43-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   43-block  2
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   43-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   43-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   43-block  5
+call   19 never executed
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:   43-block  6
+call   23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed (throw)
+    %%%%%:   43-block  7
+call   26 never executed
+call   27 never executed
+call   28 never executed
+        1:   43-block  8
+        1:   43-block  9
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0
+        1:   43-block 10
+    $$$$$:   43-block 11
+call   32 never executed
+    $$$$$:   43-block 12
+    $$$$$:   43-block 13
+    $$$$$:   43-block 14
+call   33 never executed
+    $$$$$:   43-block 15
+call   34 never executed
+    $$$$$:   43-block 16
+    $$$$$:   43-block 17
+    $$$$$:   43-block 18
+call   35 never executed
+    $$$$$:   43-block 19
+    $$$$$:   43-block 20
+call   36 never executed
+        1:   44:}
+        1:   44-block  0
+        1:   44-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   44-block  2
+call    3 never executed
+------------------
+_ZN48excesoDeVelocidadTEST_viaje_rapido_ordenado_TestC1Ev:
+function _ZN48excesoDeVelocidadTEST_viaje_rapido_ordenado_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   37:TEST(excesoDeVelocidadTEST, viaje_rapido_ordenado){
+        1:   37-block  0
+call    0 returned 1
+------------------

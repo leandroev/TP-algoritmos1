@@ -1,0 +1,1536 @@
+        -:    0:Source:C:/Users/Lean-zabi-chan/Desktop/transporteUrbano/tests/completarHuecosTEST.cpp
+        -:    0:Graph:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\completarHuecosTEST.gcno
+        -:    0:Data:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\completarHuecosTEST.gcda
+        -:    0:Runs:1
+        -:    1:#include "../solucion.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:const gps hueco = puntoGps(-1000,-1000);
+        -:    8:
+function _Z13sin_faltantesSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EES_IiSaIiEE called 1 returned 100% blocks executed 85%
+        1:    9:bool sin_faltantes(viaje v_viaje, vector<int> faltantes){
+       1*:   10:    for (int i = 0; i < faltantes.size(); ++i) {
+        1:   10-block  0
+    %%%%%:   10-block  1
+        1:   10-block  2
+call    0 returned 1
+branch  1 taken 1
+branch  2 taken 0 (fallthrough)
+        1:   11:        if(obtenerPosicion(v_viaje[faltantes[i]]) == hueco){
+        1:   11-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   11-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   11-block  2
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+        1:   12:            return false;
+        1:   12-block  0
+        -:   13:        }
+        -:   14:    }
+    #####:   15:    return true;
+    %%%%%:   15-block  0
+        -:   16:}
+        -:   17:
+function _Z26obtener_siguiente_de_huecoSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EEi called 3 returned 100% blocks executed 83%
+        3:   18:int obtener_siguiente_de_hueco(viaje v_viaje, int indice_hueco){
+        -:   19:    int index;
+        3:   20:    viaje temp = ordenar_viaje(v_viaje);
+        3:   20-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   20-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   20-block  2
+call    6 returned 3
+    $$$$$:   20-block  3
+call    7 never executed
+    $$$$$:   20-block  4
+        7:   21:    for (int i = 1; i < temp.size(); ++i) {
+        4:   21-block  0
+        7:   21-block  1
+call    0 returned 7
+branch  1 taken 7
+branch  2 taken 0 (fallthrough)
+        7:   22:        if(v_viaje[indice_hueco] == temp[i]){
+        7:   22-block  0
+call    0 returned 7
+call    1 returned 7
+call    2 returned 7
+branch  3 taken 7 (fallthrough)
+branch  4 taken 0 (throw)
+        7:   22-block  1
+branch  5 taken 3 (fallthrough)
+branch  6 taken 4
+        3:   23:            index = i+1;
+        3:   24:            break;
+        3:   24-block  0
+        -:   25:        }
+        -:   26:    }
+       3*:   27:    for (int j = index; j < temp.size(); ++j) {
+        3:   27-block  0
+    %%%%%:   27-block  1
+        3:   27-block  2
+call    0 returned 3
+branch  1 taken 3
+branch  2 taken 0 (fallthrough)
+        3:   28:        if(obtenerPosicion(temp[j]) != hueco){
+        3:   28-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   28-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   28-block  2
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0
+    $$$$$:   28-block  3
+        3:   29:            index = j;
+        3:   30:            break;
+        3:   30-block  0
+        -:   31:        }
+        -:   32:    }
+        5:   33:    for (int k = 0; k < v_viaje.size() ; ++k) {
+        3:   33-block  0
+        2:   33-block  1
+        5:   33-block  2
+call    0 returned 5
+branch  1 taken 5
+branch  2 taken 0 (fallthrough)
+        5:   34:        if(obtenerTiempo(v_viaje[k]) == obtenerTiempo(temp[index])){
+        5:   34-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   34-block  1
+call    4 returned 5
+call    5 returned 5
+branch  6 taken 5 (fallthrough)
+branch  7 taken 0 (throw)
+        5:   34-block  2
+branch  8 taken 3 (fallthrough)
+branch  9 taken 2
+        3:   35:            index = k;
+        3:   36:            break;
+        3:   36-block  0
+        -:   37:        }
+        -:   38:    }
+        3:   39:    return index;
+        3:   39-block  0
+        3:   40:}
+        3:   40-block  0
+call    0 returned 3
+    $$$$$:   40-block  1
+call    1 never executed
+        -:   41:
+function _Z25obtener_anterior_de_huecoSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EEi called 3 returned 100% blocks executed 82%
+        3:   42:int obtener_anterior_de_hueco(viaje v_viaje, int indice_hueco){
+        3:   43:    int index = 0;
+        3:   44:    viaje temp = ordenar_viaje(v_viaje);
+        3:   44-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   44-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   44-block  2
+call    6 returned 3
+    $$$$$:   44-block  3
+call    7 never executed
+    $$$$$:   44-block  4
+        7:   45:    for (int i = 1; i < temp.size(); ++i) {
+        4:   45-block  0
+        7:   45-block  1
+call    0 returned 7
+branch  1 taken 7
+branch  2 taken 0 (fallthrough)
+        7:   46:        if(v_viaje[indice_hueco] == temp[i]){
+        7:   46-block  0
+call    0 returned 7
+call    1 returned 7
+call    2 returned 7
+branch  3 taken 7 (fallthrough)
+branch  4 taken 0 (throw)
+        7:   46-block  1
+branch  5 taken 3 (fallthrough)
+branch  6 taken 4
+        3:   47:            index = i-1;
+        3:   48:            break;
+        3:   48-block  0
+        -:   49:        }
+        -:   50:    }
+       3*:   51:    for (int j = index; j > -1; j--) {
+        3:   51-block  0
+    %%%%%:   51-block  1
+        3:   51-block  2
+branch  0 taken 3
+branch  1 taken 0 (fallthrough)
+        3:   52:        if(obtenerPosicion(temp[j]) != hueco){
+        3:   52-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   52-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   52-block  2
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0
+    $$$$$:   52-block  3
+        3:   53:            index = j;
+        3:   54:            break;
+        3:   54-block  0
+        -:   55:        }
+        -:   56:    }
+        8:   57:    for (int k = 0; k < v_viaje.size() ; ++k) {
+        3:   57-block  0
+        5:   57-block  1
+        8:   57-block  2
+call    0 returned 8
+branch  1 taken 8
+branch  2 taken 0 (fallthrough)
+        8:   58:        if(obtenerTiempo(v_viaje[k]) == obtenerTiempo(temp[index])){
+        8:   58-block  0
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 8 (fallthrough)
+branch  3 taken 0 (throw)
+        8:   58-block  1
+call    4 returned 8
+call    5 returned 8
+branch  6 taken 8 (fallthrough)
+branch  7 taken 0 (throw)
+        8:   58-block  2
+branch  8 taken 3 (fallthrough)
+branch  9 taken 5
+        3:   59:            index = k;
+        3:   60:            break;
+        3:   60-block  0
+        -:   61:        }
+        -:   62:    }
+        3:   63:    return index;
+        3:   63-block  0
+        3:   64:}
+        3:   64-block  0
+call    0 returned 3
+    $$$$$:   64-block  1
+call    1 never executed
+        -:   65:
+function _Z33distancia_y_tiempo_proporcionalesSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EES4_S_IiSaIiEE called 1 returned 100% blocks executed 74%
+        1:   66:bool distancia_y_tiempo_proporcionales(viaje con_huecos, viaje sin_huecos, vector<int> faltantes){
+        -:   67:    double proporcion_t;
+        1:   68:    gps gps_anterior;
+        1:   69:    gps gps_siguiente;
+        1:   70:    gps gps_actual;
+        -:   71:    tiempo time_siguiente;
+        -:   72:    tiempo time_anterior;
+        -:   73:    tiempo time_actual;
+        -:   74:    int index;
+        -:   75:    double dist_anterior;
+        -:   76:    double dist_cercanos;
+       1*:   77:    for (int i = 0; i < faltantes.size(); ++i) {
+        1:   77-block  0
+    %%%%%:   77-block  1
+        1:   77-block  2
+call    0 returned 1
+branch  1 taken 1
+branch  2 taken 0 (fallthrough)
+        1:   78:        index = faltantes[i];
+        1:   78-block  0
+call    0 returned 1
+        1:   79:        int cercano_siguiente = obtener_siguiente_de_hueco(con_huecos, index);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   79-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   79-block  1
+call    6 returned 1
+    $$$$$:   79-block  2
+call    7 never executed
+    $$$$$:   79-block  3
+        1:   80:        int cercano_anterior = obtener_anterior_de_hueco(con_huecos, index);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   80-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   80-block  1
+call    6 returned 1
+    $$$$$:   80-block  2
+call    7 never executed
+    $$$$$:   80-block  3
+        1:   81:        gps_actual = obtenerPosicion(con_huecos[index]);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   81-block  0
+call    4 returned 1
+    $$$$$:   81-block  1
+        1:   82:        time_actual = obtenerTiempo(con_huecos[index]);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   83:        gps_anterior = obtenerPosicion(sin_huecos[cercano_anterior]);
+        1:   83-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   83-block  1
+call    4 returned 1
+    $$$$$:   83-block  2
+        1:   84:        time_anterior = obtenerTiempo(sin_huecos[cercano_anterior]);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   85:        gps_siguiente = obtenerPosicion(sin_huecos[cercano_siguiente]);
+        1:   85-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   85-block  1
+call    4 returned 1
+    $$$$$:   85-block  2
+        1:   86:        time_siguiente = obtenerTiempo(sin_huecos[cercano_siguiente]);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   87:        proporcion_t = (time_actual-time_anterior)/(time_siguiente - time_anterior);
+        1:   88:        dist_cercanos = distMts(gps_anterior, gps_siguiente)*proporcion_t;
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   89:        dist_anterior = distMts(gps_actual, gps_anterior);
+        1:   89-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   90:        if(dist_cercanos != dist_anterior){
+        1:   90-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   91:            return false;
+        1:   91-block  0
+        -:   92:        }
+        -:   93:    }
+    #####:   94:    return true;
+    %%%%%:   94-block  0
+        -:   95:}
+        -:   96:
+function _Z10sin_huecosSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EE called 1 returned 100% blocks executed 92%
+        1:   97:bool sin_huecos(viaje v_viaje){
+        3:   98:    for (int i = 0; i < v_viaje.size(); ++i) {
+        1:   98-block  0
+        2:   98-block  1
+        3:   98-block  2
+call    0 returned 3
+branch  1 taken 3
+branch  2 taken 0 (fallthrough)
+        3:   99:        if(obtenerPosicion(v_viaje[i]) == hueco) {
+        3:   99-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   99-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   99-block  2
+branch  7 taken 1 (fallthrough)
+branch  8 taken 2
+        1:  100:            return false;
+        1:  100-block  0
+        -:  101:        }
+        -:  102:    }
+    #####:  103:    return true;
+    %%%%%:  103-block  0
+        -:  104:}
+        -:  105:
+        -:  106:
+        2:  107:TEST(completarHuecosTEST, largo_del_viaje_no_cambia){
+        1:  108:	gps p1 = puntoGps(-33, -34);
+        1:  109:	gps p2 = puntoGps(10, 10);
+        1:  110:	gps p3 = puntoGps(0, 0);
+        1:  111:    gps p4 = hueco;
+        -:  112:
+        -:  113:	viaje viaje_con_hueco = {medicion(3, p1),
+        -:  114:				             medicion(0, p2),
+        -:  115:				             medicion(7, p3),
+        -:  116:				             medicion(4, p4)
+        2:  117:	};
+        -:  118:
+        1:  119:	vector<int> faltantes;
+        5:  120:	for (int i = 0; i < viaje_con_hueco.size(); ++i)
+        -:  121:	{
+        4:  122:		if(obtenerPosicion(viaje_con_hueco[i]) == hueco){
+        1:  123:			faltantes.push_back(i);
+        -:  124:		}
+        -:  125:	}
+        -:  126:
+        1:  127:	viaje viaje_sin_hueco = viaje_con_hueco;
+        1:  128:    completarHuecos(viaje_sin_hueco,faltantes);
+        -:  129:
+       1*:  130:    EXPECT_EQ(viaje_sin_hueco.size(),viaje_con_hueco.size());
+        1:  131:}
+------------------
+_ZN50completarHuecosTEST_largo_del_viaje_no_cambia_Test8TestBodyEv:
+function _ZN50completarHuecosTEST_largo_del_viaje_no_cambia_Test8TestBodyEv called 1 returned 100% blocks executed 52%
+        1:  107:TEST(completarHuecosTEST, largo_del_viaje_no_cambia){
+        1:  108:	gps p1 = puntoGps(-33, -34);
+        1:  108-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  109:	gps p2 = puntoGps(10, 10);
+        1:  109-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  110:	gps p3 = puntoGps(0, 0);
+        1:  110-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  111:    gps p4 = hueco;
+        -:  112:
+        -:  113:	viaje viaje_con_hueco = {medicion(3, p1),
+        -:  114:				             medicion(0, p2),
+        -:  115:				             medicion(7, p3),
+        -:  116:				             medicion(4, p4)
+        2:  117:	};
+        1:  117-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  117-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  117-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  117-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  117-block  4
+        1:  117-block  5
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+    $$$$$:  117-block  6
+    $$$$$:  117-block  7
+        -:  118:
+        1:  119:	vector<int> faltantes;
+call    0 returned 1
+        5:  120:	for (int i = 0; i < viaje_con_hueco.size(); ++i)
+        4:  120-block  0
+        5:  120-block  1
+call    0 returned 5
+branch  1 taken 4
+branch  2 taken 1 (fallthrough)
+        -:  121:	{
+        4:  122:		if(obtenerPosicion(viaje_con_hueco[i]) == hueco){
+        4:  122-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:  122-block  1
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:  122-block  2
+branch  7 taken 1 (fallthrough)
+branch  8 taken 3
+    $$$$$:  122-block  3
+        1:  123:			faltantes.push_back(i);
+        1:  123-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  124:		}
+        -:  125:	}
+        -:  126:
+        1:  127:	viaje viaje_sin_hueco = viaje_con_hueco;
+        1:  127-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  128:    completarHuecos(viaje_sin_hueco,faltantes);
+        1:  128-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  128-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  128-block  2
+call    6 returned 1
+    $$$$$:  128-block  3
+call    7 never executed
+    $$$$$:  128-block  4
+        -:  129:
+       1*:  130:    EXPECT_EQ(viaje_sin_hueco.size(),viaje_con_hueco.size());
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  130-block  0
+call    5 returned 1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  130-block  1
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:  130-block  2
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:  130-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  130-block  4
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  130-block  5
+call   20 never executed
+call   21 never executed
+        1:  130-block  6
+call   22 returned 1
+    $$$$$:  130-block  7
+    $$$$$:  130-block  8
+    $$$$$:  130-block  9
+call   23 never executed
+    $$$$$:  130-block 10
+    $$$$$:  130-block 11
+call   24 never executed
+    $$$$$:  130-block 12
+    $$$$$:  130-block 13
+call   25 never executed
+        1:  131:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  131-block  0
+call    3 never executed
+    $$$$$:  131-block  1
+call    4 never executed
+    $$$$$:  131-block  2
+call    5 never executed
+------------------
+_ZN50completarHuecosTEST_largo_del_viaje_no_cambia_TestC1Ev:
+function _ZN50completarHuecosTEST_largo_del_viaje_no_cambia_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  107:TEST(completarHuecosTEST, largo_del_viaje_no_cambia){
+        1:  107-block  0
+call    0 returned 1
+------------------
+        -:  132:
+        2:  133:TEST(completarHuecosTEST, sin_pos_faltantes){
+        1:  134:    gps p1 = puntoGps(-33, -34);
+        1:  135:    gps p2 = puntoGps(10, 10);
+        1:  136:    gps p3 = hueco;
+        1:  137:    gps p4 = hueco;
+        1:  138:    gps p5 = hueco;
+        -:  139:
+        -:  140:    viaje viaje_con_huecos = {medicion(9, p1),
+        -:  141:                              medicion(1, p2),
+        -:  142:                              medicion(7, p3),
+        -:  143:                              medicion(4, p4),
+        -:  144:                              medicion(2, p5)
+        2:  145:    };
+        -:  146:
+        1:  147:    vector<int> faltantes;
+        6:  148:    for (int i = 0; i < viaje_con_huecos.size(); ++i)
+        -:  149:    {
+        5:  150:        if(obtenerPosicion(viaje_con_huecos[i]) == hueco){
+        3:  151:            faltantes.push_back(i);
+        -:  152:        }
+        -:  153:    }
+        -:  154:
+        1:  155:    viaje viaje_sin_huecos = viaje_con_huecos;
+        1:  156:    completarHuecos(viaje_sin_huecos,faltantes);
+        -:  157:
+        1:  158:    EXPECT_TRUE(sin_faltantes(viaje_sin_huecos,faltantes));
+        1:  159:}
+------------------
+_ZN42completarHuecosTEST_sin_pos_faltantes_Test8TestBodyEv:
+function _ZN42completarHuecosTEST_sin_pos_faltantes_Test8TestBodyEv called 1 returned 100% blocks executed 59%
+        1:  133:TEST(completarHuecosTEST, sin_pos_faltantes){
+        1:  134:    gps p1 = puntoGps(-33, -34);
+        1:  134-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  135:    gps p2 = puntoGps(10, 10);
+        1:  135-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  136:    gps p3 = hueco;
+        1:  137:    gps p4 = hueco;
+        1:  138:    gps p5 = hueco;
+        -:  139:
+        -:  140:    viaje viaje_con_huecos = {medicion(9, p1),
+        -:  141:                              medicion(1, p2),
+        -:  142:                              medicion(7, p3),
+        -:  143:                              medicion(4, p4),
+        -:  144:                              medicion(2, p5)
+        2:  145:    };
+        1:  145-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  145-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  145-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  145-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  145-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  145-block  5
+        1:  145-block  6
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+    $$$$$:  145-block  7
+    $$$$$:  145-block  8
+        -:  146:
+        1:  147:    vector<int> faltantes;
+call    0 returned 1
+        6:  148:    for (int i = 0; i < viaje_con_huecos.size(); ++i)
+        5:  148-block  0
+        6:  148-block  1
+call    0 returned 6
+branch  1 taken 5
+branch  2 taken 1 (fallthrough)
+        -:  149:    {
+        5:  150:        if(obtenerPosicion(viaje_con_huecos[i]) == hueco){
+        5:  150-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:  150-block  1
+call    4 returned 5
+branch  5 taken 5 (fallthrough)
+branch  6 taken 0 (throw)
+        5:  150-block  2
+branch  7 taken 3 (fallthrough)
+branch  8 taken 2
+    $$$$$:  150-block  3
+        3:  151:            faltantes.push_back(i);
+        3:  151-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  152:        }
+        -:  153:    }
+        -:  154:
+        1:  155:    viaje viaje_sin_huecos = viaje_con_huecos;
+        1:  155-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  156:    completarHuecos(viaje_sin_huecos,faltantes);
+        1:  156-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  156-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  156-block  2
+call    6 returned 1
+    $$$$$:  156-block  3
+call    7 never executed
+    $$$$$:  156-block  4
+        -:  157:
+        1:  158:    EXPECT_TRUE(sin_faltantes(viaje_sin_huecos,faltantes));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  158-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  158-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  158-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  158-block  3
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0
+        1:  158-block  4
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:  158-block  5
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0 (throw)
+        1:  158-block  6
+call   23 returned 1
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:  158-block  7
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:  158-block  8
+call   30 returned 1
+call   31 returned 1
+call   32 returned 1
+        1:  158-block  9
+call   33 returned 1
+    $$$$$:  158-block 10
+call   34 never executed
+    $$$$$:  158-block 11
+    $$$$$:  158-block 12
+call   35 never executed
+    $$$$$:  158-block 13
+    $$$$$:  158-block 14
+    $$$$$:  158-block 15
+call   36 never executed
+    $$$$$:  158-block 16
+call   37 never executed
+    $$$$$:  158-block 17
+    $$$$$:  158-block 18
+    $$$$$:  158-block 19
+call   38 never executed
+    $$$$$:  158-block 20
+    $$$$$:  158-block 21
+call   39 never executed
+        1:  159:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  159-block  0
+call    3 never executed
+    $$$$$:  159-block  1
+call    4 never executed
+    $$$$$:  159-block  2
+call    5 never executed
+------------------
+_ZN42completarHuecosTEST_sin_pos_faltantes_TestC1Ev:
+function _ZN42completarHuecosTEST_sin_pos_faltantes_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  133:TEST(completarHuecosTEST, sin_pos_faltantes){
+        1:  133-block  0
+call    0 returned 1
+------------------
+        -:  160:
+        2:  161:TEST(completarHuecosTEST, puntos_cercanos){
+        1:  162:    gps p1 = puntoGps(-33, -34);
+        1:  163:    gps p2 = puntoGps(10, 10);
+        1:  164:    gps p3 = puntoGps(50,5);
+        1:  165:    gps p4 = hueco;
+        1:  166:    gps p5 = hueco;
+        -:  167:
+        -:  168:    viaje viaje_con_huecos = {medicion(9, p1),
+        -:  169:                              medicion(1, p2),
+        -:  170:                              medicion(5, p3),
+        -:  171:                              medicion(7, p4),
+        -:  172:                              medicion(2, p5)
+        2:  173:    };
+        -:  174:
+        1:  175:    vector<int> faltantes;
+        6:  176:    for (int i = 0; i < viaje_con_huecos.size(); ++i)
+        -:  177:    {
+        5:  178:        if(obtenerPosicion(viaje_con_huecos[i]) == hueco){
+        2:  179:            faltantes.push_back(i);
+        -:  180:        }
+        -:  181:    }
+        -:  182:
+        1:  183:    viaje viaje_sin_huecos = viaje_con_huecos;
+        1:  184:    completarHuecos(viaje_sin_huecos,faltantes);
+        -:  185:
+        1:  186:    int indice_anterior_tiempo_2 = obtener_anterior_de_hueco(viaje_con_huecos, 4);
+        1:  187:    int indice_siguiente_tiempo_2 = obtener_siguiente_de_hueco(viaje_con_huecos, 4);
+        1:  188:    int indice_anterior_tiempo_7 = obtener_anterior_de_hueco(viaje_con_huecos, 3);
+        1:  189:    int indice_siguiente_tiempo_7 = obtener_siguiente_de_hueco(viaje_con_huecos, 3);
+       1*:  190:    EXPECT_EQ(indice_anterior_tiempo_2, 1);
+       1*:  191:    EXPECT_EQ(indice_siguiente_tiempo_2, 2);
+       1*:  192:    EXPECT_EQ(indice_anterior_tiempo_7, 2);
+       1*:  193:    EXPECT_EQ(indice_siguiente_tiempo_7, 0);
+        1:  194:}
+------------------
+_ZN40completarHuecosTEST_puntos_cercanos_Test8TestBodyEv:
+function _ZN40completarHuecosTEST_puntos_cercanos_Test8TestBodyEv called 1 returned 100% blocks executed 38%
+        1:  161:TEST(completarHuecosTEST, puntos_cercanos){
+        1:  162:    gps p1 = puntoGps(-33, -34);
+        1:  162-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  163:    gps p2 = puntoGps(10, 10);
+        1:  163-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  164:    gps p3 = puntoGps(50,5);
+        1:  164-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  165:    gps p4 = hueco;
+        1:  166:    gps p5 = hueco;
+        -:  167:
+        -:  168:    viaje viaje_con_huecos = {medicion(9, p1),
+        -:  169:                              medicion(1, p2),
+        -:  170:                              medicion(5, p3),
+        -:  171:                              medicion(7, p4),
+        -:  172:                              medicion(2, p5)
+        2:  173:    };
+        1:  173-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  173-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  173-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  173-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  173-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  173-block  5
+        1:  173-block  6
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+    $$$$$:  173-block  7
+    $$$$$:  173-block  8
+        -:  174:
+        1:  175:    vector<int> faltantes;
+call    0 returned 1
+        6:  176:    for (int i = 0; i < viaje_con_huecos.size(); ++i)
+        5:  176-block  0
+        6:  176-block  1
+call    0 returned 6
+branch  1 taken 5
+branch  2 taken 1 (fallthrough)
+        -:  177:    {
+        5:  178:        if(obtenerPosicion(viaje_con_huecos[i]) == hueco){
+        5:  178-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:  178-block  1
+call    4 returned 5
+branch  5 taken 5 (fallthrough)
+branch  6 taken 0 (throw)
+        5:  178-block  2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 3
+    $$$$$:  178-block  3
+        2:  179:            faltantes.push_back(i);
+        2:  179-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  180:        }
+        -:  181:    }
+        -:  182:
+        1:  183:    viaje viaje_sin_huecos = viaje_con_huecos;
+        1:  183-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  184:    completarHuecos(viaje_sin_huecos,faltantes);
+        1:  184-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  184-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  184-block  2
+call    6 returned 1
+    $$$$$:  184-block  3
+call    7 never executed
+    $$$$$:  184-block  4
+        -:  185:
+        1:  186:    int indice_anterior_tiempo_2 = obtener_anterior_de_hueco(viaje_con_huecos, 4);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  186-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  186-block  1
+call    6 returned 1
+    $$$$$:  186-block  2
+call    7 never executed
+    $$$$$:  186-block  3
+        1:  187:    int indice_siguiente_tiempo_2 = obtener_siguiente_de_hueco(viaje_con_huecos, 4);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  187-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  187-block  1
+call    6 returned 1
+    $$$$$:  187-block  2
+call    7 never executed
+    $$$$$:  187-block  3
+        1:  188:    int indice_anterior_tiempo_7 = obtener_anterior_de_hueco(viaje_con_huecos, 3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  188-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  188-block  1
+call    6 returned 1
+    $$$$$:  188-block  2
+call    7 never executed
+    $$$$$:  188-block  3
+        1:  189:    int indice_siguiente_tiempo_7 = obtener_siguiente_de_hueco(viaje_con_huecos, 3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  189-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  189-block  1
+call    6 returned 1
+    $$$$$:  189-block  2
+call    7 never executed
+    $$$$$:  189-block  3
+       1*:  190:    EXPECT_EQ(indice_anterior_tiempo_2, 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  190-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  190-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  190-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  190-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  190-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:  190-block  5
+call   18 never executed
+call   19 never executed
+        1:  190-block  6
+call   20 returned 1
+    $$$$$:  190-block  7
+    $$$$$:  190-block  8
+call   21 never executed
+    $$$$$:  190-block  9
+    $$$$$:  190-block 10
+call   22 never executed
+    $$$$$:  190-block 11
+    $$$$$:  190-block 12
+call   23 never executed
+       1*:  191:    EXPECT_EQ(indice_siguiente_tiempo_2, 2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  191-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  191-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  191-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  191-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  191-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:  191-block  5
+call   18 never executed
+call   19 never executed
+        1:  191-block  6
+call   20 returned 1
+    $$$$$:  191-block  7
+    $$$$$:  191-block  8
+call   21 never executed
+    $$$$$:  191-block  9
+    $$$$$:  191-block 10
+call   22 never executed
+    $$$$$:  191-block 11
+    $$$$$:  191-block 12
+call   23 never executed
+       1*:  192:    EXPECT_EQ(indice_anterior_tiempo_7, 2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  192-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  192-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  192-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  192-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  192-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:  192-block  5
+call   18 never executed
+call   19 never executed
+        1:  192-block  6
+call   20 returned 1
+    $$$$$:  192-block  7
+    $$$$$:  192-block  8
+call   21 never executed
+    $$$$$:  192-block  9
+    $$$$$:  192-block 10
+call   22 never executed
+    $$$$$:  192-block 11
+    $$$$$:  192-block 12
+call   23 never executed
+       1*:  193:    EXPECT_EQ(indice_siguiente_tiempo_7, 0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  193-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  193-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  193-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  193-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  193-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:  193-block  5
+call   18 never executed
+call   19 never executed
+        1:  193-block  6
+call   20 returned 1
+    $$$$$:  193-block  7
+    $$$$$:  193-block  8
+call   21 never executed
+    $$$$$:  193-block  9
+    $$$$$:  193-block 10
+call   22 never executed
+    $$$$$:  193-block 11
+    $$$$$:  193-block 12
+call   23 never executed
+        1:  194:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  194-block  0
+call    3 never executed
+    $$$$$:  194-block  1
+call    4 never executed
+    $$$$$:  194-block  2
+call    5 never executed
+------------------
+_ZN40completarHuecosTEST_puntos_cercanos_TestC1Ev:
+function _ZN40completarHuecosTEST_puntos_cercanos_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  161:TEST(completarHuecosTEST, puntos_cercanos){
+        1:  161-block  0
+call    0 returned 1
+------------------
+        -:  195:
+        2:  196:TEST(completarHuecosTEST, proporcional_distancia_y_tiempo){
+        1:  197:    gps p1 = puntoGps(-33, -34);
+        1:  198:    gps p2 = puntoGps(10, 10);
+        1:  199:    gps p3 = puntoGps(50,5);
+        1:  200:    gps p4 = hueco;
+        1:  201:    gps p5 = hueco;
+        -:  202:
+        -:  203:    viaje viaje_con_huecos = {medicion(9, p1),
+        -:  204:                              medicion(1, p2),
+        -:  205:                              medicion(5, p3),
+        -:  206:                              medicion(7, p4),
+        -:  207:                              medicion(2, p5)
+        2:  208:    };
+        -:  209:
+        1:  210:    vector<int> faltantes;
+        6:  211:    for (int i = 0; i < viaje_con_huecos.size(); ++i)
+        -:  212:    {
+        5:  213:        if(obtenerPosicion(viaje_con_huecos[i]) == hueco){
+        2:  214:            faltantes.push_back(i);
+        -:  215:        }
+        -:  216:    }
+        -:  217:
+        1:  218:    viaje viaje_sin_huecos = viaje_con_huecos;
+        1:  219:    completarHuecos(viaje_sin_huecos,faltantes);
+        -:  220:
+        1:  221:    EXPECT_TRUE(distancia_y_tiempo_proporcionales(viaje_con_huecos, viaje_sin_huecos, faltantes));
+        1:  222:}
+------------------
+_ZN56completarHuecosTEST_proporcional_distancia_y_tiempo_Test8TestBodyEv:
+function _ZN56completarHuecosTEST_proporcional_distancia_y_tiempo_Test8TestBodyEv called 1 returned 100% blocks executed 58%
+        1:  196:TEST(completarHuecosTEST, proporcional_distancia_y_tiempo){
+        1:  197:    gps p1 = puntoGps(-33, -34);
+        1:  197-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  198:    gps p2 = puntoGps(10, 10);
+        1:  198-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  199:    gps p3 = puntoGps(50,5);
+        1:  199-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  200:    gps p4 = hueco;
+        1:  201:    gps p5 = hueco;
+        -:  202:
+        -:  203:    viaje viaje_con_huecos = {medicion(9, p1),
+        -:  204:                              medicion(1, p2),
+        -:  205:                              medicion(5, p3),
+        -:  206:                              medicion(7, p4),
+        -:  207:                              medicion(2, p5)
+        2:  208:    };
+        1:  208-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  208-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  208-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  208-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  208-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  208-block  5
+        1:  208-block  6
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+    $$$$$:  208-block  7
+    $$$$$:  208-block  8
+        -:  209:
+        1:  210:    vector<int> faltantes;
+call    0 returned 1
+        6:  211:    for (int i = 0; i < viaje_con_huecos.size(); ++i)
+        5:  211-block  0
+        6:  211-block  1
+call    0 returned 6
+branch  1 taken 5
+branch  2 taken 1 (fallthrough)
+        -:  212:    {
+        5:  213:        if(obtenerPosicion(viaje_con_huecos[i]) == hueco){
+        5:  213-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:  213-block  1
+call    4 returned 5
+branch  5 taken 5 (fallthrough)
+branch  6 taken 0 (throw)
+        5:  213-block  2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 3
+    $$$$$:  213-block  3
+        2:  214:            faltantes.push_back(i);
+        2:  214-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  215:        }
+        -:  216:    }
+        -:  217:
+        1:  218:    viaje viaje_sin_huecos = viaje_con_huecos;
+        1:  218-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  219:    completarHuecos(viaje_sin_huecos,faltantes);
+        1:  219-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  219-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  219-block  2
+call    6 returned 1
+    $$$$$:  219-block  3
+call    7 never executed
+    $$$$$:  219-block  4
+        -:  220:
+        1:  221:    EXPECT_TRUE(distancia_y_tiempo_proporcionales(viaje_con_huecos, viaje_sin_huecos, faltantes));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  221-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  221-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  221-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  221-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  221-block  4
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  221-block  5
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:  221-block  6
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:  221-block  7
+call   27 returned 1
+call   28 returned 1
+branch 29 taken 1 (fallthrough)
+branch 30 taken 0 (throw)
+        1:  221-block  8
+call   31 returned 1
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0 (throw)
+        1:  221-block  9
+call   34 returned 1
+call   35 returned 1
+call   36 returned 1
+        1:  221-block 10
+call   37 returned 1
+    $$$$$:  221-block 11
+call   38 never executed
+    $$$$$:  221-block 12
+    $$$$$:  221-block 13
+call   39 never executed
+    $$$$$:  221-block 14
+    $$$$$:  221-block 15
+call   40 never executed
+    $$$$$:  221-block 16
+    $$$$$:  221-block 17
+    $$$$$:  221-block 18
+call   41 never executed
+    $$$$$:  221-block 19
+call   42 never executed
+    $$$$$:  221-block 20
+    $$$$$:  221-block 21
+    $$$$$:  221-block 22
+call   43 never executed
+    $$$$$:  221-block 23
+    $$$$$:  221-block 24
+call   44 never executed
+        1:  222:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  222-block  0
+call    3 never executed
+    $$$$$:  222-block  1
+call    4 never executed
+    $$$$$:  222-block  2
+call    5 never executed
+------------------
+_ZN56completarHuecosTEST_proporcional_distancia_y_tiempo_TestC1Ev:
+function _ZN56completarHuecosTEST_proporcional_distancia_y_tiempo_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  196:TEST(completarHuecosTEST, proporcional_distancia_y_tiempo){
+        1:  196-block  0
+call    0 returned 1
+------------------
+        -:  223:
+        2:  224:TEST(completarHuecosTEST, mismos_no_huecos){
+        1:  225:    gps p1 = puntoGps(-33, -34);
+        1:  226:    gps p2 = puntoGps(10, 10);
+        1:  227:    gps p3 = hueco;
+        -:  228:
+        -:  229:    viaje viaje_v = {medicion(9, p1),
+        -:  230:                     medicion(1, p2),
+        -:  231:                     medicion(5, p3),
+        2:  232:    };
+        -:  233:
+        1:  234:    vector<int> faltantes;
+        4:  235:    for (int i = 0; i < viaje_v.size(); ++i)
+        -:  236:    {
+        3:  237:        if(obtenerPosicion(viaje_v[i]) == hueco){
+        1:  238:            faltantes.push_back(i);
+        -:  239:        }
+        -:  240:    }
+        1:  241:    completarHuecos(viaje_v, faltantes);
+        1:  242:    EXPECT_TRUE(sin_huecos(viaje_v));
+        1:  243:}
+------------------
+_ZN41completarHuecosTEST_mismos_no_huecos_Test8TestBodyEv:
+function _ZN41completarHuecosTEST_mismos_no_huecos_Test8TestBodyEv called 1 returned 100% blocks executed 59%
+        1:  224:TEST(completarHuecosTEST, mismos_no_huecos){
+        1:  225:    gps p1 = puntoGps(-33, -34);
+        1:  225-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  226:    gps p2 = puntoGps(10, 10);
+        1:  226-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  227:    gps p3 = hueco;
+        -:  228:
+        -:  229:    viaje viaje_v = {medicion(9, p1),
+        -:  230:                     medicion(1, p2),
+        -:  231:                     medicion(5, p3),
+        2:  232:    };
+        1:  232-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  232-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  232-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  232-block  3
+        1:  232-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:  232-block  5
+    $$$$$:  232-block  6
+        -:  233:
+        1:  234:    vector<int> faltantes;
+call    0 returned 1
+        4:  235:    for (int i = 0; i < viaje_v.size(); ++i)
+        3:  235-block  0
+        4:  235-block  1
+call    0 returned 4
+branch  1 taken 3
+branch  2 taken 1 (fallthrough)
+        -:  236:    {
+        3:  237:        if(obtenerPosicion(viaje_v[i]) == hueco){
+        3:  237-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:  237-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:  237-block  2
+branch  7 taken 1 (fallthrough)
+branch  8 taken 2
+    $$$$$:  237-block  3
+        1:  238:            faltantes.push_back(i);
+        1:  238-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  239:        }
+        -:  240:    }
+        1:  241:    completarHuecos(viaje_v, faltantes);
+        1:  241-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  241-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  241-block  2
+call    6 returned 1
+    $$$$$:  241-block  3
+call    7 never executed
+    $$$$$:  241-block  4
+        1:  242:    EXPECT_TRUE(sin_huecos(viaje_v));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  242-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  242-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  242-block  2
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0
+        1:  242-block  3
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  242-block  4
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:  242-block  5
+call   19 returned 1
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0 (throw)
+        1:  242-block  6
+call   23 returned 1
+branch 24 taken 1 (fallthrough)
+branch 25 taken 0 (throw)
+        1:  242-block  7
+call   26 returned 1
+call   27 returned 1
+call   28 returned 1
+        1:  242-block  8
+call   29 returned 1
+    $$$$$:  242-block  9
+call   30 never executed
+    $$$$$:  242-block 10
+    $$$$$:  242-block 11
+    $$$$$:  242-block 12
+call   31 never executed
+    $$$$$:  242-block 13
+call   32 never executed
+    $$$$$:  242-block 14
+    $$$$$:  242-block 15
+    $$$$$:  242-block 16
+call   33 never executed
+    $$$$$:  242-block 17
+    $$$$$:  242-block 18
+call   34 never executed
+        1:  243:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  243-block  0
+call    2 never executed
+    $$$$$:  243-block  1
+call    3 never executed
+------------------
+_ZN41completarHuecosTEST_mismos_no_huecos_TestC1Ev:
+function _ZN41completarHuecosTEST_mismos_no_huecos_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  224:TEST(completarHuecosTEST, mismos_no_huecos){
+        1:  224-block  0
+call    0 returned 1
+------------------

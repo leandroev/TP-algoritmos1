@@ -1,0 +1,294 @@
+        -:    0:Source:C:/Users/Lean-zabi-chan/Desktop/transporteUrbano/tests/distanciaAuxTEST.cpp
+        -:    0:Graph:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\distanciaAuxTEST.gcno
+        -:    0:Data:C:\Users\Lean-zabi-chan\Desktop\transporteUrbano\cmake-build-debug\CMakeFiles\transporteUrbanoTest.dir\tests\distanciaAuxTEST.gcda
+        -:    0:Runs:1
+        -:    1:#include "../solucion.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:
+        2:    8:TEST(distanciaAuxTEST, distanciaUnoMismoEsCero){
+        1:    9:    gps p1 = puntoGps(-33, -34);
+        1:   10:    gps p2 = p1;
+        -:   11:
+       1*:   12:    EXPECT_NEAR(distMts(p1, p2), 0.0, 0.001);
+        1:   13:}
+------------------
+_ZN45distanciaAuxTEST_distanciaUnoMismoEsCero_Test8TestBodyEv:
+function _ZN45distanciaAuxTEST_distanciaUnoMismoEsCero_Test8TestBodyEv called 1 returned 100% blocks executed 33%
+        1:    8:TEST(distanciaAuxTEST, distanciaUnoMismoEsCero){
+        1:    9:    gps p1 = puntoGps(-33, -34);
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    gps p2 = p1;
+        -:   11:
+       1*:   12:    EXPECT_NEAR(distMts(p1, p2), 0.0, 0.001);
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   12-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   12-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   12-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   12-block  5
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   12-block  6
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:   12-block  7
+call   21 never executed
+call   22 never executed
+        1:   12-block  8
+call   23 returned 1
+    $$$$$:   12-block  9
+call   24 never executed
+    $$$$$:   12-block 10
+    $$$$$:   12-block 11
+call   25 never executed
+    $$$$$:   12-block 12
+    $$$$$:   12-block 13
+call   26 never executed
+        1:   13:}
+------------------
+_ZN45distanciaAuxTEST_distanciaUnoMismoEsCero_TestC1Ev:
+function _ZN45distanciaAuxTEST_distanciaUnoMismoEsCero_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    8:TEST(distanciaAuxTEST, distanciaUnoMismoEsCero){
+        1:    8-block  0
+call    0 returned 1
+------------------
+        -:   14:
+        2:   15:TEST(distanciaAuxTEST, distanciaMoviendoEnLat){
+        1:   16:    gps p1 = puntoGps(-33, -34);
+        1:   17:    gps p2 = desviarPunto(p1, 100, 0);
+        -:   18:
+       1*:   19:    EXPECT_NEAR(distMts(p1, p2), 100.0, 0.01);
+        1:   20:}
+------------------
+_ZN44distanciaAuxTEST_distanciaMoviendoEnLat_Test8TestBodyEv:
+function _ZN44distanciaAuxTEST_distanciaMoviendoEnLat_Test8TestBodyEv called 1 returned 100% blocks executed 36%
+        1:   15:TEST(distanciaAuxTEST, distanciaMoviendoEnLat){
+        1:   16:    gps p1 = puntoGps(-33, -34);
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17:    gps p2 = desviarPunto(p1, 100, 0);
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   18:
+       1*:   19:    EXPECT_NEAR(distMts(p1, p2), 100.0, 0.01);
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   19-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   19-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   19-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   19-block  5
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   19-block  6
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:   19-block  7
+call   21 never executed
+call   22 never executed
+        1:   19-block  8
+call   23 returned 1
+    $$$$$:   19-block  9
+call   24 never executed
+    $$$$$:   19-block 10
+    $$$$$:   19-block 11
+call   25 never executed
+    $$$$$:   19-block 12
+    $$$$$:   19-block 13
+call   26 never executed
+        1:   20:}
+------------------
+_ZN44distanciaAuxTEST_distanciaMoviendoEnLat_TestC1Ev:
+function _ZN44distanciaAuxTEST_distanciaMoviendoEnLat_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(distanciaAuxTEST, distanciaMoviendoEnLat){
+        1:   15-block  0
+call    0 returned 1
+------------------
+        -:   21:
+        2:   22:TEST(distanciaAuxTEST, distanciaMoviendoEnLng){
+        1:   23:    gps p1 = puntoGps(-33, -34);
+        1:   24:    gps p2 = desviarPunto(p1, 0, 100);
+        -:   25:
+       1*:   26:    EXPECT_NEAR(distMts(p1, p2), 100.0, 0.01);
+        1:   27:}
+------------------
+_ZN44distanciaAuxTEST_distanciaMoviendoEnLng_Test8TestBodyEv:
+function _ZN44distanciaAuxTEST_distanciaMoviendoEnLng_Test8TestBodyEv called 1 returned 100% blocks executed 36%
+        1:   22:TEST(distanciaAuxTEST, distanciaMoviendoEnLng){
+        1:   23:    gps p1 = puntoGps(-33, -34);
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24:    gps p2 = desviarPunto(p1, 0, 100);
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   25:
+       1*:   26:    EXPECT_NEAR(distMts(p1, p2), 100.0, 0.01);
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   26-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   26-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   26-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   26-block  5
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   26-block  6
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:   26-block  7
+call   21 never executed
+call   22 never executed
+        1:   26-block  8
+call   23 returned 1
+    $$$$$:   26-block  9
+call   24 never executed
+    $$$$$:   26-block 10
+    $$$$$:   26-block 11
+call   25 never executed
+    $$$$$:   26-block 12
+    $$$$$:   26-block 13
+call   26 never executed
+        1:   27:}
+------------------
+_ZN44distanciaAuxTEST_distanciaMoviendoEnLng_TestC1Ev:
+function _ZN44distanciaAuxTEST_distanciaMoviendoEnLng_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   22:TEST(distanciaAuxTEST, distanciaMoviendoEnLng){
+        1:   22-block  0
+call    0 returned 1
+------------------
+        -:   28:
+        2:   29:TEST(distanciaAuxTEST, distanciaMoviendoEnLatYLng){
+        1:   30:    gps p1 = puntoGps(-33, -34);
+        1:   31:    gps p2 = desviarPunto(p1, 3., 4.);
+        -:   32:
+       1*:   33:    EXPECT_NEAR(distMts(p1, p2), 5.0, 0.01);
+        1:   34:}
+------------------
+_ZN48distanciaAuxTEST_distanciaMoviendoEnLatYLng_Test8TestBodyEv:
+function _ZN48distanciaAuxTEST_distanciaMoviendoEnLatYLng_Test8TestBodyEv called 1 returned 100% blocks executed 36%
+        1:   29:TEST(distanciaAuxTEST, distanciaMoviendoEnLatYLng){
+        1:   30:    gps p1 = puntoGps(-33, -34);
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   31:    gps p2 = desviarPunto(p1, 3., 4.);
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   32:
+       1*:   33:    EXPECT_NEAR(distMts(p1, p2), 5.0, 0.01);
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   33-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   33-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   33-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   33-block  5
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   33-block  6
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:   33-block  7
+call   21 never executed
+call   22 never executed
+        1:   33-block  8
+call   23 returned 1
+    $$$$$:   33-block  9
+call   24 never executed
+    $$$$$:   33-block 10
+    $$$$$:   33-block 11
+call   25 never executed
+    $$$$$:   33-block 12
+    $$$$$:   33-block 13
+call   26 never executed
+        1:   34:}
+------------------
+_ZN48distanciaAuxTEST_distanciaMoviendoEnLatYLng_TestC1Ev:
+function _ZN48distanciaAuxTEST_distanciaMoviendoEnLatYLng_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   29:TEST(distanciaAuxTEST, distanciaMoviendoEnLatYLng){
+        1:   29-block  0
+call    0 returned 1
+------------------

@@ -18,5 +18,4 @@ gps obtenerEsquinaInferior(celda c);
 nombre obtenerNombre(celda c);
 
 
-
 #endif //TRANSPORTEURBANO_AUXILIARES_H
