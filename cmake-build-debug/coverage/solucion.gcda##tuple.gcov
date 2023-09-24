@@ -220,15 +220,15 @@ call    0 returned 1503
 ------------------
         -:  198:
         -:  199:      template<typename _UHead>
-     9341:  200:        constexpr _Head_base(_UHead&& __h)
-     9341:  201:	: _M_head_impl(std::forward<_UHead>(__h)) { }
+     9377:  200:        constexpr _Head_base(_UHead&& __h)
+     9377:  201:	: _M_head_impl(std::forward<_UHead>(__h)) { }
 ------------------
 _ZNSt10_Head_baseILy1ESt5tupleIJddEELb0EEC2IRS1_EEOT_:
-function _ZNSt10_Head_baseILy1ESt5tupleIJddEELb0EEC2IRS1_EEOT_ called 1130 returned 100% blocks executed 100%
-     1130:  200:        constexpr _Head_base(_UHead&& __h)
-     1130:  201:	: _M_head_impl(std::forward<_UHead>(__h)) { }
-     1130:  201-block  0
-call    0 returned 1130
+function _ZNSt10_Head_baseILy1ESt5tupleIJddEELb0EEC2IRS1_EEOT_ called 1139 returned 100% blocks executed 100%
+     1139:  200:        constexpr _Head_base(_UHead&& __h)
+     1139:  201:	: _M_head_impl(std::forward<_UHead>(__h)) { }
+     1139:  201-block  0
+call    0 returned 1139
 ------------------
 _ZNSt10_Head_baseILy0ESt5tupleIJddEELb0EEC2IRS1_EEOT_:
 function _ZNSt10_Head_baseILy0ESt5tupleIJddEELb0EEC2IRS1_EEOT_ called 937 returned 100% blocks executed 100%
@@ -238,11 +238,11 @@ function _ZNSt10_Head_baseILy0ESt5tupleIJddEELb0EEC2IRS1_EEOT_ called 937 return
 call    0 returned 937
 ------------------
 _ZNSt10_Head_baseILy0EdLb0EEC2IRdEEOT_:
-function _ZNSt10_Head_baseILy0EdLb0EEC2IRdEEOT_ called 2328 returned 100% blocks executed 100%
-     2328:  200:        constexpr _Head_base(_UHead&& __h)
-     2328:  201:	: _M_head_impl(std::forward<_UHead>(__h)) { }
-     2328:  201-block  0
-call    0 returned 2328
+function _ZNSt10_Head_baseILy0EdLb0EEC2IRdEEOT_ called 2346 returned 100% blocks executed 100%
+     2346:  200:        constexpr _Head_base(_UHead&& __h)
+     2346:  201:	: _M_head_impl(std::forward<_UHead>(__h)) { }
+     2346:  201-block  0
+call    0 returned 2346
 ------------------
 _ZNSt10_Head_baseILy0EiLb0EEC2IRiEEOT_:
 function _ZNSt10_Head_baseILy0EiLb0EEC2IRiEEOT_ called 937 returned 100% blocks executed 100%
@@ -259,11 +259,11 @@ function _ZNSt10_Head_baseILy2ESt5tupleIJiiEELb0EEC2IRS1_EEOT_ called 937 return
 call    0 returned 937
 ------------------
 _ZNSt10_Head_baseILy1EdLb0EEC2IRdEEOT_:
-function _ZNSt10_Head_baseILy1EdLb0EEC2IRdEEOT_ called 2135 returned 100% blocks executed 100%
-     2135:  200:        constexpr _Head_base(_UHead&& __h)
-     2135:  201:	: _M_head_impl(std::forward<_UHead>(__h)) { }
-     2135:  201-block  0
-call    0 returned 2135
+function _ZNSt10_Head_baseILy1EdLb0EEC2IRdEEOT_ called 2144 returned 100% blocks executed 100%
+     2144:  200:        constexpr _Head_base(_UHead&& __h)
+     2144:  201:	: _M_head_impl(std::forward<_UHead>(__h)) { }
+     2144:  201-block  0
+call    0 returned 2144
 ------------------
 _ZNSt10_Head_baseILy1EiLb0EEC2IRiEEOT_:
 function _ZNSt10_Head_baseILy1EiLb0EEC2IRiEEOT_ called 937 returned 100% blocks executed 100%
@@ -304,22 +304,22 @@ call    0 returned 937
         -:  231:	: _M_head_impl(std::forward<_UHead>(__uhead), *__a._M_a) { }
         -:  232:
         -:  233:      static constexpr _Head&
-    18300:  234:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
+    18717:  234:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
 ------------------
 _ZNSt10_Head_baseILy1EdLb0EE7_M_headERS0_:
-function _ZNSt10_Head_baseILy1EdLb0EE7_M_headERS0_ called 6628 returned 100% blocks executed 100%
-     6628:  234:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
-     6628:  234-block  0
+function _ZNSt10_Head_baseILy1EdLb0EE7_M_headERS0_ called 6668 returned 100% blocks executed 100%
+     6668:  234:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
+     6668:  234-block  0
 ------------------
 _ZNSt10_Head_baseILy1ESt5tupleIJddEELb0EE7_M_headERS2_:
-function _ZNSt10_Head_baseILy1ESt5tupleIJddEELb0EE7_M_headERS2_ called 1377 returned 100% blocks executed 100%
-     1377:  234:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
-     1377:  234-block  0
+function _ZNSt10_Head_baseILy1ESt5tupleIJddEELb0EE7_M_headERS2_ called 1449 returned 100% blocks executed 100%
+     1449:  234:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
+     1449:  234-block  0
 ------------------
 _ZNSt10_Head_baseILy0EdLb0EE7_M_headERS0_:
-function _ZNSt10_Head_baseILy0EdLb0EE7_M_headERS0_ called 7371 returned 100% blocks executed 100%
-     7371:  234:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
-     7371:  234-block  0
+function _ZNSt10_Head_baseILy0EdLb0EE7_M_headERS0_ called 7676 returned 100% blocks executed 100%
+     7676:  234:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
+     7676:  234-block  0
 ------------------
 _ZNSt10_Head_baseILy1EiLb0EE7_M_headERS0_:
 function _ZNSt10_Head_baseILy1EiLb0EE7_M_headERS0_ called 1462 returned 100% blocks executed 100%
@@ -333,7 +333,7 @@ function _ZNSt10_Head_baseILy0EiLb0EE7_M_headERS0_ called 1462 returned 100% blo
 ------------------
         -:  235:
         -:  236:      static constexpr const _Head&
-     101*:  237:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
+     123*:  237:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
 ------------------
 _ZNSt10_Head_baseILy1EdLb0EE7_M_headERKS0_:
 function _ZNSt10_Head_baseILy1EdLb0EE7_M_headERKS0_ called 0 returned 0% blocks executed 0%
@@ -341,9 +341,9 @@ function _ZNSt10_Head_baseILy1EdLb0EE7_M_headERKS0_ called 0 returned 0% blocks 
     %%%%%:  237-block  0
 ------------------
 _ZNSt10_Head_baseILy1ESt5tupleIJddEELb0EE7_M_headERKS2_:
-function _ZNSt10_Head_baseILy1ESt5tupleIJddEELb0EE7_M_headERKS2_ called 101 returned 100% blocks executed 100%
-      101:  237:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
-      101:  237-block  0
+function _ZNSt10_Head_baseILy1ESt5tupleIJddEELb0EE7_M_headERKS2_ called 123 returned 100% blocks executed 100%
+      123:  237:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
+      123:  237-block  0
 ------------------
 _ZNSt10_Head_baseILy0EdLb0EE7_M_headERKS0_:
 function _ZNSt10_Head_baseILy0EdLb0EE7_M_headERKS0_ called 0 returned 0% blocks executed 0%
@@ -381,19 +381,19 @@ function _ZNSt10_Head_baseILy0EdLb0EE7_M_headERKS0_ called 0 returned 0% blocks 
         -:  266:      typedef _Head_base<_Idx, _Head> _Base;
         -:  267:
         -:  268:      static constexpr _Head&
-     8833:  269:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+     9138:  269:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
 ------------------
 _ZNSt11_Tuple_implILy0EJddEE7_M_headERS0_:
-function _ZNSt11_Tuple_implILy0EJddEE7_M_headERS0_ called 6700 returned 100% blocks executed 100%
-     6700:  269:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
-     6700:  269-block  0
-call    0 returned 6700
+function _ZNSt11_Tuple_implILy0EJddEE7_M_headERS0_ called 6740 returned 100% blocks executed 100%
+     6740:  269:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+     6740:  269-block  0
+call    0 returned 6740
 ------------------
 _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_headERS2_:
-function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_headERS2_ called 671 returned 100% blocks executed 100%
-      671:  269:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
-      671:  269-block  0
-call    0 returned 671
+function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_headERS2_ called 936 returned 100% blocks executed 100%
+      936:  269:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+      936:  269-block  0
+call    0 returned 936
 ------------------
 _ZNSt11_Tuple_implILy0EJiiEE7_M_headERS0_:
 function _ZNSt11_Tuple_implILy0EJiiEE7_M_headERS0_ called 1462 returned 100% blocks executed 100%
@@ -403,7 +403,7 @@ call    0 returned 1462
 ------------------
         -:  270:
         -:  271:      static constexpr const _Head&
-     117*:  272:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+     139*:  272:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
 ------------------
 _ZNSt11_Tuple_implILy0EJddEE7_M_headERKS0_:
 function _ZNSt11_Tuple_implILy0EJddEE7_M_headERKS0_ called 0 returned 0% blocks executed 0%
@@ -412,19 +412,19 @@ function _ZNSt11_Tuple_implILy0EJddEE7_M_headERKS0_ called 0 returned 0% blocks 
 call    0 never executed
 ------------------
 _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_headERKS2_:
-function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_headERKS2_ called 117 returned 100% blocks executed 100%
-      117:  272:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
-      117:  272-block  0
-call    0 returned 117
+function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_headERKS2_ called 139 returned 100% blocks executed 100%
+      139:  272:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+      139:  272-block  0
+call    0 returned 139
 ------------------
         -:  273:
         -:  274:      static constexpr _Inherited&
-     2996:  275:      _M_tail(_Tuple_impl& __t) noexcept { return __t; }
+     3076:  275:      _M_tail(_Tuple_impl& __t) noexcept { return __t; }
 ------------------
 _ZNSt11_Tuple_implILy0EJddEE7_M_tailERS0_:
-function _ZNSt11_Tuple_implILy0EJddEE7_M_tailERS0_ called 1919 returned 100% blocks executed 100%
-     1919:  275:      _M_tail(_Tuple_impl& __t) noexcept { return __t; }
-     1919:  275-block  0
+function _ZNSt11_Tuple_implILy0EJddEE7_M_tailERS0_ called 1959 returned 100% blocks executed 100%
+     1959:  275:      _M_tail(_Tuple_impl& __t) noexcept { return __t; }
+     1959:  275-block  0
 ------------------
 _ZNSt11_Tuple_implILy0EJiiEE7_M_tailERS0_:
 function _ZNSt11_Tuple_implILy0EJiiEE7_M_tailERS0_ called 988 returned 100% blocks executed 100%
@@ -432,23 +432,23 @@ function _ZNSt11_Tuple_implILy0EJiiEE7_M_tailERS0_ called 988 returned 100% bloc
       988:  275-block  0
 ------------------
 _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_tailERS2_:
-function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_tailERS2_ called 89 returned 100% blocks executed 100%
-       89:  275:      _M_tail(_Tuple_impl& __t) noexcept { return __t; }
-       89:  275-block  0
+function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_tailERS2_ called 129 returned 100% blocks executed 100%
+      129:  275:      _M_tail(_Tuple_impl& __t) noexcept { return __t; }
+      129:  275-block  0
 ------------------
         -:  276:
         -:  277:      static constexpr const _Inherited&
-      202:  278:      _M_tail(const _Tuple_impl& __t) noexcept { return __t; }
+      246:  278:      _M_tail(const _Tuple_impl& __t) noexcept { return __t; }
 ------------------
 _ZNSt11_Tuple_implILy0EJddEE7_M_tailERKS0_:
-function _ZNSt11_Tuple_implILy0EJddEE7_M_tailERKS0_ called 113 returned 100% blocks executed 100%
-      113:  278:      _M_tail(const _Tuple_impl& __t) noexcept { return __t; }
-      113:  278-block  0
+function _ZNSt11_Tuple_implILy0EJddEE7_M_tailERKS0_ called 135 returned 100% blocks executed 100%
+      135:  278:      _M_tail(const _Tuple_impl& __t) noexcept { return __t; }
+      135:  278-block  0
 ------------------
 _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_tailERKS2_:
-function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_tailERKS2_ called 89 returned 100% blocks executed 100%
-       89:  278:      _M_tail(const _Tuple_impl& __t) noexcept { return __t; }
-       89:  278-block  0
+function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_tailERKS2_ called 111 returned 100% blocks executed 100%
+      111:  278:      _M_tail(const _Tuple_impl& __t) noexcept { return __t; }
+      111:  278-block  0
 ------------------
         -:  279:
         -:  280:      constexpr _Tuple_impl()
@@ -462,10 +462,10 @@ function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE7_M_tailERKS2_ called 89 retur
         -:  288:      template<typename _UHead, typename... _UTail,
         -:  289:	       typename = __enable_if_t<sizeof...(_Tail) == sizeof...(_UTail)>>
         -:  290:	explicit constexpr
-     4946:  291:	_Tuple_impl(_UHead&& __head, _UTail&&... __tail)
+     4955:  291:	_Tuple_impl(_UHead&& __head, _UTail&&... __tail)
         -:  292:	: _Inherited(std::forward<_UTail>(__tail)...),
-     4946:  293:	  _Base(std::forward<_UHead>(__head))
-     4946:  294:	{ }
+     4955:  293:	  _Base(std::forward<_UHead>(__head))
+     4955:  294:	{ }
 ------------------
 _ZNSt11_Tuple_implILy1EJSt5tupleIJddEES0_IJiiEEEEC2IRS1_JRS2_EvEEOT_DpOT0_:
 function _ZNSt11_Tuple_implILy1EJSt5tupleIJddEES0_IJiiEEEEC2IRS1_JRS2_EvEEOT_DpOT0_ called 937 returned 100% blocks executed 100%
@@ -493,16 +493,16 @@ call    4 returned 937
       937:  294:	{ }
 ------------------
 _ZNSt11_Tuple_implILy0EJddEEC2IRdJS2_EvEEOT_DpOT0_:
-function _ZNSt11_Tuple_implILy0EJddEEC2IRdJS2_EvEEOT_DpOT0_ called 2135 returned 100% blocks executed 100%
-     2135:  291:	_Tuple_impl(_UHead&& __head, _UTail&&... __tail)
+function _ZNSt11_Tuple_implILy0EJddEEC2IRdJS2_EvEEOT_DpOT0_ called 2144 returned 100% blocks executed 100%
+     2144:  291:	_Tuple_impl(_UHead&& __head, _UTail&&... __tail)
         -:  292:	: _Inherited(std::forward<_UTail>(__tail)...),
-     2135:  293:	  _Base(std::forward<_UHead>(__head))
-     2135:  293-block  0
-call    0 returned 2135
-call    1 returned 2135
-call    2 returned 2135
-call    3 returned 2135
-     2135:  294:	{ }
+     2144:  293:	  _Base(std::forward<_UHead>(__head))
+     2144:  293-block  0
+call    0 returned 2144
+call    1 returned 2144
+call    2 returned 2144
+call    3 returned 2144
+     2144:  294:	{ }
 ------------------
 _ZNSt11_Tuple_implILy0EJiiEEC2IRiJS2_EvEEOT_DpOT0_:
 function _ZNSt11_Tuple_implILy0EJiiEEC2IRiJS2_EvEEOT_DpOT0_ called 937 returned 100% blocks executed 100%
@@ -675,72 +675,90 @@ call    0 returned 2828
         -:  424:      template<typename... _UElements>
         -:  425:	_GLIBCXX20_CONSTEXPR
         -:  426:	void
-      202:  427:	_M_assign(const _Tuple_impl<_Idx, _UElements...>& ___in)
+      246:  427:	_M_assign(const _Tuple_impl<_Idx, _UElements...>& ___in)
         -:  428:	{
-      202:  429:	  _M_head(*this) = _Tuple_impl<_Idx, _UElements...>::_M_head(___in);
-      404:  430:	  _M_tail(*this)._M_assign(
-      202:  431:	      _Tuple_impl<_Idx, _UElements...>::_M_tail(___in));
-      202:  432:	}
+      246:  429:	  _M_head(*this) = _Tuple_impl<_Idx, _UElements...>::_M_head(___in);
+      492:  430:	  _M_tail(*this)._M_assign(
+      246:  431:	      _Tuple_impl<_Idx, _UElements...>::_M_tail(___in));
+      246:  432:	}
 ------------------
 _ZNSt11_Tuple_implILy0EJddEE9_M_assignIJddEEEvRKS_ILy0EJDpT_EE:
-function _ZNSt11_Tuple_implILy0EJddEE9_M_assignIJddEEEvRKS_ILy0EJDpT_EE called 113 returned 100% blocks executed 100%
-      113:  427:	_M_assign(const _Tuple_impl<_Idx, _UElements...>& ___in)
+function _ZNSt11_Tuple_implILy0EJddEE9_M_assignIJddEEEvRKS_ILy0EJDpT_EE called 135 returned 100% blocks executed 100%
+      135:  427:	_M_assign(const _Tuple_impl<_Idx, _UElements...>& ___in)
         -:  428:	{
-      113:  429:	  _M_head(*this) = _Tuple_impl<_Idx, _UElements...>::_M_head(___in);
-      113:  429-block  0
-call    0 returned 113
-call    1 returned 113
-      226:  430:	  _M_tail(*this)._M_assign(
-call    0 returned 113
-call    1 returned 113
-      113:  431:	      _Tuple_impl<_Idx, _UElements...>::_M_tail(___in));
-call    0 returned 113
-      113:  432:	}
+      135:  429:	  _M_head(*this) = _Tuple_impl<_Idx, _UElements...>::_M_head(___in);
+      135:  429-block  0
+call    0 returned 135
+call    1 returned 135
+      270:  430:	  _M_tail(*this)._M_assign(
+call    0 returned 135
+call    1 returned 135
+      135:  431:	      _Tuple_impl<_Idx, _UElements...>::_M_tail(___in));
+call    0 returned 135
+      135:  432:	}
 ------------------
 _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE9_M_assignIJdS1_EEEvRKS_ILy0EJDpT_EE:
-function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE9_M_assignIJdS1_EEEvRKS_ILy0EJDpT_EE called 89 returned 100% blocks executed 100%
-       89:  427:	_M_assign(const _Tuple_impl<_Idx, _UElements...>& ___in)
+function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE9_M_assignIJdS1_EEEvRKS_ILy0EJDpT_EE called 111 returned 100% blocks executed 100%
+      111:  427:	_M_assign(const _Tuple_impl<_Idx, _UElements...>& ___in)
         -:  428:	{
-       89:  429:	  _M_head(*this) = _Tuple_impl<_Idx, _UElements...>::_M_head(___in);
-       89:  429-block  0
-call    0 returned 89
-call    1 returned 89
-      178:  430:	  _M_tail(*this)._M_assign(
-call    0 returned 89
-call    1 returned 89
-       89:  431:	      _Tuple_impl<_Idx, _UElements...>::_M_tail(___in));
-call    0 returned 89
-       89:  432:	}
+      111:  429:	  _M_head(*this) = _Tuple_impl<_Idx, _UElements...>::_M_head(___in);
+      111:  429-block  0
+call    0 returned 111
+call    1 returned 111
+      222:  430:	  _M_tail(*this)._M_assign(
+call    0 returned 111
+call    1 returned 111
+      111:  431:	      _Tuple_impl<_Idx, _UElements...>::_M_tail(___in));
+call    0 returned 111
+      111:  432:	}
 ------------------
         -:  433:
         -:  434:      template<typename _UHead, typename... _UTails>
         -:  435:	_GLIBCXX20_CONSTEXPR
         -:  436:	void
-     1397:  437:	_M_assign(_Tuple_impl<_Idx, _UHead, _UTails...>&& ___in)
+     1415:  437:	_M_assign(_Tuple_impl<_Idx, _UHead, _UTails...>&& ___in)
         -:  438:	{
-     1397:  439:	  _M_head(*this) = std::forward<_UHead>
-     1397:  440:	    (_Tuple_impl<_Idx, _UHead, _UTails...>::_M_head(___in));
-     2794:  441:	  _M_tail(*this)._M_assign(
-     1397:  442:	      std::move(_Tuple_impl<_Idx, _UHead, _UTails...>::_M_tail(___in)));
-     1397:  443:	}
+     1415:  439:	  _M_head(*this) = std::forward<_UHead>
+     1415:  440:	    (_Tuple_impl<_Idx, _UHead, _UTails...>::_M_head(___in));
+     2830:  441:	  _M_tail(*this)._M_assign(
+     1415:  442:	      std::move(_Tuple_impl<_Idx, _UHead, _UTails...>::_M_tail(___in)));
+     1415:  443:	}
+------------------
+_ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE9_M_assignIdJS1_EEEvOS_ILy0EJT_DpT0_EE:
+function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEE9_M_assignIdJS1_EEEvOS_ILy0EJT_DpT0_EE called 9 returned 100% blocks executed 100%
+        9:  437:	_M_assign(_Tuple_impl<_Idx, _UHead, _UTails...>&& ___in)
+        -:  438:	{
+        9:  439:	  _M_head(*this) = std::forward<_UHead>
+call    0 returned 9
+        9:  440:	    (_Tuple_impl<_Idx, _UHead, _UTails...>::_M_head(___in));
+        9:  440-block  0
+call    0 returned 9
+call    1 returned 9
+       18:  441:	  _M_tail(*this)._M_assign(
+call    0 returned 9
+call    1 returned 9
+        9:  442:	      std::move(_Tuple_impl<_Idx, _UHead, _UTails...>::_M_tail(___in)));
+call    0 returned 9
+call    1 returned 9
+        9:  443:	}
 ------------------
 _ZNSt11_Tuple_implILy0EJddEE9_M_assignIdJdEEEvOS_ILy0EJT_DpT0_EE:
-function _ZNSt11_Tuple_implILy0EJddEE9_M_assignIdJdEEEvOS_ILy0EJT_DpT0_EE called 903 returned 100% blocks executed 100%
-      903:  437:	_M_assign(_Tuple_impl<_Idx, _UHead, _UTails...>&& ___in)
+function _ZNSt11_Tuple_implILy0EJddEE9_M_assignIdJdEEEvOS_ILy0EJT_DpT0_EE called 912 returned 100% blocks executed 100%
+      912:  437:	_M_assign(_Tuple_impl<_Idx, _UHead, _UTails...>&& ___in)
         -:  438:	{
-      903:  439:	  _M_head(*this) = std::forward<_UHead>
-call    0 returned 903
-      903:  440:	    (_Tuple_impl<_Idx, _UHead, _UTails...>::_M_head(___in));
-      903:  440-block  0
-call    0 returned 903
-call    1 returned 903
-     1806:  441:	  _M_tail(*this)._M_assign(
-call    0 returned 903
-call    1 returned 903
-      903:  442:	      std::move(_Tuple_impl<_Idx, _UHead, _UTails...>::_M_tail(___in)));
-call    0 returned 903
-call    1 returned 903
-      903:  443:	}
+      912:  439:	  _M_head(*this) = std::forward<_UHead>
+call    0 returned 912
+      912:  440:	    (_Tuple_impl<_Idx, _UHead, _UTails...>::_M_head(___in));
+      912:  440-block  0
+call    0 returned 912
+call    1 returned 912
+     1824:  441:	  _M_tail(*this)._M_assign(
+call    0 returned 912
+call    1 returned 912
+      912:  442:	      std::move(_Tuple_impl<_Idx, _UHead, _UTails...>::_M_tail(___in)));
+call    0 returned 912
+call    1 returned 912
+      912:  443:	}
 ------------------
 _ZNSt11_Tuple_implILy0EJiiEE9_M_assignIiJiEEEvOS_ILy0EJT_DpT0_EE:
 function _ZNSt11_Tuple_implILy0EJiiEE9_M_assignIiJiEEEvOS_ILy0EJT_DpT0_EE called 494 returned 100% blocks executed 100%
@@ -813,19 +831,19 @@ call    1 returned 494
         -:  494:      typedef _Head_base<_Idx, _Head> _Base;
         -:  495:
         -:  496:      static constexpr _Head&
-     8864:  497:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+     8976:  497:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
 ------------------
 _ZNSt11_Tuple_implILy1EJdEE7_M_headERS0_:
-function _ZNSt11_Tuple_implILy1EJdEE7_M_headERS0_ called 6628 returned 100% blocks executed 100%
-     6628:  497:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
-     6628:  497-block  0
-call    0 returned 6628
+function _ZNSt11_Tuple_implILy1EJdEE7_M_headERS0_ called 6668 returned 100% blocks executed 100%
+     6668:  497:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+     6668:  497-block  0
+call    0 returned 6668
 ------------------
 _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEE7_M_headERS2_:
-function _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEE7_M_headERS2_ called 774 returned 100% blocks executed 100%
-      774:  497:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
-      774:  497-block  0
-call    0 returned 774
+function _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEE7_M_headERS2_ called 846 returned 100% blocks executed 100%
+      846:  497:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+      846:  497-block  0
+call    0 returned 846
 ------------------
 _ZNSt11_Tuple_implILy1EJiEE7_M_headERS0_:
 function _ZNSt11_Tuple_implILy1EJiEE7_M_headERS0_ called 1462 returned 100% blocks executed 100%
@@ -835,7 +853,7 @@ call    0 returned 1462
 ------------------
         -:  498:
         -:  499:      static constexpr const _Head&
-     101*:  500:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+     123*:  500:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
 ------------------
 _ZNSt11_Tuple_implILy1EJdEE7_M_headERKS0_:
 function _ZNSt11_Tuple_implILy1EJdEE7_M_headERKS0_ called 0 returned 0% blocks executed 0%
@@ -844,10 +862,10 @@ function _ZNSt11_Tuple_implILy1EJdEE7_M_headERKS0_ called 0 returned 0% blocks e
 call    0 never executed
 ------------------
 _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEE7_M_headERKS2_:
-function _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEE7_M_headERKS2_ called 101 returned 100% blocks executed 100%
-      101:  500:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
-      101:  500-block  0
-call    0 returned 101
+function _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEE7_M_headERKS2_ called 123 returned 100% blocks executed 100%
+      123:  500:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+      123:  500-block  0
+call    0 returned 123
 ------------------
         -:  501:
         -:  502:      constexpr
@@ -861,9 +879,9 @@ call    0 returned 101
         -:  510:
         -:  511:      template<typename _UHead>
         -:  512:	explicit constexpr
-     4009:  513:	_Tuple_impl(_UHead&& __head)
-     4009:  514:	: _Base(std::forward<_UHead>(__head))
-     4009:  515:	{ }
+     4018:  513:	_Tuple_impl(_UHead&& __head)
+     4018:  514:	: _Base(std::forward<_UHead>(__head))
+     4018:  515:	{ }
 ------------------
 _ZNSt11_Tuple_implILy2EJSt5tupleIJiiEEEEC2IRS1_EEOT_:
 function _ZNSt11_Tuple_implILy2EJSt5tupleIJiiEEEEC2IRS1_EEOT_ called 937 returned 100% blocks executed 100%
@@ -875,13 +893,13 @@ call    1 returned 937
       937:  515:	{ }
 ------------------
 _ZNSt11_Tuple_implILy1EJdEEC2IRdEEOT_:
-function _ZNSt11_Tuple_implILy1EJdEEC2IRdEEOT_ called 2135 returned 100% blocks executed 100%
-     2135:  513:	_Tuple_impl(_UHead&& __head)
-     2135:  514:	: _Base(std::forward<_UHead>(__head))
-     2135:  514-block  0
-call    0 returned 2135
-call    1 returned 2135
-     2135:  515:	{ }
+function _ZNSt11_Tuple_implILy1EJdEEC2IRdEEOT_ called 2144 returned 100% blocks executed 100%
+     2144:  513:	_Tuple_impl(_UHead&& __head)
+     2144:  514:	: _Base(std::forward<_UHead>(__head))
+     2144:  514-block  0
+call    0 returned 2144
+call    1 returned 2144
+     2144:  515:	{ }
 ------------------
 _ZNSt11_Tuple_implILy1EJiEEC2IRiEEOT_:
 function _ZNSt11_Tuple_implILy1EJiEEC2IRiEEOT_ called 937 returned 100% blocks executed 100%
@@ -1032,53 +1050,66 @@ function _ZNSt11_Tuple_implILy1EJdEEC2EOS0_ called 2828 returned 100% blocks exe
         -:  629:      template<typename _UHead>
         -:  630:	_GLIBCXX20_CONSTEXPR
         -:  631:	void
-      202:  632:	_M_assign(const _Tuple_impl<_Idx, _UHead>& ___in)
+      246:  632:	_M_assign(const _Tuple_impl<_Idx, _UHead>& ___in)
         -:  633:	{
-      202:  634:	  _M_head(*this) = _Tuple_impl<_Idx, _UHead>::_M_head(___in);
-      202:  635:	}
+      246:  634:	  _M_head(*this) = _Tuple_impl<_Idx, _UHead>::_M_head(___in);
+      246:  635:	}
 ------------------
 _ZNSt11_Tuple_implILy1EJdEE9_M_assignIdEEvRKS_ILy1EJT_EE:
-function _ZNSt11_Tuple_implILy1EJdEE9_M_assignIdEEvRKS_ILy1EJT_EE called 113 returned 100% blocks executed 100%
-      113:  632:	_M_assign(const _Tuple_impl<_Idx, _UHead>& ___in)
+function _ZNSt11_Tuple_implILy1EJdEE9_M_assignIdEEvRKS_ILy1EJT_EE called 135 returned 100% blocks executed 100%
+      135:  632:	_M_assign(const _Tuple_impl<_Idx, _UHead>& ___in)
         -:  633:	{
-      113:  634:	  _M_head(*this) = _Tuple_impl<_Idx, _UHead>::_M_head(___in);
-      113:  634-block  0
-call    0 returned 113
-call    1 returned 113
-      113:  635:	}
+      135:  634:	  _M_head(*this) = _Tuple_impl<_Idx, _UHead>::_M_head(___in);
+      135:  634-block  0
+call    0 returned 135
+call    1 returned 135
+      135:  635:	}
 ------------------
 _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEE9_M_assignIS1_EEvRKS_ILy1EJT_EE:
-function _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEE9_M_assignIS1_EEvRKS_ILy1EJT_EE called 89 returned 100% blocks executed 100%
-       89:  632:	_M_assign(const _Tuple_impl<_Idx, _UHead>& ___in)
+function _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEE9_M_assignIS1_EEvRKS_ILy1EJT_EE called 111 returned 100% blocks executed 100%
+      111:  632:	_M_assign(const _Tuple_impl<_Idx, _UHead>& ___in)
         -:  633:	{
-       89:  634:	  _M_head(*this) = _Tuple_impl<_Idx, _UHead>::_M_head(___in);
-       89:  634-block  0
-call    0 returned 89
-call    1 returned 89
-call    2 returned 89
-       89:  635:	}
+      111:  634:	  _M_head(*this) = _Tuple_impl<_Idx, _UHead>::_M_head(___in);
+      111:  634-block  0
+call    0 returned 111
+call    1 returned 111
+call    2 returned 111
+      111:  635:	}
 ------------------
         -:  636:
         -:  637:      template<typename _UHead>
         -:  638:	_GLIBCXX20_CONSTEXPR
         -:  639:	void
-     1397:  640:	_M_assign(_Tuple_impl<_Idx, _UHead>&& ___in)
+     1415:  640:	_M_assign(_Tuple_impl<_Idx, _UHead>&& ___in)
         -:  641:	{
-     1397:  642:	  _M_head(*this)
-     1397:  643:	    = std::forward<_UHead>(_Tuple_impl<_Idx, _UHead>::_M_head(___in));
-     1397:  644:	}
+     1415:  642:	  _M_head(*this)
+     1424:  643:	    = std::forward<_UHead>(_Tuple_impl<_Idx, _UHead>::_M_head(___in));
+     1415:  644:	}
+------------------
+_ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEE9_M_assignIS1_EEvOS_ILy1EJT_EE:
+function _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEE9_M_assignIS1_EEvOS_ILy1EJT_EE called 9 returned 100% blocks executed 100%
+        9:  640:	_M_assign(_Tuple_impl<_Idx, _UHead>&& ___in)
+        -:  641:	{
+        9:  642:	  _M_head(*this)
+call    0 returned 9
+       18:  643:	    = std::forward<_UHead>(_Tuple_impl<_Idx, _UHead>::_M_head(___in));
+        9:  643-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+        9:  644:	}
 ------------------
 _ZNSt11_Tuple_implILy1EJdEE9_M_assignIdEEvOS_ILy1EJT_EE:
-function _ZNSt11_Tuple_implILy1EJdEE9_M_assignIdEEvOS_ILy1EJT_EE called 903 returned 100% blocks executed 100%
-      903:  640:	_M_assign(_Tuple_impl<_Idx, _UHead>&& ___in)
+function _ZNSt11_Tuple_implILy1EJdEE9_M_assignIdEEvOS_ILy1EJT_EE called 912 returned 100% blocks executed 100%
+      912:  640:	_M_assign(_Tuple_impl<_Idx, _UHead>&& ___in)
         -:  641:	{
-      903:  642:	  _M_head(*this)
-call    0 returned 903
-      903:  643:	    = std::forward<_UHead>(_Tuple_impl<_Idx, _UHead>::_M_head(___in));
-      903:  643-block  0
-call    0 returned 903
-call    1 returned 903
-      903:  644:	}
+      912:  642:	  _M_head(*this)
+call    0 returned 912
+      912:  643:	    = std::forward<_UHead>(_Tuple_impl<_Idx, _UHead>::_M_head(___in));
+      912:  643-block  0
+call    0 returned 912
+call    1 returned 912
+      912:  644:	}
 ------------------
 _ZNSt11_Tuple_implILy1EJiEE9_M_assignIiEEvOS_ILy1EJT_EE:
 function _ZNSt11_Tuple_implILy1EJiEE9_M_assignIiEEvOS_ILy1EJT_EE called 494 returned 100% blocks executed 100%
@@ -1794,19 +1825,19 @@ call    0 returned 1318
         -: 1335:      template<typename _U1, typename _U2,
         -: 1336:	       _ImplicitCtor<!__is_alloc_arg<_U1>(), _U1, _U2> = true>
         -: 1337:	constexpr
-     3072: 1338:	tuple(_U1&& __a1, _U2&& __a2)
+     3081: 1338:	tuple(_U1&& __a1, _U2&& __a2)
         -: 1339:	noexcept(__nothrow_constructible<_U1, _U2>())
-     3072: 1340:	: _Inherited(std::forward<_U1>(__a1), std::forward<_U2>(__a2)) { }
+     3081: 1340:	: _Inherited(std::forward<_U1>(__a1), std::forward<_U2>(__a2)) { }
 ------------------
 _ZNSt5tupleIJddEEC1IRdS2_Lb1EEEOT_OT0_:
-function _ZNSt5tupleIJddEEC1IRdS2_Lb1EEEOT_OT0_ called 2135 returned 100% blocks executed 100%
-     2135: 1338:	tuple(_U1&& __a1, _U2&& __a2)
+function _ZNSt5tupleIJddEEC1IRdS2_Lb1EEEOT_OT0_ called 2144 returned 100% blocks executed 100%
+     2144: 1338:	tuple(_U1&& __a1, _U2&& __a2)
         -: 1339:	noexcept(__nothrow_constructible<_U1, _U2>())
-     2135: 1340:	: _Inherited(std::forward<_U1>(__a1), std::forward<_U2>(__a2)) { }
-     2135: 1340-block  0
-call    0 returned 2135
-call    1 returned 2135
-call    2 returned 2135
+     2144: 1340:	: _Inherited(std::forward<_U1>(__a1), std::forward<_U2>(__a2)) { }
+     2144: 1340-block  0
+call    0 returned 2144
+call    1 returned 2144
+call    2 returned 2144
 ------------------
 _ZNSt5tupleIJiiEEC1IRiS2_Lb1EEEOT_OT0_:
 function _ZNSt5tupleIJiiEEC1IRiS2_Lb1EEEOT_OT0_ called 937 returned 100% blocks executed 100%
@@ -2095,65 +2126,79 @@ call    0 returned 2828
         -: 1602:
         -: 1603:      _GLIBCXX20_CONSTEXPR
         -: 1604:      tuple&
-      202: 1605:      operator=(__conditional_t<__assignable<const _T1&, const _T2&>(),
+      246: 1605:      operator=(__conditional_t<__assignable<const _T1&, const _T2&>(),
         -: 1606:				const tuple&,
         -: 1607:				const __nonesuch&> ___in)
         -: 1608:      noexcept(__nothrow_assignable<const _T1&, const _T2&>())
         -: 1609:      {
-      202: 1610:	this->_M_assign(___in);
-      202: 1611:	return *this;
+      246: 1610:	this->_M_assign(___in);
+      246: 1611:	return *this;
         -: 1612:      }
 ------------------
 _ZNSt5tupleIJddEEaSERKS0_:
-function _ZNSt5tupleIJddEEaSERKS0_ called 113 returned 100% blocks executed 100%
-      113: 1605:      operator=(__conditional_t<__assignable<const _T1&, const _T2&>(),
+function _ZNSt5tupleIJddEEaSERKS0_ called 135 returned 100% blocks executed 100%
+      135: 1605:      operator=(__conditional_t<__assignable<const _T1&, const _T2&>(),
         -: 1606:				const tuple&,
         -: 1607:				const __nonesuch&> ___in)
         -: 1608:      noexcept(__nothrow_assignable<const _T1&, const _T2&>())
         -: 1609:      {
-      113: 1610:	this->_M_assign(___in);
-      113: 1610-block  0
-call    0 returned 113
-      113: 1611:	return *this;
+      135: 1610:	this->_M_assign(___in);
+      135: 1610-block  0
+call    0 returned 135
+      135: 1611:	return *this;
         -: 1612:      }
 ------------------
 _ZNSt5tupleIJdS_IJddEEEEaSERKS1_:
-function _ZNSt5tupleIJdS_IJddEEEEaSERKS1_ called 89 returned 100% blocks executed 100%
-       89: 1605:      operator=(__conditional_t<__assignable<const _T1&, const _T2&>(),
+function _ZNSt5tupleIJdS_IJddEEEEaSERKS1_ called 111 returned 100% blocks executed 100%
+      111: 1605:      operator=(__conditional_t<__assignable<const _T1&, const _T2&>(),
         -: 1606:				const tuple&,
         -: 1607:				const __nonesuch&> ___in)
         -: 1608:      noexcept(__nothrow_assignable<const _T1&, const _T2&>())
         -: 1609:      {
-       89: 1610:	this->_M_assign(___in);
-       89: 1610-block  0
-call    0 returned 89
-       89: 1611:	return *this;
+      111: 1610:	this->_M_assign(___in);
+      111: 1610-block  0
+call    0 returned 111
+      111: 1611:	return *this;
         -: 1612:      }
 ------------------
         -: 1613:
         -: 1614:      _GLIBCXX20_CONSTEXPR
         -: 1615:      tuple&
-     1397: 1616:      operator=(__conditional_t<__assignable<_T1, _T2>(),
+     1415: 1616:      operator=(__conditional_t<__assignable<_T1, _T2>(),
         -: 1617:				tuple&&,
         -: 1618:				__nonesuch&&> ___in)
         -: 1619:      noexcept(__nothrow_assignable<_T1, _T2>())
         -: 1620:      {
-     1397: 1621:	this->_M_assign(std::move(___in));
-     1397: 1622:	return *this;
+     1415: 1621:	this->_M_assign(std::move(___in));
+     1415: 1622:	return *this;
+        -: 1623:      }
+------------------
+_ZNSt5tupleIJdS_IJddEEEEaSEOS1_:
+function _ZNSt5tupleIJdS_IJddEEEEaSEOS1_ called 9 returned 100% blocks executed 100%
+        9: 1616:      operator=(__conditional_t<__assignable<_T1, _T2>(),
+        -: 1617:				tuple&&,
+        -: 1618:				__nonesuch&&> ___in)
+        -: 1619:      noexcept(__nothrow_assignable<_T1, _T2>())
+        -: 1620:      {
+        9: 1621:	this->_M_assign(std::move(___in));
+        9: 1621-block  0
+call    0 returned 9
+call    1 returned 9
+        9: 1622:	return *this;
         -: 1623:      }
 ------------------
 _ZNSt5tupleIJddEEaSEOS0_:
-function _ZNSt5tupleIJddEEaSEOS0_ called 903 returned 100% blocks executed 100%
-      903: 1616:      operator=(__conditional_t<__assignable<_T1, _T2>(),
+function _ZNSt5tupleIJddEEaSEOS0_ called 912 returned 100% blocks executed 100%
+      912: 1616:      operator=(__conditional_t<__assignable<_T1, _T2>(),
         -: 1617:				tuple&&,
         -: 1618:				__nonesuch&&> ___in)
         -: 1619:      noexcept(__nothrow_assignable<_T1, _T2>())
         -: 1620:      {
-      903: 1621:	this->_M_assign(std::move(___in));
-      903: 1621-block  0
-call    0 returned 903
-call    1 returned 903
-      903: 1622:	return *this;
+      912: 1621:	this->_M_assign(std::move(___in));
+      912: 1621-block  0
+call    0 returned 912
+call    1 returned 912
+      912: 1622:	return *this;
         -: 1623:      }
 ------------------
 _ZNSt5tupleIJiiEEaSEOS0_:
@@ -2339,8 +2384,23 @@ call    0 returned 474
         -: 1775:
         -: 1776:  template<size_t __i, typename _Head, typename... _Tail>
         -: 1777:    constexpr const _Head&
-        -: 1778:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
-        -: 1779:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+    #####: 1778:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+    #####: 1779:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+------------------
+_ZSt12__get_helperILy1EdJEERKT0_RKSt11_Tuple_implIXT_EJS0_DpT1_EE:
+function _ZSt12__get_helperILy1EdJEERKT0_RKSt11_Tuple_implIXT_EJS0_DpT1_EE called 0 returned 0% blocks executed 0%
+    #####: 1778:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+    #####: 1779:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+    %%%%%: 1779-block  0
+call    0 never executed
+------------------
+_ZSt12__get_helperILy0EdJdEERKT0_RKSt11_Tuple_implIXT_EJS0_DpT1_EE:
+function _ZSt12__get_helperILy0EdJdEERKT0_RKSt11_Tuple_implIXT_EJS0_DpT1_EE called 0 returned 0% blocks executed 0%
+    #####: 1778:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+    #####: 1779:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+    %%%%%: 1779-block  0
+call    0 never executed
+------------------
         -: 1780:
         -: 1781:  // Deleted overload to improve diagnostics for invalid indices
         -: 1782:  template<size_t __i, typename... _Types>
@@ -2371,8 +2431,23 @@ call    0 returned 474
         -: 1792:  /// Return a const reference to the ith element of a const tuple.
         -: 1793:  template<size_t __i, typename... _Elements>
         -: 1794:    constexpr const __tuple_element_t<__i, tuple<_Elements...>>&
-        -: 1795:    get(const tuple<_Elements...>& __t) noexcept
-        -: 1796:    { return std::__get_helper<__i>(__t); }
+    #####: 1795:    get(const tuple<_Elements...>& __t) noexcept
+    #####: 1796:    { return std::__get_helper<__i>(__t); }
+------------------
+_ZSt3getILy1EJddEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS4_:
+function _ZSt3getILy1EJddEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS4_ called 0 returned 0% blocks executed 0%
+    #####: 1795:    get(const tuple<_Elements...>& __t) noexcept
+    #####: 1796:    { return std::__get_helper<__i>(__t); }
+    %%%%%: 1796-block  0
+call    0 never executed
+------------------
+_ZSt3getILy0EJddEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS4_:
+function _ZSt3getILy0EJddEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS4_ called 0 returned 0% blocks executed 0%
+    #####: 1795:    get(const tuple<_Elements...>& __t) noexcept
+    #####: 1796:    { return std::__get_helper<__i>(__t); }
+    %%%%%: 1796-block  0
+call    0 never executed
+------------------
         -: 1797:
         -: 1798:  /// Return an rvalue reference to the ith element of a tuple rvalue.
         -: 1799:  template<size_t __i, typename... _Elements>
@@ -2454,11 +2529,52 @@ call    0 returned 474
         -: 1875:    struct __tuple_compare
         -: 1876:    {
         -: 1877:      static constexpr bool
-        -: 1878:      __eq(const _Tp& __t, const _Up& __u)
+      103: 1878:      __eq(const _Tp& __t, const _Up& __u)
         -: 1879:      {
-        -: 1880:	return bool(std::get<__i>(__t) == std::get<__i>(__u))
-        -: 1881:	  && __tuple_compare<_Tp, _Up, __i + 1, __size>::__eq(__t, __u);
+      103: 1880:	return bool(std::get<__i>(__t) == std::get<__i>(__u))
+     103*: 1881:	  && __tuple_compare<_Tp, _Up, __i + 1, __size>::__eq(__t, __u);
         -: 1882:      }
+------------------
+_ZNSt15__tuple_compareISt5tupleIJddEES1_Ly1ELy2EE4__eqERKS1_S4_:
+function _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly1ELy2EE4__eqERKS1_S4_ called 33 returned 100% blocks executed 89%
+       33: 1878:      __eq(const _Tp& __t, const _Up& __u)
+        -: 1879:      {
+       33: 1880:	return bool(std::get<__i>(__t) == std::get<__i>(__u))
+       33: 1880-block  0
+call    0 returned 33
+call    1 returned 33
+      33*: 1881:	  && __tuple_compare<_Tp, _Up, __i + 1, __size>::__eq(__t, __u);
+branch  0 taken 33 (fallthrough)
+branch  1 taken 0
+       33: 1881-block  0
+call    2 returned 33
+branch  3 taken 33 (fallthrough)
+branch  4 taken 0
+       33: 1881-block  1
+    %%%%%: 1881-block  2
+       33: 1881-block  3
+        -: 1882:      }
+------------------
+_ZNSt15__tuple_compareISt5tupleIJddEES1_Ly0ELy2EE4__eqERKS1_S4_:
+function _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly0ELy2EE4__eqERKS1_S4_ called 70 returned 100% blocks executed 100%
+       70: 1878:      __eq(const _Tp& __t, const _Up& __u)
+        -: 1879:      {
+       70: 1880:	return bool(std::get<__i>(__t) == std::get<__i>(__u))
+       70: 1880-block  0
+call    0 returned 70
+call    1 returned 70
+       70: 1881:	  && __tuple_compare<_Tp, _Up, __i + 1, __size>::__eq(__t, __u);
+branch  0 taken 33 (fallthrough)
+branch  1 taken 37
+       33: 1881-block  0
+call    2 returned 33
+branch  3 taken 33 (fallthrough)
+branch  4 taken 0
+       33: 1881-block  1
+       37: 1881-block  2
+       70: 1881-block  3
+        -: 1882:      }
+------------------
         -: 1883:
         -: 1884:      static constexpr bool
         -: 1885:      __less(const _Tp& __t, const _Up& __u)
@@ -2473,7 +2589,9 @@ call    0 returned 474
         -: 1894:    struct __tuple_compare<_Tp, _Up, __size, __size>
         -: 1895:    {
         -: 1896:      static constexpr bool
-        -: 1897:      __eq(const _Tp&, const _Up&) { return true; }
+function _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly2ELy2EE4__eqERKS1_S4_ called 33 returned 100% blocks executed 100%
+       33: 1897:      __eq(const _Tp&, const _Up&) { return true; }
+       33: 1897-block  0
         -: 1898:
         -: 1899:      static constexpr bool
         -: 1900:      __less(const _Tp&, const _Up&) { return false; }
@@ -2481,7 +2599,8 @@ call    0 returned 474
         -: 1902:
         -: 1903:  template<typename... _TElements, typename... _UElements>
         -: 1904:    constexpr bool
-        -: 1905:    operator==(const tuple<_TElements...>& __t,
+function _ZSteqIJddEJddEEbRKSt5tupleIJDpT_EERKS0_IJDpT0_EE called 70 returned 100% blocks executed 100%
+       70: 1905:    operator==(const tuple<_TElements...>& __t,
         -: 1906:	       const tuple<_UElements...>& __u)
         -: 1907:    {
         -: 1908:      static_assert(sizeof...(_TElements) == sizeof...(_UElements),
@@ -2489,7 +2608,9 @@ call    0 returned 474
         -: 1910:      using __compare = __tuple_compare<tuple<_TElements...>,
         -: 1911:					tuple<_UElements...>,
         -: 1912:					0, sizeof...(_TElements)>;
-        -: 1913:      return __compare::__eq(__t, __u);
+       70: 1913:      return __compare::__eq(__t, __u);
+       70: 1913-block  0
+call    0 returned 70
         -: 1914:    }
         -: 1915:
         -: 1916:#if __cpp_lib_three_way_comparison
@@ -2536,9 +2657,12 @@ call    0 returned 474
         -: 1957:
         -: 1958:  template<typename... _TElements, typename... _UElements>
         -: 1959:    constexpr bool
-        -: 1960:    operator!=(const tuple<_TElements...>& __t,
+function _ZStneIJddEJddEEbRKSt5tupleIJDpT_EERKS0_IJDpT0_EE called 21 returned 100% blocks executed 100%
+       21: 1960:    operator!=(const tuple<_TElements...>& __t,
         -: 1961:	       const tuple<_UElements...>& __u)
-        -: 1962:    { return !(__t == __u); }
+       21: 1962:    { return !(__t == __u); }
+       21: 1962-block  0
+call    0 returned 21
         -: 1963:
         -: 1964:  template<typename... _TElements, typename... _UElements>
         -: 1965:    constexpr bool
@@ -2563,11 +2687,11 @@ call    0 returned 474
         -: 1984:  /// Create a tuple containing copies of the arguments
         -: 1985:  template<typename... _Elements>
         -: 1986:    constexpr tuple<typename __decay_and_strip<_Elements>::__type...>
-     3072: 1987:    make_tuple(_Elements&&... __args)
+     3081: 1987:    make_tuple(_Elements&&... __args)
         -: 1988:    {
         -: 1989:      typedef tuple<typename __decay_and_strip<_Elements>::__type...>
         -: 1990:	__result_type;
-     3072: 1991:      return __result_type(std::forward<_Elements>(__args)...);
+     3081: 1991:      return __result_type(std::forward<_Elements>(__args)...);
         -: 1992:    }
         -: 1993:
         -: 1994:  // _GLIBCXX_RESOLVE_LIB_DEFECTS

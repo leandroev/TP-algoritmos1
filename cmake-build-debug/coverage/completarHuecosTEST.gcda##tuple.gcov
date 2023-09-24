@@ -2222,12 +2222,12 @@ call    0 never executed
         -: 1957:
         -: 1958:  template<typename... _TElements, typename... _UElements>
         -: 1959:    constexpr bool
-function _ZStneIJddEJddEEbRKSt5tupleIJDpT_EERKS0_IJDpT0_EE called 6 returned 100% blocks executed 100%
-        6: 1960:    operator!=(const tuple<_TElements...>& __t,
+function _ZStneIJddEJddEEbRKSt5tupleIJDpT_EERKS0_IJDpT0_EE called 0 returned 0% blocks executed 0%
+    #####: 1960:    operator!=(const tuple<_TElements...>& __t,
         -: 1961:	       const tuple<_UElements...>& __u)
-        6: 1962:    { return !(__t == __u); }
-        6: 1962-block  0
-call    0 returned 6
+    #####: 1962:    { return !(__t == __u); }
+    %%%%%: 1962-block  0
+call    0 never executed
         -: 1963:
         -: 1964:  template<typename... _TElements, typename... _UElements>
         -: 1965:    constexpr bool

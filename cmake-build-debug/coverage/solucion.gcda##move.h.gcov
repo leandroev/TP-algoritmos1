@@ -50,8 +50,8 @@
         -:   46:   */
         -:   47:  template<typename _Tp>
         -:   48:    inline _GLIBCXX_CONSTEXPR _Tp*
-    1377*:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-    1377*:   50:    { return __builtin_addressof(__r); }
+    1689*:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+    1689*:   50:    { return __builtin_addressof(__r); }
 ------------------
 _ZSt11__addressofISt5tupleIJiiEEEPT_RS2_:
 function _ZSt11__addressofISt5tupleIJiiEEEPT_RS2_ called 49 returned 100% blocks executed 100%
@@ -72,10 +72,10 @@ function _ZSt11__addressofISt5tupleIJddEEEPT_RS2_ called 0 returned 0% blocks ex
     %%%%%:   50-block  0
 ------------------
 _ZSt11__addressofISt5tupleIJdS0_IJddEEEEEPT_RS3_:
-function _ZSt11__addressofISt5tupleIJdS0_IJddEEEEEPT_RS3_ called 1307 returned 100% blocks executed 100%
-     1307:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-     1307:   50:    { return __builtin_addressof(__r); }
-     1307:   50-block  0
+function _ZSt11__addressofISt5tupleIJdS0_IJddEEEEEPT_RS3_ called 1619 returned 100% blocks executed 100%
+     1619:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+     1619:   50:    { return __builtin_addressof(__r); }
+     1619:   50-block  0
 ------------------
 _ZSt11__addressofIKSt6vectorISt5tupleIJdS1_IJddEEEESaIS3_EEEPT_RS7_:
 function _ZSt11__addressofIKSt6vectorISt5tupleIJdS1_IJddEEEESaIS3_EEEPT_RS7_ called 18 returned 100% blocks executed 100%
@@ -115,8 +115,8 @@ function _ZSt11__addressofIKSt6vectorISt5tupleIJddEESaIS2_EEEPT_RS6_ called 3 re
         -:   74:  template<typename _Tp>
         -:   75:    _GLIBCXX_NODISCARD
         -:   76:    constexpr _Tp&&
-   48306*:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-   48306*:   78:    { return static_cast<_Tp&&>(__t); }
+   48816*:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+   48816*:   78:    { return static_cast<_Tp&&>(__t); }
 ------------------
 _ZSt7forwardISt5tupleIJiiEEEOT_RNSt16remove_referenceIS2_E4typeE:
 function _ZSt7forwardISt5tupleIJiiEEEOT_RNSt16remove_referenceIS2_E4typeE called 30 returned 100% blocks executed 100%
@@ -130,12 +130,6 @@ function _ZSt7forwardISt5tupleIJS0_IJddEES1_S0_IJiiEEEEEOT_RNSt16remove_referenc
      2636:   78:    { return static_cast<_Tp&&>(__t); }
      2636:   78-block  0
 ------------------
-_ZSt7forwardISt5tupleIJddEEEOT_RNSt16remove_referenceIS2_E4typeE:
-function _ZSt7forwardISt5tupleIJddEEEOT_RNSt16remove_referenceIS2_E4typeE called 14 returned 100% blocks executed 100%
-       14:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-       14:   78:    { return static_cast<_Tp&&>(__t); }
-       14:   78-block  0
-------------------
 _ZSt7forwardIRSt5tupleIJdS0_IJddEEEEEOT_RNSt16remove_referenceIS4_E4typeE:
 function _ZSt7forwardIRSt5tupleIJdS0_IJddEEEEEOT_RNSt16remove_referenceIS4_E4typeE called 0 returned 0% blocks executed 0%
     #####:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
@@ -143,10 +137,16 @@ function _ZSt7forwardIRSt5tupleIJdS0_IJddEEEEEOT_RNSt16remove_referenceIS4_E4typ
     %%%%%:   78-block  0
 ------------------
 _ZSt7forwardIRKSt5tupleIJdS0_IJddEEEEEOT_RNSt16remove_referenceIS5_E4typeE:
-function _ZSt7forwardIRKSt5tupleIJdS0_IJddEEEEEOT_RNSt16remove_referenceIS5_E4typeE called 1004 returned 100% blocks executed 100%
-     1004:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-     1004:   78:    { return static_cast<_Tp&&>(__t); }
-     1004:   78-block  0
+function _ZSt7forwardIRKSt5tupleIJdS0_IJddEEEEEOT_RNSt16remove_referenceIS5_E4typeE called 1316 returned 100% blocks executed 100%
+     1316:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+     1316:   78:    { return static_cast<_Tp&&>(__t); }
+     1316:   78-block  0
+------------------
+_ZSt7forwardISt5tupleIJddEEEOT_RNSt16remove_referenceIS2_E4typeE:
+function _ZSt7forwardISt5tupleIJddEEEOT_RNSt16remove_referenceIS2_E4typeE called 23 returned 100% blocks executed 100%
+       23:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+       23:   78:    { return static_cast<_Tp&&>(__t); }
+       23:   78-block  0
 ------------------
 _ZSt7forwardIRKSt5tupleIJiiEEEOT_RNSt16remove_referenceIS4_E4typeE:
 function _ZSt7forwardIRKSt5tupleIJiiEEEOT_RNSt16remove_referenceIS4_E4typeE called 59 returned 100% blocks executed 100%
@@ -167,10 +167,10 @@ function _ZSt7forwardIRKSt5tupleIJddEEEOT_RNSt16remove_referenceIS4_E4typeE call
     %%%%%:   78-block  0
 ------------------
 _ZSt7forwardIdEOT_RNSt16remove_referenceIS0_E4typeE:
-function _ZSt7forwardIdEOT_RNSt16remove_referenceIS0_E4typeE called 1806 returned 100% blocks executed 100%
-     1806:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-     1806:   78:    { return static_cast<_Tp&&>(__t); }
-     1806:   78-block  0
+function _ZSt7forwardIdEOT_RNSt16remove_referenceIS0_E4typeE called 1833 returned 100% blocks executed 100%
+     1833:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+     1833:   78:    { return static_cast<_Tp&&>(__t); }
+     1833:   78-block  0
 ------------------
 _ZSt7forwardIiEOT_RNSt16remove_referenceIS0_E4typeE:
 function _ZSt7forwardIiEOT_RNSt16remove_referenceIS0_E4typeE called 1191 returned 100% blocks executed 100%
@@ -185,16 +185,16 @@ function _ZSt7forwardIRSt5tupleIJiiEEEOT_RNSt16remove_referenceIS3_E4typeE calle
      5622:   78-block  0
 ------------------
 _ZSt7forwardIRSt5tupleIJddEEEOT_RNSt16remove_referenceIS3_E4typeE:
-function _ZSt7forwardIRSt5tupleIJddEEEOT_RNSt16remove_referenceIS3_E4typeE called 9398 returned 100% blocks executed 100%
-     9398:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-     9398:   78:    { return static_cast<_Tp&&>(__t); }
-     9398:   78-block  0
+function _ZSt7forwardIRSt5tupleIJddEEEOT_RNSt16remove_referenceIS3_E4typeE called 9443 returned 100% blocks executed 100%
+     9443:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+     9443:   78:    { return static_cast<_Tp&&>(__t); }
+     9443:   78-block  0
 ------------------
 _ZSt7forwardIRdEOT_RNSt16remove_referenceIS1_E4typeE:
-function _ZSt7forwardIRdEOT_RNSt16remove_referenceIS1_E4typeE called 19987 returned 100% blocks executed 100%
-    19987:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-    19987:   78:    { return static_cast<_Tp&&>(__t); }
-    19987:   78-block  0
+function _ZSt7forwardIRdEOT_RNSt16remove_referenceIS1_E4typeE called 20104 returned 100% blocks executed 100%
+    20104:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+    20104:   78:    { return static_cast<_Tp&&>(__t); }
+    20104:   78-block  0
 ------------------
 _ZSt7forwardIRiEOT_RNSt16remove_referenceIS1_E4typeE:
 function _ZSt7forwardIRiEOT_RNSt16remove_referenceIS1_E4typeE called 6559 returned 100% blocks executed 100%
@@ -227,8 +227,8 @@ function _ZSt7forwardIRiEOT_RNSt16remove_referenceIS1_E4typeE called 6559 return
         -:  101:  template<typename _Tp>
         -:  102:    _GLIBCXX_NODISCARD
         -:  103:    constexpr typename std::remove_reference<_Tp>::type&&
-    4134*:  104:    move(_Tp&& __t) noexcept
-    4134*:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+    4355*:  104:    move(_Tp&& __t) noexcept
+    4355*:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
 ------------------
 _ZSt4moveIRSt5tupleIJS0_IJddEES1_S0_IJiiEEEEEONSt16remove_referenceIT_E4typeEOS6_:
 function _ZSt4moveIRSt5tupleIJS0_IJddEES1_S0_IJiiEEEEEONSt16remove_referenceIT_E4typeEOS6_ called 1318 returned 100% blocks executed 100%
@@ -254,11 +254,17 @@ function _ZSt4moveIRPSt5tupleIJddEEEONSt16remove_referenceIT_E4typeEOS5_ called 
     #####:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
     %%%%%:  105-block  0
 ------------------
+_ZSt4moveIRSt11_Tuple_implILy1EJSt5tupleIJddEEEEEONSt16remove_referenceIT_E4typeEOS6_:
+function _ZSt4moveIRSt11_Tuple_implILy1EJSt5tupleIJddEEEEEONSt16remove_referenceIT_E4typeEOS6_ called 9 returned 100% blocks executed 100%
+        9:  104:    move(_Tp&& __t) noexcept
+        9:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+        9:  105-block  0
+------------------
 _ZSt4moveIRSt11_Tuple_implILy1EJdEEEONSt16remove_referenceIT_E4typeEOS4_:
-function _ZSt4moveIRSt11_Tuple_implILy1EJdEEEONSt16remove_referenceIT_E4typeEOS4_ called 903 returned 100% blocks executed 100%
-      903:  104:    move(_Tp&& __t) noexcept
-      903:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-      903:  105-block  0
+function _ZSt4moveIRSt11_Tuple_implILy1EJdEEEONSt16remove_referenceIT_E4typeEOS4_ called 912 returned 100% blocks executed 100%
+      912:  104:    move(_Tp&& __t) noexcept
+      912:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+      912:  105-block  0
 ------------------
 _ZSt4moveIRSt11_Tuple_implILy1EJiEEEONSt16remove_referenceIT_E4typeEOS4_:
 function _ZSt4moveIRSt11_Tuple_implILy1EJiEEEONSt16remove_referenceIT_E4typeEOS4_ called 494 returned 100% blocks executed 100%
@@ -266,11 +272,17 @@ function _ZSt4moveIRSt11_Tuple_implILy1EJiEEEONSt16remove_referenceIT_E4typeEOS4
       494:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
       494:  105-block  0
 ------------------
+_ZSt4moveIRSt5tupleIJdS0_IJddEEEEEONSt16remove_referenceIT_E4typeEOS5_:
+function _ZSt4moveIRSt5tupleIJdS0_IJddEEEEEONSt16remove_referenceIT_E4typeEOS5_ called 194 returned 100% blocks executed 100%
+      194:  104:    move(_Tp&& __t) noexcept
+      194:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+      194:  105-block  0
+------------------
 _ZSt4moveIRSt5tupleIJddEEEONSt16remove_referenceIT_E4typeEOS4_:
-function _ZSt4moveIRSt5tupleIJddEEEONSt16remove_referenceIT_E4typeEOS4_ called 910 returned 100% blocks executed 100%
-      910:  104:    move(_Tp&& __t) noexcept
-      910:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-      910:  105-block  0
+function _ZSt4moveIRSt5tupleIJddEEEONSt16remove_referenceIT_E4typeEOS4_ called 919 returned 100% blocks executed 100%
+      919:  104:    move(_Tp&& __t) noexcept
+      919:  105:    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+      919:  105-block  0
 ------------------
 _ZSt4moveIRSt5tupleIJiiEEEONSt16remove_referenceIT_E4typeEOS4_:
 function _ZSt4moveIRSt5tupleIJiiEEEONSt16remove_referenceIT_E4typeEOS4_ called 509 returned 100% blocks executed 100%

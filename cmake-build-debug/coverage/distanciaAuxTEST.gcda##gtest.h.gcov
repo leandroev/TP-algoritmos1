@@ -300,18 +300,18 @@ function _ZNK7testing15AssertionResultcvbEv called 59 returned 100% blocks execu
         -:  294:  // use it when they fail (i.e., the predicate's outcome doesn't match the
         -:  295:  // assertion's expectation). When nothing has been streamed into the
         -:  296:  // object, returns an empty string.
-function _ZNK7testing15AssertionResult7messageEv called 3 returned 100% blocks executed 71%
-        3:  297:  const char* message() const {
-       3*:  298:    return message_.get() != NULL ?  message_->c_str() : "";
-        3:  298-block  0
-call    0 returned 3
+function _ZNK7testing15AssertionResult7messageEv called 1 returned 100% blocks executed 71%
+        1:  297:  const char* message() const {
+       1*:  298:    return message_.get() != NULL ?  message_->c_str() : "";
+        1:  298-block  0
+call    0 returned 1
 branch  1 taken 0 (fallthrough)
-branch  2 taken 3
+branch  2 taken 1
     %%%%%:  298-block  1
 call    3 never executed
 call    4 never executed
-        3:  298-block  2
-        3:  298-block  3
+        1:  298-block  2
+        1:  298-block  3
         -:  299:  }
         -:  300:  // TODO(vladl@google.com): Remove this after making sure no clients use it.
         -:  301:  // Deprecated; please use message() instead.

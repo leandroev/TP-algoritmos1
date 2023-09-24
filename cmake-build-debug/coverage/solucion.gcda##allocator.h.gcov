@@ -173,11 +173,11 @@
         -:  165:      __attribute__((__always_inline__))
         -:  166:      _GLIBCXX20_CONSTEXPR
         -:  167:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-     472*:  168:      : __allocator_base<_Tp>(__a) { }
+     608*:  168:      : __allocator_base<_Tp>(__a) { }
     %%%%%:  168-block  0
-      252:  168-block  1
+      320:  168-block  1
     %%%%%:  168-block  2
-      220:  168-block  3
+      288:  168-block  3
         -:  169:
         -:  170:#if __cplusplus >= 201103L
         -:  171:      // Avoid implicit deprecation.
@@ -193,13 +193,13 @@
         -:  181:#if __cpp_constexpr_dynamic_alloc
         -:  182:      constexpr
         -:  183:#endif
-     220*:  184:      ~allocator() _GLIBCXX_NOTHROW { }
+     288*:  184:      ~allocator() _GLIBCXX_NOTHROW { }
     %%%%%:  184-block  0
 call    0 never executed
     $$$$$:  184-block  1
 call    1 never executed
-      220:  184-block  2
-call    2 returned 220
+      288:  184-block  2
+call    2 returned 288
     $$$$$:  184-block  3
 call    3 never executed
         -:  185:

@@ -365,22 +365,22 @@ call    0 never executed
         -:  288:      template<typename _UHead, typename... _UTail,
         -:  289:	       typename = __enable_if_t<sizeof...(_Tail) == sizeof...(_UTail)>>
         -:  290:	explicit constexpr
-     193*:  291:	_Tuple_impl(_UHead&& __head, _UTail&&... __tail)
+     202*:  291:	_Tuple_impl(_UHead&& __head, _UTail&&... __tail)
         -:  292:	: _Inherited(std::forward<_UTail>(__tail)...),
-     193*:  293:	  _Base(std::forward<_UHead>(__head))
-     193*:  294:	{ }
+     202*:  293:	  _Base(std::forward<_UHead>(__head))
+     202*:  294:	{ }
 ------------------
 _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEEC2IRdJRS1_EvEEOT_DpOT0_:
-function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEEC2IRdJRS1_EvEEOT_DpOT0_ called 193 returned 100% blocks executed 100%
-      193:  291:	_Tuple_impl(_UHead&& __head, _UTail&&... __tail)
+function _ZNSt11_Tuple_implILy0EJdSt5tupleIJddEEEEC2IRdJRS1_EvEEOT_DpOT0_ called 202 returned 100% blocks executed 100%
+      202:  291:	_Tuple_impl(_UHead&& __head, _UTail&&... __tail)
         -:  292:	: _Inherited(std::forward<_UTail>(__tail)...),
-      193:  293:	  _Base(std::forward<_UHead>(__head))
-      193:  293-block  0
-call    0 returned 193
-call    1 returned 193
-call    2 returned 193
-call    3 returned 193
-      193:  294:	{ }
+      202:  293:	  _Base(std::forward<_UHead>(__head))
+      202:  293-block  0
+call    0 returned 202
+call    1 returned 202
+call    2 returned 202
+call    3 returned 202
+      202:  294:	{ }
 ------------------
 _ZNSt11_Tuple_implILy0EJddEEC2IRdJS2_EvEEOT_DpOT0_:
 function _ZNSt11_Tuple_implILy0EJddEEC2IRdJS2_EvEEOT_DpOT0_ called 0 returned 0% blocks executed 0%
@@ -631,18 +631,18 @@ call    0 never executed
         -:  510:
         -:  511:      template<typename _UHead>
         -:  512:	explicit constexpr
-     193*:  513:	_Tuple_impl(_UHead&& __head)
-     193*:  514:	: _Base(std::forward<_UHead>(__head))
-     193*:  515:	{ }
+     202*:  513:	_Tuple_impl(_UHead&& __head)
+     202*:  514:	: _Base(std::forward<_UHead>(__head))
+     202*:  515:	{ }
 ------------------
 _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEEC2IRS1_EEOT_:
-function _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEEC2IRS1_EEOT_ called 193 returned 100% blocks executed 100%
-      193:  513:	_Tuple_impl(_UHead&& __head)
-      193:  514:	: _Base(std::forward<_UHead>(__head))
-      193:  514-block  0
-call    0 returned 193
-call    1 returned 193
-      193:  515:	{ }
+function _ZNSt11_Tuple_implILy1EJSt5tupleIJddEEEEC2IRS1_EEOT_ called 202 returned 100% blocks executed 100%
+      202:  513:	_Tuple_impl(_UHead&& __head)
+      202:  514:	: _Base(std::forward<_UHead>(__head))
+      202:  514-block  0
+call    0 returned 202
+call    1 returned 202
+      202:  515:	{ }
 ------------------
 _ZNSt11_Tuple_implILy1EJdEEC2IRdEEOT_:
 function _ZNSt11_Tuple_implILy1EJdEEC2IRdEEOT_ called 0 returned 0% blocks executed 0%
@@ -1475,19 +1475,19 @@ call    1 never executed
         -: 1335:      template<typename _U1, typename _U2,
         -: 1336:	       _ImplicitCtor<!__is_alloc_arg<_U1>(), _U1, _U2> = true>
         -: 1337:	constexpr
-     193*: 1338:	tuple(_U1&& __a1, _U2&& __a2)
+     202*: 1338:	tuple(_U1&& __a1, _U2&& __a2)
         -: 1339:	noexcept(__nothrow_constructible<_U1, _U2>())
-     193*: 1340:	: _Inherited(std::forward<_U1>(__a1), std::forward<_U2>(__a2)) { }
+     202*: 1340:	: _Inherited(std::forward<_U1>(__a1), std::forward<_U2>(__a2)) { }
 ------------------
 _ZNSt5tupleIJdS_IJddEEEEC1IRdRS0_Lb1EEEOT_OT0_:
-function _ZNSt5tupleIJdS_IJddEEEEC1IRdRS0_Lb1EEEOT_OT0_ called 193 returned 100% blocks executed 100%
-      193: 1338:	tuple(_U1&& __a1, _U2&& __a2)
+function _ZNSt5tupleIJdS_IJddEEEEC1IRdRS0_Lb1EEEOT_OT0_ called 202 returned 100% blocks executed 100%
+      202: 1338:	tuple(_U1&& __a1, _U2&& __a2)
         -: 1339:	noexcept(__nothrow_constructible<_U1, _U2>())
-      193: 1340:	: _Inherited(std::forward<_U1>(__a1), std::forward<_U2>(__a2)) { }
-      193: 1340-block  0
-call    0 returned 193
-call    1 returned 193
-call    2 returned 193
+      202: 1340:	: _Inherited(std::forward<_U1>(__a1), std::forward<_U2>(__a2)) { }
+      202: 1340-block  0
+call    0 returned 202
+call    1 returned 202
+call    2 returned 202
 ------------------
 _ZNSt5tupleIJddEEC1IRdS2_Lb1EEEOT_OT0_:
 function _ZNSt5tupleIJddEEC1IRdS2_Lb1EEEOT_OT0_ called 0 returned 0% blocks executed 0%
@@ -1931,8 +1931,8 @@ call    2 never executed
         -: 1770:
         -: 1771:  template<size_t __i, typename _Head, typename... _Tail>
         -: 1772:    constexpr _Head&
-    12457: 1773:    __get_helper(_Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
-    12457: 1774:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+    12714: 1773:    __get_helper(_Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+    12714: 1774:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
 ------------------
 _ZSt12__get_helperILy2ESt5tupleIJiiEEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE:
 function _ZSt12__get_helperILy2ESt5tupleIJiiEEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE called 494 returned 100% blocks executed 100%
@@ -1956,18 +1956,18 @@ function _ZSt12__get_helperILy1ESt5tupleIJddEEJS0_IJiiEEEERT0_RSt11_Tuple_implIX
 call    0 returned 603
 ------------------
 _ZSt12__get_helperILy0EdJSt5tupleIJddEEEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE:
-function _ZSt12__get_helperILy0EdJSt5tupleIJddEEEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE called 582 returned 100% blocks executed 100%
-      582: 1773:    __get_helper(_Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
-      582: 1774:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
-      582: 1774-block  0
-call    0 returned 582
+function _ZSt12__get_helperILy0EdJSt5tupleIJddEEEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE called 807 returned 100% blocks executed 100%
+      807: 1773:    __get_helper(_Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+      807: 1774:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+      807: 1774-block  0
+call    0 returned 807
 ------------------
 _ZSt12__get_helperILy1ESt5tupleIJddEEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE:
-function _ZSt12__get_helperILy1ESt5tupleIJddEEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE called 685 returned 100% blocks executed 100%
-      685: 1773:    __get_helper(_Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
-      685: 1774:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
-      685: 1774-block  0
-call    0 returned 685
+function _ZSt12__get_helperILy1ESt5tupleIJddEEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE called 717 returned 100% blocks executed 100%
+      717: 1773:    __get_helper(_Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+      717: 1774:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+      717: 1774-block  0
+call    0 returned 717
 ------------------
 _ZSt12__get_helperILy1EdJEERT0_RSt11_Tuple_implIXT_EJS0_DpT1_EE:
 function _ZSt12__get_helperILy1EdJEERT0_RSt11_Tuple_implIXT_EJS0_DpT1_EE called 4709 returned 100% blocks executed 100%
@@ -1997,8 +1997,8 @@ call    0 returned 4781
         -: 1786:  /// Return a reference to the ith element of a tuple.
         -: 1787:  template<size_t __i, typename... _Elements>
         -: 1788:    constexpr __tuple_element_t<__i, tuple<_Elements...>>&
-    12457: 1789:    get(tuple<_Elements...>& __t) noexcept
-    12457: 1790:    { return std::__get_helper<__i>(__t); }
+    12714: 1789:    get(tuple<_Elements...>& __t) noexcept
+    12714: 1790:    { return std::__get_helper<__i>(__t); }
 ------------------
 _ZSt3getILy2EJSt5tupleIJddEES1_S0_IJiiEEEERNSt13tuple_elementIXT_ES0_IJDpT0_EEE4typeERS6_:
 function _ZSt3getILy2EJSt5tupleIJddEES1_S0_IJiiEEEERNSt13tuple_elementIXT_ES0_IJDpT0_EEE4typeERS6_ called 494 returned 100% blocks executed 100%
@@ -2022,18 +2022,18 @@ function _ZSt3getILy1EJSt5tupleIJddEES1_S0_IJiiEEEERNSt13tuple_elementIXT_ES0_IJ
 call    0 returned 603
 ------------------
 _ZSt3getILy0EJdSt5tupleIJddEEEERNSt13tuple_elementIXT_ES0_IJDpT0_EEE4typeERS5_:
-function _ZSt3getILy0EJdSt5tupleIJddEEEERNSt13tuple_elementIXT_ES0_IJDpT0_EEE4typeERS5_ called 582 returned 100% blocks executed 100%
-      582: 1789:    get(tuple<_Elements...>& __t) noexcept
-      582: 1790:    { return std::__get_helper<__i>(__t); }
-      582: 1790-block  0
-call    0 returned 582
+function _ZSt3getILy0EJdSt5tupleIJddEEEERNSt13tuple_elementIXT_ES0_IJDpT0_EEE4typeERS5_ called 807 returned 100% blocks executed 100%
+      807: 1789:    get(tuple<_Elements...>& __t) noexcept
+      807: 1790:    { return std::__get_helper<__i>(__t); }
+      807: 1790-block  0
+call    0 returned 807
 ------------------
 _ZSt3getILy1EJdSt5tupleIJddEEEERNSt13tuple_elementIXT_ES0_IJDpT0_EEE4typeERS5_:
-function _ZSt3getILy1EJdSt5tupleIJddEEEERNSt13tuple_elementIXT_ES0_IJDpT0_EEE4typeERS5_ called 685 returned 100% blocks executed 100%
-      685: 1789:    get(tuple<_Elements...>& __t) noexcept
-      685: 1790:    { return std::__get_helper<__i>(__t); }
-      685: 1790-block  0
-call    0 returned 685
+function _ZSt3getILy1EJdSt5tupleIJddEEEERNSt13tuple_elementIXT_ES0_IJDpT0_EEE4typeERS5_ called 717 returned 100% blocks executed 100%
+      717: 1789:    get(tuple<_Elements...>& __t) noexcept
+      717: 1790:    { return std::__get_helper<__i>(__t); }
+      717: 1790-block  0
+call    0 returned 717
 ------------------
 _ZSt3getILy1EJddEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS4_:
 function _ZSt3getILy1EJddEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS4_ called 4709 returned 100% blocks executed 100%
@@ -2245,11 +2245,11 @@ call    0 returned 4781
         -: 1984:  /// Create a tuple containing copies of the arguments
         -: 1985:  template<typename... _Elements>
         -: 1986:    constexpr tuple<typename __decay_and_strip<_Elements>::__type...>
-     193*: 1987:    make_tuple(_Elements&&... __args)
+     202*: 1987:    make_tuple(_Elements&&... __args)
         -: 1988:    {
         -: 1989:      typedef tuple<typename __decay_and_strip<_Elements>::__type...>
         -: 1990:	__result_type;
-     193*: 1991:      return __result_type(std::forward<_Elements>(__args)...);
+     202*: 1991:      return __result_type(std::forward<_Elements>(__args)...);
         -: 1992:    }
         -: 1993:
         -: 1994:  // _GLIBCXX_RESOLVE_LIB_DEFECTS

@@ -1158,7 +1158,7 @@
         -: 1154:  typedef T element_type;
         -: 1155:
         -: 1156:  explicit scoped_ptr(T* p = NULL) : ptr_(p) {}
-      191: 1157:  ~scoped_ptr() { reset(); }
+      181: 1157:  ~scoped_ptr() { reset(); }
 ------------------
 _ZN7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED1Ev:
 function _ZN7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEED1Ev called 59 returned 100% blocks executed 100%
@@ -1167,19 +1167,19 @@ function _ZN7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_tr
 call    0 returned 59
 ------------------
 _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEED1Ev:
-function _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEED1Ev called 132 returned 100% blocks executed 100%
-      132: 1157:  ~scoped_ptr() { reset(); }
-      132: 1157-block  0
-call    0 returned 132
+function _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEED1Ev called 122 returned 100% blocks executed 100%
+      122: 1157:  ~scoped_ptr() { reset(); }
+      122: 1157-block  0
+call    0 returned 122
 ------------------
         -: 1158:
         -: 1159:  T& operator*() const { return *ptr_; }
 function _ZNK7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEptEv called 0 returned 0% blocks executed 0%
     #####: 1160:  T* operator->() const { return ptr_; }
     %%%%%: 1160-block  0
-function _ZNK7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE3getEv called 3 returned 100% blocks executed 100%
-        3: 1161:  T* get() const { return ptr_; }
-        3: 1161-block  0
+function _ZNK7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE3getEv called 1 returned 100% blocks executed 100%
+        1: 1161:  T* get() const { return ptr_; }
+        1: 1161-block  0
         -: 1162:
         -: 1163:  T* release() {
         -: 1164:    T* const ptr = ptr_;
@@ -1187,38 +1187,38 @@ function _ZNK7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_t
         -: 1166:    return ptr;
         -: 1167:  }
         -: 1168:
-      191: 1169:  void reset(T* p = NULL) {
-      191: 1170:    if (p != ptr_) {
-     132*: 1171:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
-     132*: 1172:        delete ptr_;
+      181: 1169:  void reset(T* p = NULL) {
+      181: 1170:    if (p != ptr_) {
+     122*: 1171:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
+     122*: 1172:        delete ptr_;
         -: 1173:      }
-     132*: 1174:      ptr_ = p;
+     122*: 1174:      ptr_ = p;
         -: 1175:    }
-      191: 1176:  }
+      181: 1176:  }
 ------------------
 _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEE5resetEPS7_:
-function _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEE5resetEPS7_ called 132 returned 100% blocks executed 100%
-      132: 1169:  void reset(T* p = NULL) {
-      132: 1170:    if (p != ptr_) {
-      132: 1170-block  0
-branch  0 taken 132 (fallthrough)
+function _ZN7testing8internal10scoped_ptrINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEE5resetEPS7_ called 122 returned 100% blocks executed 100%
+      122: 1169:  void reset(T* p = NULL) {
+      122: 1170:    if (p != ptr_) {
+      122: 1170-block  0
+branch  0 taken 122 (fallthrough)
 branch  1 taken 0
-      132: 1171:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
-      132: 1171-block  0
-call    0 returned 132
-branch  1 taken 132 (fallthrough)
+      122: 1171:      if (IsTrue(sizeof(T) > 0)) {  // Makes sure T is a complete type.
+      122: 1171-block  0
+call    0 returned 122
+branch  1 taken 122 (fallthrough)
 branch  2 taken 0
-      132: 1172:        delete ptr_;
-      132: 1172-block  0
-branch  0 taken 132 (fallthrough)
+      122: 1172:        delete ptr_;
+      122: 1172-block  0
+branch  0 taken 122 (fallthrough)
 branch  1 taken 0
-      132: 1172-block  1
-call    2 returned 132
+      122: 1172-block  1
+call    2 returned 122
         -: 1173:      }
-      132: 1174:      ptr_ = p;
-      132: 1174-block  0
+      122: 1174:      ptr_ = p;
+      122: 1174-block  0
         -: 1175:    }
-      132: 1176:  }
+      122: 1176:  }
 ------------------
 _ZN7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5resetEPS7_:
 function _ZN7testing8internal10scoped_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5resetEPS7_ called 59 returned 100% blocks executed 25%

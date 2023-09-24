@@ -7,950 +7,1211 @@
         -:    3:#include <iostream>
         -:    4:#include <algorithm>
         -:    5:#include <fstream>
-        -:    6:#include <iomanip>
-        -:    7:
-        -:    8:using namespace std;
-        -:    9:
-        -:   10://####################################  	Funciones auxiliares 	  ##############################################\\
-        -:   11:
-function _Z13ordenar_viajeSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EE called 18 returned 100% blocks executed 78%
-       18:   12:viaje ordenar_viaje(viaje viaje_original){
-       18:   13:    viaje viaje_ordenado = viaje_original;
-       18:   13-block  0
-call    0 returned 18
-        -:   14:    int indice_menor_tiempo;
-       93:   15:    for (int i = 0; i < viaje_original.size(); ++i){
-       75:   15-block  0
-       93:   15-block  1
-call    0 returned 93
-branch  1 taken 75
-branch  2 taken 18 (fallthrough)
-       75:   16:        indice_menor_tiempo = obtener_indice_menor_tiempo(viaje_ordenado, i, viaje_ordenado.size());
-       75:   16-block  0
-call    0 returned 75
-call    1 returned 75
-branch  2 taken 75 (fallthrough)
-branch  3 taken 0 (throw)
-       75:   16-block  1
-call    4 returned 75
-branch  5 taken 75 (fallthrough)
-branch  6 taken 0 (throw)
-       75:   16-block  2
-call    7 returned 75
-    $$$$$:   16-block  3
-call    8 never executed
-    $$$$$:   16-block  4
-       75:   17:        if(indice_menor_tiempo != i){
-branch  0 taken 25 (fallthrough)
-branch  1 taken 50
-       25:   18:            swap_elementos_viaje(viaje_ordenado,i,indice_menor_tiempo);
-       25:   18-block  0
-call    0 returned 25
-        -:   19:        }
-        -:   20:    }
-       18:   21:    return viaje_ordenado;
-       18:   21-block  0
-       18:   21-block  1
-    =====:   22:}
-    $$$$$:   22-block  0
-call    0 never executed
-        -:   23:
-function _Z27obtener_indice_menor_tiempoSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EEii called 75 returned 100% blocks executed 100%
-       75:   24:int obtener_indice_menor_tiempo(viaje v_viaje,int desde, int hasta){
-       75:   25:    int indice_menor_tiempo = desde; // por la Pre, los viajes no estan vacios, 0 <= desde < hasta < v_viaje.size()
-      273:   26:    for (int i = desde; i < hasta; ++i) {
-       75:   26-block  0
-      198:   26-block  1
-      273:   26-block  2
-branch  0 taken 198
-branch  1 taken 75 (fallthrough)
-      198:   27:        if(obtenerTiempo(v_viaje[indice_menor_tiempo]) > obtenerTiempo(v_viaje[i])){
-      198:   27-block  0
-call    0 returned 198
-call    1 returned 198
-call    2 returned 198
-call    3 returned 198
-branch  4 taken 32 (fallthrough)
-branch  5 taken 166
-       32:   28:            indice_menor_tiempo = i;
-       32:   28-block  0
-        -:   29:        }
-        -:   30:    }
-       75:   31:    return indice_menor_tiempo;
-       75:   31-block  0
-        -:   32:}
-        -:   33:
-function _Z20swap_elementos_viajeRSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EEii called 25 returned 100% blocks executed 100%
-       25:   34:void swap_elementos_viaje(viaje &v_viaje, int indice_1, int indice_2){
-       25:   35:    tuple<tiempo, gps> temporal = v_viaje[indice_1];
-       25:   35-block  0
-call    0 returned 25
-       25:   36:    v_viaje[indice_1] = v_viaje[indice_2];
-call    0 returned 25
-call    1 returned 25
-call    2 returned 25
-       25:   37:    v_viaje[indice_2] = temporal;
-call    0 returned 25
-call    1 returned 25
-       25:   38:}
-        -:   39:
-function _Z9velocidadSt5tupleIJdS_IJddEEEES1_ called 18 returned 100% blocks executed 89%
-       18:   40:double velocidad(tuple<tiempo, gps> tiempo_1, tuple<tiempo, gps> tiempo_2){
-       18:   41:    double distancia = distEnKM(obtenerPosicion(tiempo_1),obtenerPosicion(tiempo_2));
-       18:   41-block  0
-call    0 returned 18
-branch  1 taken 18 (fallthrough)
+        -:    6:
+        -:    7:using namespace std;
+        -:    8:
+        -:    9://####################################  	Funciones auxiliares 	  ##############################################\\
+        -:   10:
+function _Z24dist_tiempo_proporcionalSt5tupleIJdS_IJddEEEES1_S1_ called 9 returned 100% blocks executed 95%
+        9:   11:tuple<tiempo, gps> dist_tiempo_proporcional(tuple<tiempo, gps> hueco, tuple<tiempo, gps> anterior,
+        -:   12:                                            tuple<tiempo, gps> siguiente){
+        9:   13:    double peso = (obtenerTiempo(hueco) - obtenerTiempo(anterior)) /
+        9:   13-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
 branch  2 taken 0 (throw)
-       18:   41-block  1
-call    3 returned 18
-branch  4 taken 18 (fallthrough)
+        9:   13-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
 branch  5 taken 0 (throw)
-       18:   41-block  2
-call    6 returned 18
-branch  7 taken 18 (fallthrough)
-branch  8 taken 0 (throw)
-    $$$$$:   41-block  3
-       18:   42:    double tiempo = (obtenerTiempo(tiempo_2) - obtenerTiempo(tiempo_1))/3600;
-       18:   42-block  0
-call    0 returned 18
-call    1 returned 18
-       18:   43:    return distancia/tiempo;
-       18:   43-block  0
-        -:   44:}
-        -:   45:
-function _Z21obtener_nombre_de_gpsSt5tupleIJddEESt6vectorIS_IJS0_S0_S_IJiiEEEESaIS3_EE called 44 returned 100% blocks executed 97%
-       44:   46:nombre obtener_nombre_de_gps(gps posicion, grilla g_grilla){
-        -:   47:    bool en_celda_latitud;
-        -:   48:    bool en_celda_longitud;
-       44:   49:    nombre nombre_celda;
-      151:   50:    for (int j = 0; j < g_grilla.size(); ++j) {
-       44:   50-block  0
-      107:   50-block  1
-      151:   50-block  2
-call    0 returned 151
-branch  1 taken 151
-branch  2 taken 0 (fallthrough)
-      151:   51:        gps gps_inf(obtenerEsquinaInferior(g_grilla[j]));
-      151:   51-block  0
-call    0 returned 151
-call    1 returned 151
-branch  2 taken 151 (fallthrough)
-branch  3 taken 0 (throw)
-      151:   52:        gps gps_sup(obtenerEsquinaSuperior(g_grilla[j]));
-      151:   52-block  0
-call    0 returned 151
-call    1 returned 151
-branch  2 taken 151 (fallthrough)
-branch  3 taken 0 (throw)
-      302:   53:        en_celda_latitud = obtenerLatitud(gps_inf) <= obtenerLatitud(posicion) &&
-      151:   53-block  0
-call    0 returned 151
-branch  1 taken 151 (fallthrough)
+        9:   14:            (obtenerTiempo(siguiente) - obtenerTiempo(anterior));
+        9:   14-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
 branch  2 taken 0 (throw)
-      151:   53-block  1
-call    3 returned 151
-branch  4 taken 151 (fallthrough)
+        9:   14-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
 branch  5 taken 0 (throw)
-      151:   53-block  2
-branch  6 taken 151 (fallthrough)
-branch  7 taken 0
-       85:   53-block  3
-       66:   53-block  4
-      151:   54:                           obtenerLatitud(gps_sup) > obtenerLatitud(posicion);
-      151:   54-block  0
-call    0 returned 151
-branch  1 taken 151 (fallthrough)
+        9:   15:    double time = obtenerTiempo(anterior) + (peso * (obtenerTiempo(siguiente) -
+        9:   15-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
 branch  2 taken 0 (throw)
-      151:   54-block  1
-call    3 returned 151
-branch  4 taken 151 (fallthrough)
+        9:   15-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
 branch  5 taken 0 (throw)
-      151:   54-block  2
-branch  6 taken 85 (fallthrough)
-branch  7 taken 66
-      279:   55:        en_celda_longitud = obtenerLongitud(gps_inf) <= obtenerLongitud(posicion) &&
-      151:   55-block  0
-call    0 returned 151
-branch  1 taken 151 (fallthrough)
+        9:   16:            obtenerTiempo(anterior)));
+        9:   16-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
 branch  2 taken 0 (throw)
-      151:   55-block  1
-call    3 returned 151
-branch  4 taken 151 (fallthrough)
-branch  5 taken 0 (throw)
-      151:   55-block  2
-branch  6 taken 128 (fallthrough)
-branch  7 taken 23
-       66:   55-block  3
-       85:   55-block  4
-      128:   56:                            obtenerLongitud(gps_sup) > obtenerLongitud(posicion);
-      128:   56-block  0
-call    0 returned 128
-branch  1 taken 128 (fallthrough)
+        9:   17:    gps g_ant = obtenerPosicion(anterior);
+        9:   17-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
 branch  2 taken 0 (throw)
-      128:   56-block  1
-call    3 returned 128
-branch  4 taken 128 (fallthrough)
+        9:   18:    gps g_sig = obtenerPosicion(siguiente);
+        9:   18-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   19:    double latitud = (obtenerLatitud(g_sig) - obtenerLatitud(g_ant)) * peso;
+        9:   19-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   19-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
 branch  5 taken 0 (throw)
-      128:   56-block  2
-branch  6 taken 66 (fallthrough)
-branch  7 taken 62
-      151:   57:        if(en_celda_latitud && en_celda_longitud){
-      151:   57-block  0
-branch  0 taken 85 (fallthrough)
-branch  1 taken 66
-       85:   57-block  1
-branch  2 taken 44 (fallthrough)
-branch  3 taken 41
-       44:   58:            nombre_celda = obtenerNombre(g_grilla[j]);
-       44:   58-block  0
-call    0 returned 44
-call    1 returned 44
-branch  2 taken 44 (fallthrough)
-branch  3 taken 0 (throw)
-       44:   58-block  1
-call    4 returned 44
-    $$$$$:   58-block  2
-       44:   59:            break;
-        -:   60:        }
-        -:   61:    }
-       44:   62:    return nombre_celda;
-       44:   62-block  0
-       44:   62-block  1
-        -:   63:}
-        -:   64:
-function _Z11es_cubiertoSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EEdd called 18 returned 100% blocks executed 100%
-       18:   65:bool es_cubierto(viaje v_viaje, tiempo inicial, tiempo final){
-       18:   66:    bool tiempo_mayor_a_inicial = false;
-       18:   67:    bool tiempo_menor_a_final  = false;
-       72:   68:    for (int j = 0; j < v_viaje.size(); ++j) {
-       18:   68-block  0
-       54:   68-block  1
-       72:   68-block  2
-call    0 returned 72
-branch  1 taken 54
-branch  2 taken 18 (fallthrough)
-       54:   69:        if(obtenerTiempo(v_viaje[j]) <= final){
-       54:   69-block  0
-call    0 returned 54
-call    1 returned 54
-branch  2 taken 36 (fallthrough)
-branch  3 taken 18
-       36:   70:            tiempo_menor_a_final =  true;
-       36:   70-block  0
-        -:   71:        }
-       54:   72:        if(obtenerTiempo(v_viaje[j]) >= inicial){
-       54:   72-block  0
-call    0 returned 54
-call    1 returned 54
-branch  2 taken 37 (fallthrough)
-branch  3 taken 17
-       37:   73:            tiempo_mayor_a_inicial = true;
-       37:   73-block  0
-        -:   74:        }
-        -:   75:    }
-       18:   76:    if(tiempo_mayor_a_inicial && tiempo_menor_a_final){
-       18:   76-block  0
-branch  0 taken 14 (fallthrough)
-branch  1 taken 4
-       14:   76-block  1
-branch  2 taken 9 (fallthrough)
-branch  3 taken 5
-        9:   77:        return true;
-        9:   77-block  0
-        -:   78:    }
-        9:   79:    return false;
-        9:   79-block  0
-        -:   80:}
-        -:   81:
-function _Z25obtener_distancia_nombresSt5tupleIJiiEES0_ called 12 returned 100% blocks executed 100%
-       12:   82:int obtener_distancia_nombres(nombre nombre_1,nombre nombre_2){
-       12:   83:    int distancia = -1;
-       12:   84:    distancia += abs(get<0>(nombre_1) - get<0>(nombre_2)) + abs(get<1>(nombre_1) - get<1>(nombre_2));
-       12:   84-block  0
+        9:   20:    double longitud = (obtenerLongitud(g_sig) - obtenerLongitud(g_ant)) * peso;
+        9:   20-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   20-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
+branch  5 taken 0 (throw)
+        9:   21:    tuple<tiempo, gps> med = medicion(time , puntoGps(latitud,longitud));
+        9:   21-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   21-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   21-block  2
+       18:   22:    return med;
+        9:   22-block  0
+        9:   22-block  1
+        -:   23:}
+        -:   24:
+function _Z23obtener_siguiente_huecoSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EES4_i called 9 returned 100% blocks executed 100%
+        9:   25:int obtener_siguiente_hueco(viaje v_ordenado, viaje v_original, int indice_hueco){
+        9:   26:    int indice_siguiente = v_original.size()-1;
+        9:   26-block  0
+call    0 returned 9
+       16:   27:    for (int i = v_ordenado.size()-2; i > 1 ; --i) {
+call    0 returned 9
+        7:   27-block  0
+       16:   27-block  1
+branch  1 taken 12
+branch  2 taken 4 (fallthrough)
+       12:   28:        if(obtenerTiempo(v_ordenado[i]) > obtenerTiempo(v_original[indice_hueco])){
+       12:   28-block  0
 call    0 returned 12
 call    1 returned 12
 call    2 returned 12
 call    3 returned 12
-       12:   85:    return distancia;
-        -:   86:}
-        -:   87://################################################################################################################\\
-        -:   88://################################################################################################################\\
-        -:   89:
+branch  4 taken 7 (fallthrough)
+branch  5 taken 5
+        7:   29:            gps pos = obtenerPosicion(v_ordenado[i]);
+        7:   29-block  0
+call    0 returned 7
+call    1 returned 7
+branch  2 taken 7 (fallthrough)
+branch  3 taken 0 (throw)
+        7:   30:            gps hueco = obtenerPosicion(v_original[indice_hueco]);
+        7:   30-block  0
+call    0 returned 7
+call    1 returned 7
+branch  2 taken 7 (fallthrough)
+branch  3 taken 0 (throw)
+        7:   31:            if(pos != hueco){
+        7:   31-block  0
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   31-block  1
+branch  3 taken 2 (fallthrough)
+branch  4 taken 5
+        2:   32:                indice_siguiente = i;
+        2:   32-block  0
+        -:   33:            }
+        -:   34:        }else{
+        -:   35:            // ya obtuve el siguiente
+        5:   36:            break;
+        5:   36-block  0
+        -:   37:        }
+        -:   38:    }
+        9:   39:    return indice_siguiente;
+        9:   39-block  0
+        9:   39-block  1
+        -:   40:}
+        -:   41:
+function _Z22obtener_anterior_huecoSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EES4_i called 9 returned 100% blocks executed 100%
+        9:   42:int obtener_anterior_hueco(viaje v_ordenado, viaje v_original, int indice_hueco){
+        9:   43:    int indice_anterior = 0;
+       17:   44:    for (int i = 1; i < v_ordenado.size()-1; ++i) {
+        9:   44-block  0
+        8:   44-block  1
+       17:   44-block  2
+call    0 returned 17
+branch  1 taken 17
+branch  2 taken 0 (fallthrough)
+       17:   45:        if(obtenerTiempo(v_ordenado[i]) < obtenerTiempo(v_original[indice_hueco])){
+       17:   45-block  0
+call    0 returned 17
+call    1 returned 17
+call    2 returned 17
+call    3 returned 17
+branch  4 taken 8 (fallthrough)
+branch  5 taken 9
+        8:   46:            gps pos = obtenerPosicion(v_ordenado[i]);
+        8:   46-block  0
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 8 (fallthrough)
+branch  3 taken 0 (throw)
+        8:   47:            gps hueco = obtenerPosicion(v_original[indice_hueco]);
+        8:   47-block  0
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 8 (fallthrough)
+branch  3 taken 0 (throw)
+        8:   48:            if(pos != hueco){
+        8:   48-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   48-block  1
+branch  3 taken 3 (fallthrough)
+branch  4 taken 5
+        3:   49:                indice_anterior = i;
+        3:   49-block  0
+        -:   50:            }
+        -:   51:        }else{
+        -:   52:            // ya obtuve el anterior
+        9:   53:            break;
+        9:   53-block  0
+        -:   54:        }
+        -:   55:    }
+        9:   56:    return indice_anterior;
+        9:   56-block  0
+        9:   56-block  1
+        -:   57:}
+        -:   58:
+function _Z13ordenar_viajeSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EE called 23 returned 100% blocks executed 78%
+       23:   59:viaje ordenar_viaje(viaje viaje_original){
+       23:   60:    viaje viaje_ordenado = viaje_original;
+       23:   60-block  0
+call    0 returned 23
+        -:   61:    int indice_menor_tiempo;
+      120:   62:    for (int i = 0; i < viaje_original.size(); ++i){
+       97:   62-block  0
+      120:   62-block  1
+call    0 returned 120
+branch  1 taken 97
+branch  2 taken 23 (fallthrough)
+       97:   63:        indice_menor_tiempo = obtener_indice_menor_tiempo(viaje_ordenado, i, viaje_ordenado.size());
+       97:   63-block  0
+call    0 returned 97
+call    1 returned 97
+branch  2 taken 97 (fallthrough)
+branch  3 taken 0 (throw)
+       97:   63-block  1
+call    4 returned 97
+branch  5 taken 97 (fallthrough)
+branch  6 taken 0 (throw)
+       97:   63-block  2
+call    7 returned 97
+    $$$$$:   63-block  3
+call    8 never executed
+    $$$$$:   63-block  4
+       97:   64:        if(indice_menor_tiempo != i){
+branch  0 taken 36 (fallthrough)
+branch  1 taken 61
+       36:   65:            swap_elementos_viaje(viaje_ordenado,i,indice_menor_tiempo);
+       36:   65-block  0
+call    0 returned 36
+        -:   66:        }
+        -:   67:    }
+       23:   68:    return viaje_ordenado;
+       23:   68-block  0
+       23:   68-block  1
+    =====:   69:}
+    $$$$$:   69-block  0
+call    0 never executed
+        -:   70:
+function _Z27obtener_indice_menor_tiempoSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EEii called 97 returned 100% blocks executed 100%
+       97:   71:int obtener_indice_menor_tiempo(viaje v_viaje,int desde, int hasta){
+       97:   72:    int indice_menor_tiempo = desde; // por la Pre, los viajes no estan vacios, 0 <= desde < hasta < v_viaje.size()
+      356:   73:    for (int i = desde; i < hasta; ++i) {
+       97:   73-block  0
+      259:   73-block  1
+      356:   73-block  2
+branch  0 taken 259
+branch  1 taken 97 (fallthrough)
+      259:   74:        if(obtenerTiempo(v_viaje[indice_menor_tiempo]) > obtenerTiempo(v_viaje[i])){
+      259:   74-block  0
+call    0 returned 259
+call    1 returned 259
+call    2 returned 259
+call    3 returned 259
+branch  4 taken 47 (fallthrough)
+branch  5 taken 212
+       47:   75:            indice_menor_tiempo = i;
+       47:   75-block  0
+        -:   76:        }
+        -:   77:    }
+       97:   78:    return indice_menor_tiempo;
+       97:   78-block  0
+        -:   79:}
+        -:   80:
+function _Z20swap_elementos_viajeRSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EEii called 36 returned 100% blocks executed 100%
+       36:   81:void swap_elementos_viaje(viaje &v_viaje, int indice_1, int indice_2){
+       36:   82:    tuple<tiempo, gps> temporal = v_viaje[indice_1];
+       36:   82-block  0
+call    0 returned 36
+       36:   83:    v_viaje[indice_1] = v_viaje[indice_2];
+call    0 returned 36
+call    1 returned 36
+call    2 returned 36
+       36:   84:    v_viaje[indice_2] = temporal;
+call    0 returned 36
+call    1 returned 36
+       36:   85:}
+        -:   86:
+function _Z9velocidadSt5tupleIJdS_IJddEEEES1_ called 9 returned 100% blocks executed 89%
+        9:   87:double velocidad(tuple<tiempo, gps> tiempo_1, tuple<tiempo, gps> tiempo_2){
+        9:   88:    double distancia = distEnKM(obtenerPosicion(tiempo_1),obtenerPosicion(tiempo_2));
+        9:   88-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   88-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
+branch  5 taken 0 (throw)
+        9:   88-block  2
+call    6 returned 9
+branch  7 taken 9 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   88-block  3
+        9:   89:    double tiempo = (obtenerTiempo(tiempo_2) - obtenerTiempo(tiempo_1))/3600;
+        9:   89-block  0
+call    0 returned 9
+call    1 returned 9
+        9:   90:    return distancia/tiempo;
+        9:   90-block  0
+        -:   91:}
+        -:   92:
+function _Z21obtener_nombre_de_gpsSt5tupleIJddEESt6vectorIS_IJS0_S0_S_IJiiEEEESaIS3_EE called 44 returned 100% blocks executed 97%
+       44:   93:nombre obtener_nombre_de_gps(gps posicion, grilla g_grilla){
+        -:   94:    bool en_celda_latitud;
+        -:   95:    bool en_celda_longitud;
+       44:   96:    nombre nombre_celda;
+      151:   97:    for (int j = 0; j < g_grilla.size(); ++j) {
+       44:   97-block  0
+      107:   97-block  1
+      151:   97-block  2
+call    0 returned 151
+branch  1 taken 151
+branch  2 taken 0 (fallthrough)
+      151:   98:        gps gps_inf(obtenerEsquinaInferior(g_grilla[j]));
+      151:   98-block  0
+call    0 returned 151
+call    1 returned 151
+branch  2 taken 151 (fallthrough)
+branch  3 taken 0 (throw)
+      151:   99:        gps gps_sup(obtenerEsquinaSuperior(g_grilla[j]));
+      151:   99-block  0
+call    0 returned 151
+call    1 returned 151
+branch  2 taken 151 (fallthrough)
+branch  3 taken 0 (throw)
+      302:  100:        en_celda_latitud = obtenerLatitud(gps_inf) <= obtenerLatitud(posicion) &&
+      151:  100-block  0
+call    0 returned 151
+branch  1 taken 151 (fallthrough)
+branch  2 taken 0 (throw)
+      151:  100-block  1
+call    3 returned 151
+branch  4 taken 151 (fallthrough)
+branch  5 taken 0 (throw)
+      151:  100-block  2
+branch  6 taken 151 (fallthrough)
+branch  7 taken 0
+       85:  100-block  3
+       66:  100-block  4
+      151:  101:                           obtenerLatitud(gps_sup) > obtenerLatitud(posicion);
+      151:  101-block  0
+call    0 returned 151
+branch  1 taken 151 (fallthrough)
+branch  2 taken 0 (throw)
+      151:  101-block  1
+call    3 returned 151
+branch  4 taken 151 (fallthrough)
+branch  5 taken 0 (throw)
+      151:  101-block  2
+branch  6 taken 85 (fallthrough)
+branch  7 taken 66
+      279:  102:        en_celda_longitud = obtenerLongitud(gps_inf) <= obtenerLongitud(posicion) &&
+      151:  102-block  0
+call    0 returned 151
+branch  1 taken 151 (fallthrough)
+branch  2 taken 0 (throw)
+      151:  102-block  1
+call    3 returned 151
+branch  4 taken 151 (fallthrough)
+branch  5 taken 0 (throw)
+      151:  102-block  2
+branch  6 taken 128 (fallthrough)
+branch  7 taken 23
+       66:  102-block  3
+       85:  102-block  4
+      128:  103:                            obtenerLongitud(gps_sup) > obtenerLongitud(posicion);
+      128:  103-block  0
+call    0 returned 128
+branch  1 taken 128 (fallthrough)
+branch  2 taken 0 (throw)
+      128:  103-block  1
+call    3 returned 128
+branch  4 taken 128 (fallthrough)
+branch  5 taken 0 (throw)
+      128:  103-block  2
+branch  6 taken 66 (fallthrough)
+branch  7 taken 62
+      151:  104:        if(en_celda_latitud && en_celda_longitud){
+      151:  104-block  0
+branch  0 taken 85 (fallthrough)
+branch  1 taken 66
+       85:  104-block  1
+branch  2 taken 44 (fallthrough)
+branch  3 taken 41
+       44:  105:            nombre_celda = obtenerNombre(g_grilla[j]);
+       44:  105-block  0
+call    0 returned 44
+call    1 returned 44
+branch  2 taken 44 (fallthrough)
+branch  3 taken 0 (throw)
+       44:  105-block  1
+call    4 returned 44
+    $$$$$:  105-block  2
+       44:  106:            break;
+        -:  107:        }
+        -:  108:    }
+       44:  109:    return nombre_celda;
+       44:  109-block  0
+       44:  109-block  1
+        -:  110:}
+        -:  111:
+function _Z11es_cubiertoSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EEdd called 18 returned 100% blocks executed 100%
+       18:  112:bool es_cubierto(viaje v_viaje, tiempo inicial, tiempo final){
+       18:  113:    bool tiempo_mayor_a_inicial = false;
+       18:  114:    bool tiempo_menor_a_final  = false;
+       72:  115:    for (int j = 0; j < v_viaje.size(); ++j) {
+       18:  115-block  0
+       54:  115-block  1
+       72:  115-block  2
+call    0 returned 72
+branch  1 taken 54
+branch  2 taken 18 (fallthrough)
+       54:  116:        if(obtenerTiempo(v_viaje[j]) <= final){
+       54:  116-block  0
+call    0 returned 54
+call    1 returned 54
+branch  2 taken 36 (fallthrough)
+branch  3 taken 18
+       36:  117:            tiempo_menor_a_final =  true;
+       36:  117-block  0
+        -:  118:        }
+       54:  119:        if(obtenerTiempo(v_viaje[j]) >= inicial){
+       54:  119-block  0
+call    0 returned 54
+call    1 returned 54
+branch  2 taken 37 (fallthrough)
+branch  3 taken 17
+       37:  120:            tiempo_mayor_a_inicial = true;
+       37:  120-block  0
+        -:  121:        }
+        -:  122:    }
+       18:  123:    if(tiempo_mayor_a_inicial && tiempo_menor_a_final){
+       18:  123-block  0
+branch  0 taken 14 (fallthrough)
+branch  1 taken 4
+       14:  123-block  1
+branch  2 taken 9 (fallthrough)
+branch  3 taken 5
+        9:  124:        return true;
+        9:  124-block  0
+        -:  125:    }
+        9:  126:    return false;
+        9:  126-block  0
+        -:  127:}
+        -:  128:
+function _Z25obtener_distancia_nombresSt5tupleIJiiEES0_ called 12 returned 100% blocks executed 100%
+       12:  129:int obtener_distancia_nombres(nombre nombre_1,nombre nombre_2){
+       12:  130:    int distancia = -1;
+       12:  131:    distancia += abs(get<0>(nombre_1) - get<0>(nombre_2)) + abs(get<1>(nombre_1) - get<1>(nombre_2));
+       12:  131-block  0
+call    0 returned 12
+call    1 returned 12
+call    2 returned 12
+call    3 returned 12
+       12:  132:    return distancia;
+        -:  133:}
+        -:  134://################################################################################################################\\
+        -:  135://################################################################################################################\\
+        -:  136:
 function _Z14escribirGrillaSt6vectorISt5tupleIJS0_IJddEES1_S0_IJiiEEEESaIS3_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 89%
-        1:   90:void escribirGrilla(grilla g_grilla, string nombreArchivo){
-        1:   91:    ofstream salida_archivo;
-        1:   91-block  0
+        1:  137:void escribirGrilla(grilla g_grilla, string nombreArchivo){
+        1:  138:    ofstream salida_archivo;
+        1:  138-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   92:    salida_archivo.open(nombreArchivo);
-        1:   92-block  0
+        1:  139:    salida_archivo.open(nombreArchivo);
+        1:  139-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:   93:    salida_archivo.setf(ios::fixed);
-        1:   93-block  0
+        1:  140:    salida_archivo.setf(ios::fixed);
+        1:  140-block  0
 call    0 returned 1
-        1:   94:    salida_archivo.precision(5);
+        1:  141:    salida_archivo.precision(5);
 call    0 returned 1
-        1:   95:    gps esquina_inferior;
-        1:   96:    gps esquina_superior;
-        1:   97:    nombre nombre_celda;
-      451:   98:    for (int i = 0; i < g_grilla.size(); ++i) {
-      450:   98-block  0
-      451:   98-block  1
+        1:  142:    gps esquina_inferior;
+        1:  143:    gps esquina_superior;
+        1:  144:    nombre nombre_celda;
+      451:  145:    for (int i = 0; i < g_grilla.size(); ++i) {
+      450:  145-block  0
+      451:  145-block  1
 call    0 returned 451
 branch  1 taken 450
 branch  2 taken 1 (fallthrough)
-      450:   99:        esquina_inferior = obtenerEsquinaInferior(g_grilla[i]);
-      450:   99-block  0
+      450:  146:        esquina_inferior = obtenerEsquinaInferior(g_grilla[i]);
+      450:  146-block  0
 call    0 returned 450
 call    1 returned 450
 branch  2 taken 450 (fallthrough)
 branch  3 taken 0 (throw)
-      450:   99-block  1
+      450:  146-block  1
 call    4 returned 450
-    $$$$$:   99-block  2
-      450:  100:        salida_archivo << obtenerLatitud(esquina_inferior) << "\t";
+    $$$$$:  146-block  2
+      450:  147:        salida_archivo << obtenerLatitud(esquina_inferior) << "\t";
 call    0 returned 450
 branch  1 taken 450 (fallthrough)
 branch  2 taken 0 (throw)
-      450:  100-block  0
+      450:  147-block  0
 call    3 returned 450
 branch  4 taken 450 (fallthrough)
 branch  5 taken 0 (throw)
-      450:  100-block  1
+      450:  147-block  1
 call    6 returned 450
 branch  7 taken 450 (fallthrough)
 branch  8 taken 0 (throw)
-      450:  101:        salida_archivo << obtenerLongitud(esquina_inferior) << "\t";
-      450:  101-block  0
+      450:  148:        salida_archivo << obtenerLongitud(esquina_inferior) << "\t";
+      450:  148-block  0
 call    0 returned 450
 branch  1 taken 450 (fallthrough)
 branch  2 taken 0 (throw)
-      450:  101-block  1
+      450:  148-block  1
 call    3 returned 450
 branch  4 taken 450 (fallthrough)
 branch  5 taken 0 (throw)
-      450:  101-block  2
+      450:  148-block  2
 call    6 returned 450
 branch  7 taken 450 (fallthrough)
 branch  8 taken 0 (throw)
-        -:  102:
-      450:  103:        esquina_superior = obtenerEsquinaSuperior(g_grilla[i]);
-      450:  103-block  0
+        -:  149:
+      450:  150:        esquina_superior = obtenerEsquinaSuperior(g_grilla[i]);
+      450:  150-block  0
 call    0 returned 450
 call    1 returned 450
 branch  2 taken 450 (fallthrough)
 branch  3 taken 0 (throw)
-      450:  103-block  1
+      450:  150-block  1
 call    4 returned 450
-    $$$$$:  103-block  2
-      450:  104:        salida_archivo << obtenerLatitud(esquina_superior) << "\t";
+    $$$$$:  150-block  2
+      450:  151:        salida_archivo << obtenerLatitud(esquina_superior) << "\t";
 call    0 returned 450
 branch  1 taken 450 (fallthrough)
 branch  2 taken 0 (throw)
-      450:  104-block  0
+      450:  151-block  0
 call    3 returned 450
 branch  4 taken 450 (fallthrough)
 branch  5 taken 0 (throw)
-      450:  104-block  1
+      450:  151-block  1
 call    6 returned 450
 branch  7 taken 450 (fallthrough)
 branch  8 taken 0 (throw)
-      450:  105:        salida_archivo << obtenerLongitud(esquina_superior) << "\t";
-      450:  105-block  0
+      450:  152:        salida_archivo << obtenerLongitud(esquina_superior) << "\t";
+      450:  152-block  0
 call    0 returned 450
 branch  1 taken 450 (fallthrough)
 branch  2 taken 0 (throw)
-      450:  105-block  1
+      450:  152-block  1
 call    3 returned 450
 branch  4 taken 450 (fallthrough)
 branch  5 taken 0 (throw)
-      450:  105-block  2
+      450:  152-block  2
 call    6 returned 450
 branch  7 taken 450 (fallthrough)
 branch  8 taken 0 (throw)
-        -:  106:
-      450:  107:        nombre_celda = obtenerNombre(g_grilla[i]);
-      450:  107-block  0
+        -:  153:
+      450:  154:        nombre_celda = obtenerNombre(g_grilla[i]);
+      450:  154-block  0
 call    0 returned 450
 call    1 returned 450
 branch  2 taken 450 (fallthrough)
 branch  3 taken 0 (throw)
-      450:  107-block  1
+      450:  154-block  1
 call    4 returned 450
-    $$$$$:  107-block  2
-      450:  108:        salida_archivo << "(" << get<0>(nombre_celda) << "," << get<1>(nombre_celda) << ")" << endl;
+    $$$$$:  154-block  2
+      450:  155:        salida_archivo << "(" << get<0>(nombre_celda) << "," << get<1>(nombre_celda) << ")" << endl;
 call    0 returned 450
 branch  1 taken 450 (fallthrough)
 branch  2 taken 0 (throw)
-      450:  108-block  0
+      450:  155-block  0
 call    3 returned 450
 call    4 returned 450
 branch  5 taken 450 (fallthrough)
 branch  6 taken 0 (throw)
-      450:  108-block  1
+      450:  155-block  1
 call    7 returned 450
 branch  8 taken 450 (fallthrough)
 branch  9 taken 0 (throw)
-      450:  108-block  2
+      450:  155-block  2
 call   10 returned 450
 call   11 returned 450
 branch 12 taken 450 (fallthrough)
 branch 13 taken 0 (throw)
-      450:  108-block  3
+      450:  155-block  3
 call   14 returned 450
 branch 15 taken 450 (fallthrough)
 branch 16 taken 0 (throw)
-      450:  108-block  4
+      450:  155-block  4
 call   17 returned 450
 branch 18 taken 450 (fallthrough)
 branch 19 taken 0 (throw)
-        -:  109:    }
-        1:  110:    salida_archivo.close();
-        1:  110-block  0
+        -:  156:    }
+        1:  157:    salida_archivo.close();
+        1:  157-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:  111:}
-        1:  111-block  0
+        1:  158:}
+        1:  158-block  0
 call    0 returned 1
-    $$$$$:  111-block  1
+    $$$$$:  158-block  1
 call    1 never executed
-        -:  112:
+        -:  159:
 function _Z18escribirRecorridosSt6vectorIS_ISt5tupleIJddEESaIS1_EESaIS3_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 88%
-        1:  113:void escribirRecorridos(vector<recorrido> recorridos, string nombreArchivo){
-        1:  114:    ofstream salida_archivo;
-        1:  114-block  0
+        1:  160:void escribirRecorridos(vector<recorrido> recorridos, string nombreArchivo){
+        1:  161:    ofstream salida_archivo;
+        1:  161-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:  115:    salida_archivo.open(nombreArchivo);
-        1:  115-block  0
+        1:  162:    salida_archivo.open(nombreArchivo);
+        1:  162-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:  116:    salida_archivo.setf(ios::fixed);
-        1:  116-block  0
+        1:  163:    salida_archivo.setf(ios::fixed);
+        1:  163-block  0
 call    0 returned 1
-        1:  117:    salida_archivo.precision(5);
+        1:  164:    salida_archivo.precision(5);
 call    0 returned 1
-        1:  118:    recorrido recorrido_actual;
+        1:  165:    recorrido recorrido_actual;
 call    0 returned 1
-        4:  119:    for (int i = 0; i < recorridos.size(); ++i) {
-        3:  119-block  0
-        4:  119-block  1
+        4:  166:    for (int i = 0; i < recorridos.size(); ++i) {
+        3:  166-block  0
+        4:  166-block  1
 call    0 returned 4
 branch  1 taken 3
 branch  2 taken 1 (fallthrough)
-        3:  120:        recorrido_actual = recorridos[i];
-        3:  120-block  0
+        3:  167:        recorrido_actual = recorridos[i];
+        3:  167-block  0
 call    0 returned 3
 call    1 returned 3
 branch  2 taken 3 (fallthrough)
 branch  3 taken 0 (throw)
-       41:  121:        for (int indice = 0; indice < recorrido_actual.size(); indice++) {
-        3:  121-block  0
-       38:  121-block  1
-       41:  121-block  2
+       41:  168:        for (int indice = 0; indice < recorrido_actual.size(); indice++) {
+        3:  168-block  0
+       38:  168-block  1
+       41:  168-block  2
 call    0 returned 41
 branch  1 taken 38
 branch  2 taken 3 (fallthrough)
-       38:  122:            salida_archivo << i << "\t";
-       38:  122-block  0
+       38:  169:            salida_archivo << i << "\t";
+       38:  169-block  0
 call    0 returned 38
 branch  1 taken 38 (fallthrough)
 branch  2 taken 0 (throw)
-       38:  122-block  1
+       38:  169-block  1
 call    3 returned 38
 branch  4 taken 38 (fallthrough)
 branch  5 taken 0 (throw)
-       38:  123:            salida_archivo << obtenerLatitud(recorrido_actual[indice]) << "\t";
-       38:  123-block  0
+       38:  170:            salida_archivo << obtenerLatitud(recorrido_actual[indice]) << "\t";
+       38:  170-block  0
 call    0 returned 38
 call    1 returned 38
 branch  2 taken 38 (fallthrough)
 branch  3 taken 0 (throw)
-       38:  123-block  1
+       38:  170-block  1
 call    4 returned 38
 branch  5 taken 38 (fallthrough)
 branch  6 taken 0 (throw)
-       38:  123-block  2
+       38:  170-block  2
 call    7 returned 38
 branch  8 taken 38 (fallthrough)
 branch  9 taken 0 (throw)
-       38:  124:            salida_archivo << obtenerLongitud(recorrido_actual[indice]) << endl;
-       38:  124-block  0
+       38:  171:            salida_archivo << obtenerLongitud(recorrido_actual[indice]) << endl;
+       38:  171-block  0
 call    0 returned 38
 call    1 returned 38
 branch  2 taken 38 (fallthrough)
 branch  3 taken 0 (throw)
-       38:  124-block  1
+       38:  171-block  1
 call    4 returned 38
 branch  5 taken 38 (fallthrough)
 branch  6 taken 0 (throw)
-       38:  124-block  2
+       38:  171-block  2
 call    7 returned 38
 branch  8 taken 38 (fallthrough)
 branch  9 taken 0 (throw)
-        -:  125:        }
-        -:  126:    }
-        1:  127:    salida_archivo.close();
-        1:  127-block  0
+        -:  172:        }
+        -:  173:    }
+        1:  174:    salida_archivo.close();
+        1:  174-block  0
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        1:  128:}
-        1:  128-block  0
+        1:  175:}
+        1:  175-block  0
 call    0 returned 1
 call    1 returned 1
-    $$$$$:  128-block  1
+    $$$$$:  175-block  1
 call    2 never executed
-    $$$$$:  128-block  2
+    $$$$$:  175-block  2
 call    3 never executed
-        -:  129:
-        -:  130:/*****************************+***** EJERCICIO excesoDeVelocidad **********************************/
-function _Z17excesoDeVelocidadSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EE called 4 returned 100% blocks executed 80%
-        4:  131:bool excesoDeVelocidad(viaje v_viaje) {
-        4:  132:    viaje viaje_ordenado = ordenar_viaje(v_viaje);
-        4:  132-block  0
+        -:  176:
+        -:  177:/*****************************+***** EJERCICIO excesoDeVelocidad **********************************/
+function _Z17excesoDeVelocidadSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EE called 4 returned 100% blocks executed 77%
+        4:  178:bool excesoDeVelocidad(viaje v_viaje) {
+        4:  179:    viaje viaje_ordenado = ordenar_viaje(v_viaje);
+        4:  179-block  0
 call    0 returned 4
 branch  1 taken 4 (fallthrough)
 branch  2 taken 0 (throw)
-        4:  132-block  1
+        4:  179-block  1
 call    3 returned 4
 branch  4 taken 4 (fallthrough)
 branch  5 taken 0 (throw)
-        4:  132-block  2
+        4:  179-block  2
 call    6 returned 4
-    $$$$$:  132-block  3
+    $$$$$:  179-block  3
 call    7 never executed
-    $$$$$:  132-block  4
-       11:  133:    for(int i = 1; i < viaje_ordenado.size(); ++i) {
-        7:  133-block  0
-       11:  133-block  1
+    $$$$$:  179-block  4
+       11:  180:    for(int i = 1; i < viaje_ordenado.size(); ++i) {
+        7:  180-block  0
+       11:  180-block  1
 call    0 returned 11
 branch  1 taken 9
 branch  2 taken 2 (fallthrough)
-        9:  134:        double vel = velocidad(viaje_ordenado[i-1], viaje_ordenado[i]);
-        9:  134-block  0
+        9:  181:        double vel = velocidad(viaje_ordenado[i-1], viaje_ordenado[i]);
+        9:  181-block  0
 call    0 returned 9
 call    1 returned 9
 call    2 returned 9
 branch  3 taken 9 (fallthrough)
 branch  4 taken 0 (throw)
-        9:  135:        if(velocidad(viaje_ordenado[i-1], viaje_ordenado[i]) >= 80){
-        9:  135-block  0
-call    0 returned 9
-call    1 returned 9
-call    2 returned 9
-branch  3 taken 9 (fallthrough)
-branch  4 taken 0 (throw)
-        9:  135-block  1
-branch  5 taken 2 (fallthrough)
-branch  6 taken 7
-        2:  136:            return true;
-        2:  136-block  0
-        -:  137:        }
-        -:  138:    }
-        2:  139:    return false;
-        2:  139-block  0
-        4:  140:}
-        4:  140-block  0
+        9:  182:        if(vel >= 80){
+        9:  182-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 7
+        2:  183:            return true;
+        2:  183-block  0
+        -:  184:        }
+        -:  185:    }
+        2:  186:    return false;
+        2:  186-block  0
+        4:  187:}
+        4:  187-block  0
 call    0 returned 4
-    $$$$$:  140-block  1
+    $$$$$:  187-block  1
 call    1 never executed
-        -:  141:
-        -:  142:/******++++**************************** EJERCICIO tiempoTotal ***********+++***********************/
+        -:  188:
+        -:  189:/******++++**************************** EJERCICIO tiempoTotal ***********+++***********************/
 function _Z11tiempoTotalSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EE called 4 returned 100% blocks executed 100%
-        4:  143:tiempo tiempoTotal(viaje v_viaje) {
-        4:  144:    tiempo maximo = obtenerTiempo(v_viaje[0]);
-        4:  144-block  0
+        4:  190:tiempo tiempoTotal(viaje v_viaje) {
+        4:  191:    tiempo maximo = obtenerTiempo(v_viaje[0]);
+        4:  191-block  0
 call    0 returned 4
 call    1 returned 4
-        4:  145:    tiempo minimo = maximo;
-       13:  146:    for (int i = 1; i < v_viaje.size(); ++i) { // recorro el viaje, n = #elementos del viaje ==> la complejidad es O(n)
-        9:  146-block  0
-       13:  146-block  1
+        4:  192:    tiempo minimo = maximo;
+       13:  193:    for (int i = 1; i < v_viaje.size(); ++i) { // recorro el viaje, n = #elementos del viaje ==> la complejidad es O(n)
+        9:  193-block  0
+       13:  193-block  1
 call    0 returned 13
 branch  1 taken 9
 branch  2 taken 4 (fallthrough)
-        9:  147:        tiempo temporal = obtenerTiempo(v_viaje[i]);
-        9:  147-block  0
+        9:  194:        tiempo temporal = obtenerTiempo(v_viaje[i]);
+        9:  194-block  0
 call    0 returned 9
 call    1 returned 9
-        9:  148:        if(maximo < temporal){
+        9:  195:        if(maximo < temporal){
 branch  0 taken 6 (fallthrough)
 branch  1 taken 3
-        6:  149:            maximo = temporal;
-        6:  149-block  0
-        -:  150:        }
-        9:  151:        if(minimo > temporal){
-        9:  151-block  0
+        6:  196:            maximo = temporal;
+        6:  196-block  0
+        -:  197:        }
+        9:  198:        if(minimo > temporal){
+        9:  198-block  0
 branch  0 taken 1 (fallthrough)
 branch  1 taken 8
-        1:  152:            minimo = temporal;
-        1:  152-block  0
-        -:  153:        }
-        -:  154:    }
-        4:  155:    return maximo-minimo;
-        4:  155-block  0
-        -:  156:}
-        -:  157:
-        -:  158:/************++*********************** EJERCICIO distanciaTotal ************++*********************/
+        1:  199:            minimo = temporal;
+        1:  199-block  0
+        -:  200:        }
+        -:  201:    }
+        4:  202:    return maximo-minimo;
+        4:  202-block  0
+        -:  203:}
+        -:  204:
+        -:  205:/************++*********************** EJERCICIO distanciaTotal ************++*********************/
 function _Z14distanciaTotalSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EE called 4 returned 100% blocks executed 71%
-        4:  159:distancia distanciaTotal(viaje v_viaje) {
-        4:  160:    viaje ordenado = ordenar_viaje(v_viaje);   // === >>  Complejidad = O(n^2)
-        4:  160-block  0
+        4:  206:distancia distanciaTotal(viaje v_viaje) {
+        4:  207:    viaje ordenado = ordenar_viaje(v_viaje);   // === >>  Complejidad = O(n^2)
+        4:  207-block  0
 call    0 returned 4
 branch  1 taken 4 (fallthrough)
 branch  2 taken 0 (throw)
-        4:  160-block  1
+        4:  207-block  1
 call    3 returned 4
 branch  4 taken 4 (fallthrough)
 branch  5 taken 0 (throw)
-        4:  160-block  2
+        4:  207-block  2
 call    6 returned 4
-    $$$$$:  160-block  3
+    $$$$$:  207-block  3
 call    7 never executed
-    $$$$$:  160-block  4
-        4:  161:    distancia total_distancia = 0.0;
-       13:  162:    for (int i = 1; i < ordenado.size(); ++i) { // ==== >> Complejidad = O(n)
-       13:  162-block  0
+    $$$$$:  207-block  4
+        4:  208:    distancia total_distancia = 0.0;
+       13:  209:    for (int i = 1; i < ordenado.size(); ++i) { // ==== >> Complejidad = O(n)
+       13:  209-block  0
 call    0 returned 13
 branch  1 taken 9
 branch  2 taken 4 (fallthrough)
-        9:  163:        total_distancia += abs(distEnKM(obtenerPosicion(ordenado[i-1]),obtenerPosicion(ordenado[i])));
-        9:  163-block  0
+        9:  210:        total_distancia += abs(distEnKM(obtenerPosicion(ordenado[i-1]),obtenerPosicion(ordenado[i])));
+        9:  210-block  0
 call    0 returned 9
 call    1 returned 9
 branch  2 taken 9 (fallthrough)
 branch  3 taken 0 (throw)
-        9:  163-block  1
+        9:  210-block  1
 call    4 returned 9
 call    5 returned 9
 branch  6 taken 9 (fallthrough)
 branch  7 taken 0 (throw)
-        9:  163-block  2
+        9:  210-block  2
 call    8 returned 9
 branch  9 taken 9 (fallthrough)
 branch 10 taken 0 (throw)
-        9:  163-block  3
+        9:  210-block  3
 call   11 returned 9
-    $$$$$:  163-block  4
-    $$$$$:  163-block  5
-        -:  164:    }
-        -:  165:    // Complejidad final ===> O(n) + O(n^2) = O(n^2) 
-        4:  166:    return total_distancia;
-        4:  166-block  0
-        4:  167:}
-        4:  167-block  0
+    $$$$$:  210-block  4
+    $$$$$:  210-block  5
+        -:  211:    }
+        -:  212:    // Complejidad final ===> O(n) + O(n^2) = O(n^2) 
+        4:  213:    return total_distancia;
+        4:  213-block  0
+        4:  214:}
+        4:  214-block  0
 call    0 returned 4
-    $$$$$:  167-block  1
+    $$$$$:  214-block  1
 call    1 never executed
-        -:  168:
-        -:  169:/***************************************** EJERCICIO flota ***************************************/
+        -:  215:
+        -:  216:/***************************************** EJERCICIO flota ***************************************/
 function _Z5flotaSt6vectorIS_ISt5tupleIJdS0_IJddEEEESaIS2_EESaIS4_EEdd called 6 returned 100% blocks executed 76%
-        6:  170:int flota(vector<viaje> viajes, tiempo inicial, tiempo final) {
-        6:  171:    int cantidad_de_flotas = 0;
-        6:  172:    viaje viaje_i;
-        6:  172-block  0
+        6:  217:int flota(vector<viaje> viajes, tiempo inicial, tiempo final) {
+        6:  218:    int cantidad_de_flotas = 0;
+        6:  219:    viaje viaje_i;
+        6:  219-block  0
 call    0 returned 6
-       24:  173:    for (int i = 0; i < viajes.size(); ++i) {
-       18:  173-block  0
-       24:  173-block  1
+       24:  220:    for (int i = 0; i < viajes.size(); ++i) {
+       18:  220-block  0
+       24:  220-block  1
 call    0 returned 24
 branch  1 taken 18
 branch  2 taken 6 (fallthrough)
-       18:  174:        viaje_i = viajes[i];
-       18:  174-block  0
+       18:  221:        viaje_i = viajes[i];
+       18:  221-block  0
 call    0 returned 18
 call    1 returned 18
 branch  2 taken 18 (fallthrough)
 branch  3 taken 0 (throw)
-       18:  175:        if(es_cubierto(viaje_i,inicial,final)){
-       18:  175-block  0
+       18:  222:        if(es_cubierto(viaje_i,inicial,final)){
+       18:  222-block  0
 call    0 returned 18
 branch  1 taken 18 (fallthrough)
 branch  2 taken 0 (throw)
-       18:  175-block  1
+       18:  222-block  1
 call    3 returned 18
 branch  4 taken 18 (fallthrough)
 branch  5 taken 0 (throw)
-       18:  175-block  2
+       18:  222-block  2
 call    6 returned 18
 branch  7 taken 9 (fallthrough)
 branch  8 taken 9
-    $$$$$:  175-block  3
+    $$$$$:  222-block  3
 call    9 never executed
-    $$$$$:  175-block  4
-        9:  176:            cantidad_de_flotas++;
-        9:  176-block  0
-        -:  177:        }
-        -:  178:    }
-        6:  179:    return cantidad_de_flotas;
-        6:  179-block  0
-        6:  180:}
-        6:  180-block  0
+    $$$$$:  222-block  4
+        9:  223:            cantidad_de_flotas++;
+        9:  223-block  0
+        -:  224:        }
+        -:  225:    }
+        6:  226:    return cantidad_de_flotas;
+        6:  226-block  0
+        6:  227:}
+        6:  227-block  0
 call    0 returned 6
-    $$$$$:  180-block  1
+    $$$$$:  227-block  1
 call    1 never executed
-        -:  181:
-        -:  182:/************************************ EJERCICIO recorridoNoCubierto *******************************/
+        -:  228:
+        -:  229:/************************************ EJERCICIO recorridoNoCubierto *******************************/
 function _Z19recorridoNoCubiertoSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EES_IS1_SaIS1_EEd called 7 returned 100% blocks executed 91%
-        7:  183:vector<gps> recorridoNoCubierto(viaje v_viaje, recorrido r_recorrido, distancia umbral) {
-        7:  184:    vector<gps> puntos_no_cubiertos;
-        7:  184-block  0
+        7:  230:vector<gps> recorridoNoCubierto(viaje v_viaje, recorrido r_recorrido, distancia umbral) {
+        7:  231:    vector<gps> puntos_no_cubiertos;
+        7:  231-block  0
 call    0 returned 7
-       69:  185:    for (int i = 0; i < r_recorrido.size(); ++i) {
-       62:  185-block  0
-       69:  185-block  1
+       69:  232:    for (int i = 0; i < r_recorrido.size(); ++i) {
+       62:  232-block  0
+       69:  232-block  1
 call    0 returned 69
 branch  1 taken 62
 branch  2 taken 7 (fallthrough)
-       62:  186:        bool punto_cubierto = false;
-      634:  187:        for (int j = 0; j < v_viaje.size(); ++j) {
-       62:  187-block  0
-      572:  187-block  1
-      634:  187-block  2
+       62:  233:        bool punto_cubierto = false;
+      634:  234:        for (int j = 0; j < v_viaje.size(); ++j) {
+       62:  234-block  0
+      572:  234-block  1
+      634:  234-block  2
 call    0 returned 634
 branch  1 taken 572
 branch  2 taken 62 (fallthrough)
-      572:  188:            if(distMts(obtenerPosicion(v_viaje[j]),r_recorrido[i]) < umbral ){
-      572:  188-block  0
+      572:  235:            if(distMts(obtenerPosicion(v_viaje[j]),r_recorrido[i]) < umbral ){
+      572:  235-block  0
 call    0 returned 572
 call    1 returned 572
 call    2 returned 572
 branch  3 taken 572 (fallthrough)
 branch  4 taken 0 (throw)
-      572:  188-block  1
+      572:  235-block  1
 call    5 returned 572
 branch  6 taken 572 (fallthrough)
 branch  7 taken 0 (throw)
-      572:  188-block  2
+      572:  235-block  2
 branch  8 taken 54 (fallthrough)
 branch  9 taken 518
-    $$$$$:  188-block  3
-       54:  189:                punto_cubierto = true;
-       54:  189-block  0
-        -:  190:            }
-        -:  191:        }
-       62:  192:        if(!punto_cubierto){
-       62:  192-block  0
+    $$$$$:  235-block  3
+       54:  236:                punto_cubierto = true;
+       54:  236-block  0
+        -:  237:            }
+        -:  238:        }
+       62:  239:        if(!punto_cubierto){
+       62:  239-block  0
 branch  0 taken 8 (fallthrough)
 branch  1 taken 54
-        8:  193:            puntos_no_cubiertos.push_back(r_recorrido[i]);
-        8:  193-block  0
+        8:  240:            puntos_no_cubiertos.push_back(r_recorrido[i]);
+        8:  240-block  0
 call    0 returned 8
 call    1 returned 8
 branch  2 taken 8 (fallthrough)
 branch  3 taken 0 (throw)
-        -:  194:        }
-        -:  195:    }
-        7:  196:    return puntos_no_cubiertos;
-        7:  196-block  0
-        7:  196-block  1
-    =====:  197:}
-    $$$$$:  197-block  0
+        -:  241:        }
+        -:  242:    }
+        7:  243:    return puntos_no_cubiertos;
+        7:  243-block  0
+        7:  243-block  1
+    =====:  244:}
+    $$$$$:  244-block  0
 call    0 never executed
-        -:  198:
-        -:  199:/************************************** EJERCICIO construirGrilla *******************************/
+        -:  245:
+        -:  246:/************************************** EJERCICIO construirGrilla *******************************/
 function _Z15construirGrillaSt5tupleIJddEES0_ii called 11 returned 100% blocks executed 84%
-       11:  200:grilla construirGrilla(gps esq1, gps esq2, int filas, int columnas) {
-       11:  201:    grilla g_grilla;
-       11:  201-block  0
+       11:  247:grilla construirGrilla(gps esq1, gps esq2, int filas, int columnas) {
+       11:  248:    grilla g_grilla;
+       11:  248-block  0
 call    0 returned 11
-       11:  202:    double lado_celdas = ((obtenerLatitud(esq2) - obtenerLatitud(esq1)) / filas);
+       11:  249:    double lado_celdas = ((obtenerLatitud(esq2) - obtenerLatitud(esq1)) / filas);
 call    0 returned 11
 branch  1 taken 11 (fallthrough)
 branch  2 taken 0 (throw)
-       11:  202-block  0
+       11:  249-block  0
 call    3 returned 11
 branch  4 taken 11 (fallthrough)
 branch  5 taken 0 (throw)
-       72:  203:    for (int indice_fila = 1; indice_fila <= filas; indice_fila++) {
-       11:  203-block  0
-       61:  203-block  1
-       72:  203-block  2
+       72:  250:    for (int indice_fila = 1; indice_fila <= filas; indice_fila++) {
+       11:  250-block  0
+       61:  250-block  1
+       72:  250-block  2
 branch  0 taken 61
 branch  1 taken 11 (fallthrough)
-      998:  204:        for (int indice_columna = 1; indice_columna <= columnas; indice_columna++) {
-       61:  204-block  0
-      937:  204-block  1
-      998:  204-block  2
+      998:  251:        for (int indice_columna = 1; indice_columna <= columnas; indice_columna++) {
+       61:  251-block  0
+      937:  251-block  1
+      998:  251-block  2
 branch  0 taken 937
 branch  1 taken 61 (fallthrough)
-      937:  205:            nombre name (indice_fila,indice_columna);
-      937:  205-block  0
+      937:  252:            nombre name (indice_fila,indice_columna);
+      937:  252-block  0
 call    0 returned 937
-      937:  206:            double latitud_inf = (indice_fila-1)*lado_celdas + obtenerLatitud(esq1);
-call    0 returned 937
-branch  1 taken 937 (fallthrough)
-branch  2 taken 0 (throw)
-      937:  207:            double longitud_inf = (indice_columna-1)*lado_celdas + obtenerLongitud(esq1);
-      937:  207-block  0
+      937:  253:            double latitud_inf = (indice_fila-1)*lado_celdas + obtenerLatitud(esq1);
 call    0 returned 937
 branch  1 taken 937 (fallthrough)
 branch  2 taken 0 (throw)
-      937:  208:            double latitud_sup = (indice_fila)*lado_celdas + obtenerLatitud(esq1);
-      937:  208-block  0
+      937:  254:            double longitud_inf = (indice_columna-1)*lado_celdas + obtenerLongitud(esq1);
+      937:  254-block  0
 call    0 returned 937
 branch  1 taken 937 (fallthrough)
 branch  2 taken 0 (throw)
-      937:  209:            double longitud_sup = (indice_columna)*lado_celdas + obtenerLongitud(esq1);
-      937:  209-block  0
+      937:  255:            double latitud_sup = (indice_fila)*lado_celdas + obtenerLatitud(esq1);
+      937:  255-block  0
 call    0 returned 937
 branch  1 taken 937 (fallthrough)
 branch  2 taken 0 (throw)
-      937:  210:            gps esq_inf = make_tuple(latitud_inf,longitud_inf);
-      937:  210-block  0
+      937:  256:            double longitud_sup = (indice_columna)*lado_celdas + obtenerLongitud(esq1);
+      937:  256-block  0
 call    0 returned 937
 branch  1 taken 937 (fallthrough)
 branch  2 taken 0 (throw)
-      937:  211:            gps esq_sup = make_tuple(latitud_sup,longitud_sup);
-      937:  211-block  0
+      937:  257:            gps esq_inf = make_tuple(latitud_inf,longitud_inf);
+      937:  257-block  0
 call    0 returned 937
 branch  1 taken 937 (fallthrough)
 branch  2 taken 0 (throw)
-      937:  212:            celda cel = make_tuple(esq_inf, esq_sup, name);
-      937:  212-block  0
+      937:  258:            gps esq_sup = make_tuple(latitud_sup,longitud_sup);
+      937:  258-block  0
 call    0 returned 937
 branch  1 taken 937 (fallthrough)
 branch  2 taken 0 (throw)
-      937:  213:            g_grilla.push_back(cel);
-      937:  213-block  0
+      937:  259:            celda cel = make_tuple(esq_inf, esq_sup, name);
+      937:  259-block  0
 call    0 returned 937
 branch  1 taken 937 (fallthrough)
 branch  2 taken 0 (throw)
-        -:  214:        }
-        -:  215:    }
-       11:  216:    return  g_grilla;
-       11:  216-block  0
-       11:  216-block  1
-    =====:  217:}
-    $$$$$:  217-block  0
+      937:  260:            g_grilla.push_back(cel);
+      937:  260-block  0
+call    0 returned 937
+branch  1 taken 937 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  261:        }
+        -:  262:    }
+       11:  263:    return  g_grilla;
+       11:  263-block  0
+       11:  263-block  1
+    =====:  264:}
+    $$$$$:  264-block  0
 call    0 never executed
-        -:  218:
-        -:  219:/***************************************** EJERCICIO aPalabra **********************************/
+        -:  265:
+        -:  266:/***************************************** EJERCICIO aPalabra **********************************/
 function _Z8aPalabraSt6vectorISt5tupleIJddEESaIS1_EES_IS0_IJS1_S1_S0_IJiiEEEESaIS5_EE called 6 returned 100% blocks executed 72%
-        6:  220:vector<nombre> aPalabra(recorrido trayecto, grilla g_grilla) {
-        6:  221:    vector<nombre> secu_nombres;
-        6:  221-block  0
+        6:  267:vector<nombre> aPalabra(recorrido trayecto, grilla g_grilla) {
+        6:  268:    vector<nombre> secu_nombres;
+        6:  268-block  0
 call    0 returned 6
-       26:  222:    for (int i = 0; i < trayecto.size(); ++i) {
-       20:  222-block  0
-       26:  222-block  1
+       26:  269:    for (int i = 0; i < trayecto.size(); ++i) {
+       20:  269-block  0
+       26:  269-block  1
 call    0 returned 26
 branch  1 taken 20
 branch  2 taken 6 (fallthrough)
-       20:  223:        nombre name = obtener_nombre_de_gps(trayecto[i],g_grilla);
-       20:  223-block  0
+       20:  270:        nombre name = obtener_nombre_de_gps(trayecto[i],g_grilla);
+       20:  270-block  0
 call    0 returned 20
 branch  1 taken 20 (fallthrough)
 branch  2 taken 0 (throw)
-       20:  223-block  1
+       20:  270-block  1
 call    3 returned 20
 call    4 returned 20
 branch  5 taken 20 (fallthrough)
 branch  6 taken 0 (throw)
-       20:  223-block  2
+       20:  270-block  2
 call    7 returned 20
-    $$$$$:  223-block  3
+    $$$$$:  270-block  3
 call    8 never executed
-    $$$$$:  223-block  4
-       20:  224:        secu_nombres.push_back(name);
+    $$$$$:  270-block  4
+       20:  271:        secu_nombres.push_back(name);
 call    0 returned 20
 branch  1 taken 20 (fallthrough)
 branch  2 taken 0 (throw)
-        -:  225:    }
-        6:  226:    return secu_nombres;
-        6:  226-block  0
-        6:  226-block  1
-    =====:  227:}
-    $$$$$:  227-block  0
+        -:  272:    }
+        6:  273:    return secu_nombres;
+        6:  273-block  0
+        6:  273-block  1
+    =====:  274:}
+    $$$$$:  274-block  0
 call    0 never executed
-        -:  228:
-        -:  229:/************************************* EJERCICIO cantidadDeSaltos ******************************/
+        -:  275:
+        -:  276:/************************************* EJERCICIO cantidadDeSaltos ******************************/
 function _Z16cantidadDeSaltosSt6vectorISt5tupleIJS0_IJddEES1_S0_IJiiEEEESaIS3_EES_IS0_IJdS1_EESaIS6_EE called 4 returned 100% blocks executed 63%
-        4:  230:int cantidadDeSaltos(grilla g_grilla, viaje v_viaje) {
-        4:  231:    viaje ordenado = ordenar_viaje(v_viaje);
-        4:  231-block  0
+        4:  277:int cantidadDeSaltos(grilla g_grilla, viaje v_viaje) {
+        4:  278:    viaje ordenado = ordenar_viaje(v_viaje);
+        4:  278-block  0
 call    0 returned 4
 branch  1 taken 4 (fallthrough)
 branch  2 taken 0 (throw)
-        4:  231-block  1
+        4:  278-block  1
 call    3 returned 4
 branch  4 taken 4 (fallthrough)
 branch  5 taken 0 (throw)
-        4:  231-block  2
+        4:  278-block  2
 call    6 returned 4
-    $$$$$:  231-block  3
+    $$$$$:  278-block  3
 call    7 never executed
-    $$$$$:  231-block  4
-        4:  232:    int numero_de_saltos = 0;
-        -:  233:    int distancia_celdas;
-       16:  234:    for(int i = 1; i < ordenado.size(); ++i) {
-       12:  234-block  0
-       16:  234-block  1
+    $$$$$:  278-block  4
+        4:  279:    int numero_de_saltos = 0;
+        -:  280:    int distancia_celdas;
+       16:  281:    for(int i = 1; i < ordenado.size(); ++i) {
+       12:  281-block  0
+       16:  281-block  1
 call    0 returned 16
 branch  1 taken 12
 branch  2 taken 4 (fallthrough)
-       12:  235:        nombre nombre_1(obtener_nombre_de_gps(obtenerPosicion(ordenado[i-1]),g_grilla));
-       12:  235-block  0
+       12:  282:        nombre nombre_1(obtener_nombre_de_gps(obtenerPosicion(ordenado[i-1]),g_grilla));
+       12:  282-block  0
 call    0 returned 12
 branch  1 taken 12 (fallthrough)
 branch  2 taken 0 (throw)
-       12:  235-block  1
+       12:  282-block  1
 call    3 returned 12
 call    4 returned 12
 branch  5 taken 12 (fallthrough)
 branch  6 taken 0 (throw)
-       12:  235-block  2
+       12:  282-block  2
 call    7 returned 12
 branch  8 taken 12 (fallthrough)
 branch  9 taken 0 (throw)
-       12:  235-block  3
+       12:  282-block  3
 call   10 returned 12
-    $$$$$:  235-block  4
-    $$$$$:  235-block  5
+    $$$$$:  282-block  4
+    $$$$$:  282-block  5
 call   11 never executed
-    $$$$$:  235-block  6
-       12:  236:        nombre nombre_2(obtener_nombre_de_gps(obtenerPosicion(ordenado[i]),g_grilla));
+    $$$$$:  282-block  6
+       12:  283:        nombre nombre_2(obtener_nombre_de_gps(obtenerPosicion(ordenado[i]),g_grilla));
 call    0 returned 12
 branch  1 taken 12 (fallthrough)
 branch  2 taken 0 (throw)
-       12:  236-block  0
+       12:  283-block  0
 call    3 returned 12
 call    4 returned 12
 branch  5 taken 12 (fallthrough)
 branch  6 taken 0 (throw)
-       12:  236-block  1
+       12:  283-block  1
 call    7 returned 12
 branch  8 taken 12 (fallthrough)
 branch  9 taken 0 (throw)
-       12:  236-block  2
+       12:  283-block  2
 call   10 returned 12
-    $$$$$:  236-block  3
-    $$$$$:  236-block  4
+    $$$$$:  283-block  3
+    $$$$$:  283-block  4
 call   11 never executed
-    $$$$$:  236-block  5
-       12:  237:        distancia_celdas = obtener_distancia_nombres(nombre_1,nombre_2);
+    $$$$$:  283-block  5
+       12:  284:        distancia_celdas = obtener_distancia_nombres(nombre_1,nombre_2);
 call    0 returned 12
-       12:  238:        if(distancia_celdas > 1){
+       12:  285:        if(distancia_celdas > 1){
 branch  0 taken 4 (fallthrough)
 branch  1 taken 8
-        4:  239:            numero_de_saltos++;
-        4:  239-block  0
-        -:  240:        }
-        -:  241:    }
-        4:  242:    return numero_de_saltos;
-        4:  242-block  0
-        4:  243:}
-        4:  243-block  0
+        4:  286:            numero_de_saltos++;
+        4:  286-block  0
+        -:  287:        }
+        -:  288:    }
+        4:  289:    return numero_de_saltos;
+        4:  289-block  0
+        4:  290:}
+        4:  290-block  0
 call    0 returned 4
-    $$$$$:  243-block  1
+    $$$$$:  290-block  1
 call    1 never executed
-        -:  244:/************************************ Agrego para poder compilar *******************************/
-function _Z15completarHuecosRSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EES_IiSaIiEE called 5 returned 100% blocks executed 100%
-        5:  245:void completarHuecos(viaje& v, vector<int> faltantes){}
+        -:  291:/************************************ Agrego para poder compilar *******************************/
+function _Z15completarHuecosRSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EES_IiSaIiEE called 5 returned 100% blocks executed 62%
+        5:  292:void completarHuecos(viaje& v, vector<int> faltantes) {
+        5:  293:    viaje viaje_ordenado = ordenar_viaje(v);
+        5:  293-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:  293-block  1
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
+branch  5 taken 0 (throw)
+        5:  293-block  2
+call    6 returned 5
+    $$$$$:  293-block  3
+call    7 never executed
+    $$$$$:  293-block  4
+       14:  294:    for(int i = 0; i < faltantes.size(); ++i ) {
+       14:  294-block  0
+call    0 returned 14
+branch  1 taken 9
+branch  2 taken 5 (fallthrough)
+        -:  295:        // obtengo los indice siguiente y anterior
+        9:  296:        int i_anterior = obtener_anterior_hueco(viaje_ordenado, v, faltantes[i]);
+        9:  296-block  0
+call    0 returned 9
+call    1 returned 9
+branch  2 taken 9 (fallthrough)
+branch  3 taken 0 (throw)
+        9:  296-block  1
+call    4 returned 9
+branch  5 taken 9 (fallthrough)
+branch  6 taken 0 (throw)
+        9:  296-block  2
+call    7 returned 9
+branch  8 taken 9 (fallthrough)
+branch  9 taken 0 (throw)
+        9:  296-block  3
+call   10 returned 9
+call   11 returned 9
+    $$$$$:  296-block  4
+call   12 never executed
+    $$$$$:  296-block  5
+    $$$$$:  296-block  6
+call   13 never executed
+    $$$$$:  296-block  7
+        9:  297:        int i_siguiente = obtener_siguiente_hueco(viaje_ordenado, v, faltantes[i]);
+call    0 returned 9
+call    1 returned 9
+branch  2 taken 9 (fallthrough)
+branch  3 taken 0 (throw)
+        9:  297-block  0
+call    4 returned 9
+branch  5 taken 9 (fallthrough)
+branch  6 taken 0 (throw)
+        9:  297-block  1
+call    7 returned 9
+branch  8 taken 9 (fallthrough)
+branch  9 taken 0 (throw)
+        9:  297-block  2
+call   10 returned 9
+call   11 returned 9
+    $$$$$:  297-block  3
+call   12 never executed
+    $$$$$:  297-block  4
+    $$$$$:  297-block  5
+call   13 never executed
+    $$$$$:  297-block  6
+       18:  298:        v[faltantes[i]] = dist_tiempo_proporcional(v[faltantes[i]], viaje_ordenado[i_anterior],
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
+branch  5 taken 0 (throw)
+        9:  298-block  0
+call    6 returned 9
+call    7 returned 9
+    $$$$$:  298-block  1
+       18:  299:                                                   viaje_ordenado[i_siguiente]);
+call    0 returned 9
+call    1 returned 9
+        -:  300:    }
+        5:  301:}
+        5:  301-block  0
+call    0 returned 5
+    $$$$$:  301-block  1
+call    1 never executed

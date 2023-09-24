@@ -1351,8 +1351,8 @@ call    0 never executed
         -:  984:      /**  Returns the number of elements in the %vector.  */
         -:  985:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  986:      size_type
-     378*:  987:      size() const _GLIBCXX_NOEXCEPT
-     378*:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+    #####:  987:      size() const _GLIBCXX_NOEXCEPT
+    #####:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
 ------------------
 _ZNKSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EE4sizeEv:
 function _ZNKSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EE4sizeEv called 0 returned 0% blocks executed 0%
@@ -1361,10 +1361,10 @@ function _ZNKSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EE4sizeEv called 0 returned 0
     %%%%%:  988-block  0
 ------------------
 _ZNKSt6vectorIiSaIiEE4sizeEv:
-function _ZNKSt6vectorIiSaIiEE4sizeEv called 378 returned 100% blocks executed 100%
-      378:  987:      size() const _GLIBCXX_NOEXCEPT
-      378:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
-      378:  988-block  0
+function _ZNKSt6vectorIiSaIiEE4sizeEv called 0 returned 0% blocks executed 0%
+    #####:  987:      size() const _GLIBCXX_NOEXCEPT
+    #####:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+    %%%%%:  988-block  0
 ------------------
         -:  989:
         -:  990:      /**  Returns the size() of the largest possible %vector.  */

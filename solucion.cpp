@@ -3,11 +3,58 @@
 #include <iostream>
 #include <algorithm>
 #include <fstream>
-#include <iomanip>
 
 using namespace std;
 
 //####################################  	Funciones auxiliares 	  ##############################################\\
+
+tuple<tiempo, gps> dist_tiempo_proporcional(tuple<tiempo, gps> hueco, tuple<tiempo, gps> anterior,
+                                            tuple<tiempo, gps> siguiente){
+    double peso = (obtenerTiempo(hueco) - obtenerTiempo(anterior)) /
+            (obtenerTiempo(siguiente) - obtenerTiempo(anterior));
+    double time = obtenerTiempo(anterior) + (peso * (obtenerTiempo(siguiente) -
+            obtenerTiempo(anterior)));
+    gps g_ant = obtenerPosicion(anterior);
+    gps g_sig = obtenerPosicion(siguiente);
+    double latitud = (obtenerLatitud(g_sig) - obtenerLatitud(g_ant)) * peso;
+    double longitud = (obtenerLongitud(g_sig) - obtenerLongitud(g_ant)) * peso;
+    tuple<tiempo, gps> med = medicion(time , puntoGps(latitud,longitud));
+    return med;
+}
+
+int obtener_siguiente_hueco(viaje v_ordenado, viaje v_original, int indice_hueco){
+    int indice_siguiente = v_original.size()-1;
+    for (int i = v_ordenado.size()-2; i > 1 ; --i) {
+        if(obtenerTiempo(v_ordenado[i]) > obtenerTiempo(v_original[indice_hueco])){
+            gps pos = obtenerPosicion(v_ordenado[i]);
+            gps hueco = obtenerPosicion(v_original[indice_hueco]);
+            if(pos != hueco){
+                indice_siguiente = i;
+            }
+        }else{
+            // ya obtuve el siguiente
+            break;
+        }
+    }
+    return indice_siguiente;
+}
+
+int obtener_anterior_hueco(viaje v_ordenado, viaje v_original, int indice_hueco){
+    int indice_anterior = 0;
+    for (int i = 1; i < v_ordenado.size()-1; ++i) {
+        if(obtenerTiempo(v_ordenado[i]) < obtenerTiempo(v_original[indice_hueco])){
+            gps pos = obtenerPosicion(v_ordenado[i]);
+            gps hueco = obtenerPosicion(v_original[indice_hueco]);
+            if(pos != hueco){
+                indice_anterior = i;
+            }
+        }else{
+            // ya obtuve el anterior
+            break;
+        }
+    }
+    return indice_anterior;
+}
 
 viaje ordenar_viaje(viaje viaje_original){
     viaje viaje_ordenado = viaje_original;
@@ -132,7 +179,7 @@ bool excesoDeVelocidad(viaje v_viaje) {
     viaje viaje_ordenado = ordenar_viaje(v_viaje);
     for(int i = 1; i < viaje_ordenado.size(); ++i) {
         double vel = velocidad(viaje_ordenado[i-1], viaje_ordenado[i]);
-        if(velocidad(viaje_ordenado[i-1], viaje_ordenado[i]) >= 80){
+        if(vel >= 80){
             return true;
         }
     }
@@ -242,4 +289,13 @@ int cantidadDeSaltos(grilla g_grilla, viaje v_viaje) {
     return numero_de_saltos;
 }
 /************************************ Agrego para poder compilar *******************************/
-void completarHuecos(viaje& v, vector<int> faltantes){}
+void completarHuecos(viaje& v, vector<int> faltantes) {
+    viaje viaje_ordenado = ordenar_viaje(v);
+    for(int i = 0; i < faltantes.size(); ++i ) {
+        // obtengo los indice siguiente y anterior
+        int i_anterior = obtener_anterior_hueco(viaje_ordenado, v, faltantes[i]);
+        int i_siguiente = obtener_siguiente_hueco(viaje_ordenado, v, faltantes[i]);
+        v[faltantes[i]] = dist_tiempo_proporcional(v[faltantes[i]], viaje_ordenado[i_anterior],
+                                                   viaje_ordenado[i_siguiente]);
+    }
+}

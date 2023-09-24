@@ -109,7 +109,7 @@
         -:   97:	__new_allocator(const __new_allocator<_Tp1>&) _GLIBCXX_USE_NOEXCEPT { }
         -:   98:
         -:   99:#if __cplusplus <= 201703L
-      603:  100:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+      587:  100:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt5tupleIJS0_IJddEES1_S0_IJiiEEEEED2Ev:
 function _ZNSt15__new_allocatorISt5tupleIJS0_IJddEES1_S0_IJiiEEEEED2Ev called 121 returned 100% blocks executed 100%
@@ -124,8 +124,8 @@ function _ZNSt15__new_allocatorISt5tupleIJddEEED2Ev called 102 returned 100% blo
       102:  100:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorIcED2Ev:
-function _ZNSt15__new_allocatorIcED2Ev called 377 returned 100% blocks executed 100%
-      377:  100:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorIcED2Ev called 361 returned 100% blocks executed 100%
+      361:  100:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
         -:  101:
         -:  102:      pointer

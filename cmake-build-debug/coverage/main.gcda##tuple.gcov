@@ -238,17 +238,17 @@
         -:  234:      _M_head(_Head_base& __b) noexcept { return __b._M_head_impl; }
         -:  235:
         -:  236:      static constexpr const _Head&
-      501:  237:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
+      617:  237:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
 ------------------
 _ZNSt10_Head_baseILy1EdLb0EE7_M_headERKS0_:
-function _ZNSt10_Head_baseILy1EdLb0EE7_M_headERKS0_ called 164 returned 100% blocks executed 100%
-      164:  237:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
-      164:  237-block  0
+function _ZNSt10_Head_baseILy1EdLb0EE7_M_headERKS0_ called 202 returned 100% blocks executed 100%
+      202:  237:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
+      202:  237-block  0
 ------------------
 _ZNSt10_Head_baseILy0EdLb0EE7_M_headERKS0_:
-function _ZNSt10_Head_baseILy0EdLb0EE7_M_headERKS0_ called 337 returned 100% blocks executed 100%
-      337:  237:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
-      337:  237-block  0
+function _ZNSt10_Head_baseILy0EdLb0EE7_M_headERKS0_ called 415 returned 100% blocks executed 100%
+      415:  237:      _M_head(const _Head_base& __b) noexcept { return __b._M_head_impl; }
+      415:  237-block  0
 ------------------
         -:  238:
         -:  239:      _Head _M_head_impl;
@@ -284,10 +284,10 @@ function _ZNSt10_Head_baseILy0EdLb0EE7_M_headERKS0_ called 337 returned 100% blo
         -:  269:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
         -:  270:
         -:  271:      static constexpr const _Head&
-function _ZNSt11_Tuple_implILy0EJddEE7_M_headERKS0_ called 220 returned 100% blocks executed 100%
-      220:  272:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
-      220:  272-block  0
-call    0 returned 220
+function _ZNSt11_Tuple_implILy0EJddEE7_M_headERKS0_ called 276 returned 100% blocks executed 100%
+      276:  272:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+      276:  272-block  0
+call    0 returned 276
         -:  273:
         -:  274:      static constexpr _Inherited&
         -:  275:      _M_tail(_Tuple_impl& __t) noexcept { return __t; }
@@ -515,10 +515,10 @@ call    0 returned 220
         -:  497:      _M_head(_Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
         -:  498:
         -:  499:      static constexpr const _Head&
-function _ZNSt11_Tuple_implILy1EJdEE7_M_headERKS0_ called 164 returned 100% blocks executed 100%
-      164:  500:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
-      164:  500-block  0
-call    0 returned 164
+function _ZNSt11_Tuple_implILy1EJdEE7_M_headERKS0_ called 202 returned 100% blocks executed 100%
+      202:  500:      _M_head(const _Tuple_impl& __t) noexcept { return _Base::_M_head(__t); }
+      202:  500-block  0
+call    0 returned 202
         -:  501:
         -:  502:      constexpr
         -:  503:      _Tuple_impl()
@@ -1796,22 +1796,22 @@ call    0 returned 164
         -: 1775:
         -: 1776:  template<size_t __i, typename _Head, typename... _Tail>
         -: 1777:    constexpr const _Head&
-      158: 1778:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
-      158: 1779:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+      208: 1778:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+      208: 1779:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
 ------------------
 _ZSt12__get_helperILy1EdJEERKT0_RKSt11_Tuple_implIXT_EJS0_DpT1_EE:
-function _ZSt12__get_helperILy1EdJEERKT0_RKSt11_Tuple_implIXT_EJS0_DpT1_EE called 51 returned 100% blocks executed 100%
-       51: 1778:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
-       51: 1779:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
-       51: 1779-block  0
-call    0 returned 51
+function _ZSt12__get_helperILy1EdJEERKT0_RKSt11_Tuple_implIXT_EJS0_DpT1_EE called 67 returned 100% blocks executed 100%
+       67: 1778:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+       67: 1779:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+       67: 1779-block  0
+call    0 returned 67
 ------------------
 _ZSt12__get_helperILy0EdJdEERKT0_RKSt11_Tuple_implIXT_EJS0_DpT1_EE:
-function _ZSt12__get_helperILy0EdJdEERKT0_RKSt11_Tuple_implIXT_EJS0_DpT1_EE called 107 returned 100% blocks executed 100%
-      107: 1778:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
-      107: 1779:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
-      107: 1779-block  0
-call    0 returned 107
+function _ZSt12__get_helperILy0EdJdEERKT0_RKSt11_Tuple_implIXT_EJS0_DpT1_EE called 141 returned 100% blocks executed 100%
+      141: 1778:    __get_helper(const _Tuple_impl<__i, _Head, _Tail...>& __t) noexcept
+      141: 1779:    { return _Tuple_impl<__i, _Head, _Tail...>::_M_head(__t); }
+      141: 1779-block  0
+call    0 returned 141
 ------------------
         -: 1780:
         -: 1781:  // Deleted overload to improve diagnostics for invalid indices
@@ -1828,22 +1828,22 @@ call    0 returned 107
         -: 1792:  /// Return a const reference to the ith element of a const tuple.
         -: 1793:  template<size_t __i, typename... _Elements>
         -: 1794:    constexpr const __tuple_element_t<__i, tuple<_Elements...>>&
-      158: 1795:    get(const tuple<_Elements...>& __t) noexcept
-      158: 1796:    { return std::__get_helper<__i>(__t); }
+      208: 1795:    get(const tuple<_Elements...>& __t) noexcept
+      208: 1796:    { return std::__get_helper<__i>(__t); }
 ------------------
 _ZSt3getILy1EJddEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS4_:
-function _ZSt3getILy1EJddEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS4_ called 51 returned 100% blocks executed 100%
-       51: 1795:    get(const tuple<_Elements...>& __t) noexcept
-       51: 1796:    { return std::__get_helper<__i>(__t); }
-       51: 1796-block  0
-call    0 returned 51
+function _ZSt3getILy1EJddEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS4_ called 67 returned 100% blocks executed 100%
+       67: 1795:    get(const tuple<_Elements...>& __t) noexcept
+       67: 1796:    { return std::__get_helper<__i>(__t); }
+       67: 1796-block  0
+call    0 returned 67
 ------------------
 _ZSt3getILy0EJddEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS4_:
-function _ZSt3getILy0EJddEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS4_ called 107 returned 100% blocks executed 100%
-      107: 1795:    get(const tuple<_Elements...>& __t) noexcept
-      107: 1796:    { return std::__get_helper<__i>(__t); }
-      107: 1796-block  0
-call    0 returned 107
+function _ZSt3getILy0EJddEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS4_ called 141 returned 100% blocks executed 100%
+      141: 1795:    get(const tuple<_Elements...>& __t) noexcept
+      141: 1796:    { return std::__get_helper<__i>(__t); }
+      141: 1796-block  0
+call    0 returned 141
 ------------------
         -: 1797:
         -: 1798:  /// Return an rvalue reference to the ith element of a tuple rvalue.

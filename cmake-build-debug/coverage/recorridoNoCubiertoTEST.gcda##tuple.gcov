@@ -1972,50 +1972,50 @@ call    0 never executed
         -: 1875:    struct __tuple_compare
         -: 1876:    {
         -: 1877:      static constexpr bool
-       78: 1878:      __eq(const _Tp& __t, const _Up& __u)
+    #####: 1878:      __eq(const _Tp& __t, const _Up& __u)
         -: 1879:      {
-       78: 1880:	return bool(std::get<__i>(__t) == std::get<__i>(__u))
-      78*: 1881:	  && __tuple_compare<_Tp, _Up, __i + 1, __size>::__eq(__t, __u);
+    #####: 1880:	return bool(std::get<__i>(__t) == std::get<__i>(__u))
+    #####: 1881:	  && __tuple_compare<_Tp, _Up, __i + 1, __size>::__eq(__t, __u);
         -: 1882:      }
 ------------------
 _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly1ELy2EE4__eqERKS1_S4_:
-function _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly1ELy2EE4__eqERKS1_S4_ called 25 returned 100% blocks executed 89%
-       25: 1878:      __eq(const _Tp& __t, const _Up& __u)
+function _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly1ELy2EE4__eqERKS1_S4_ called 0 returned 0% blocks executed 0%
+    #####: 1878:      __eq(const _Tp& __t, const _Up& __u)
         -: 1879:      {
-       25: 1880:	return bool(std::get<__i>(__t) == std::get<__i>(__u))
-       25: 1880-block  0
-call    0 returned 25
-call    1 returned 25
-      25*: 1881:	  && __tuple_compare<_Tp, _Up, __i + 1, __size>::__eq(__t, __u);
-branch  0 taken 25 (fallthrough)
-branch  1 taken 0
-       25: 1881-block  0
-call    2 returned 25
-branch  3 taken 25 (fallthrough)
-branch  4 taken 0
-       25: 1881-block  1
+    #####: 1880:	return bool(std::get<__i>(__t) == std::get<__i>(__u))
+    %%%%%: 1880-block  0
+call    0 never executed
+call    1 never executed
+    #####: 1881:	  && __tuple_compare<_Tp, _Up, __i + 1, __size>::__eq(__t, __u);
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%: 1881-block  0
+call    2 never executed
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%: 1881-block  1
     %%%%%: 1881-block  2
-       25: 1881-block  3
+    %%%%%: 1881-block  3
         -: 1882:      }
 ------------------
 _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly0ELy2EE4__eqERKS1_S4_:
-function _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly0ELy2EE4__eqERKS1_S4_ called 53 returned 100% blocks executed 100%
-       53: 1878:      __eq(const _Tp& __t, const _Up& __u)
+function _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly0ELy2EE4__eqERKS1_S4_ called 0 returned 0% blocks executed 0%
+    #####: 1878:      __eq(const _Tp& __t, const _Up& __u)
         -: 1879:      {
-       53: 1880:	return bool(std::get<__i>(__t) == std::get<__i>(__u))
-       53: 1880-block  0
-call    0 returned 53
-call    1 returned 53
-       53: 1881:	  && __tuple_compare<_Tp, _Up, __i + 1, __size>::__eq(__t, __u);
-branch  0 taken 25 (fallthrough)
-branch  1 taken 28
-       25: 1881-block  0
-call    2 returned 25
-branch  3 taken 25 (fallthrough)
-branch  4 taken 0
-       25: 1881-block  1
-       28: 1881-block  2
-       53: 1881-block  3
+    #####: 1880:	return bool(std::get<__i>(__t) == std::get<__i>(__u))
+    %%%%%: 1880-block  0
+call    0 never executed
+call    1 never executed
+    #####: 1881:	  && __tuple_compare<_Tp, _Up, __i + 1, __size>::__eq(__t, __u);
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%: 1881-block  0
+call    2 never executed
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%: 1881-block  1
+    %%%%%: 1881-block  2
+    %%%%%: 1881-block  3
         -: 1882:      }
 ------------------
         -: 1883:
@@ -2032,9 +2032,9 @@ branch  4 taken 0
         -: 1894:    struct __tuple_compare<_Tp, _Up, __size, __size>
         -: 1895:    {
         -: 1896:      static constexpr bool
-function _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly2ELy2EE4__eqERKS1_S4_ called 25 returned 100% blocks executed 100%
-       25: 1897:      __eq(const _Tp&, const _Up&) { return true; }
-       25: 1897-block  0
+function _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly2ELy2EE4__eqERKS1_S4_ called 0 returned 0% blocks executed 0%
+    #####: 1897:      __eq(const _Tp&, const _Up&) { return true; }
+    %%%%%: 1897-block  0
         -: 1898:
         -: 1899:      static constexpr bool
         -: 1900:      __less(const _Tp&, const _Up&) { return false; }
@@ -2042,8 +2042,8 @@ function _ZNSt15__tuple_compareISt5tupleIJddEES1_Ly2ELy2EE4__eqERKS1_S4_ called 
         -: 1902:
         -: 1903:  template<typename... _TElements, typename... _UElements>
         -: 1904:    constexpr bool
-function _ZSteqIJddEJddEEbRKSt5tupleIJDpT_EERKS0_IJDpT0_EE called 53 returned 100% blocks executed 100%
-       53: 1905:    operator==(const tuple<_TElements...>& __t,
+function _ZSteqIJddEJddEEbRKSt5tupleIJDpT_EERKS0_IJDpT0_EE called 0 returned 0% blocks executed 0%
+    #####: 1905:    operator==(const tuple<_TElements...>& __t,
         -: 1906:	       const tuple<_UElements...>& __u)
         -: 1907:    {
         -: 1908:      static_assert(sizeof...(_TElements) == sizeof...(_UElements),
@@ -2051,9 +2051,9 @@ function _ZSteqIJddEJddEEbRKSt5tupleIJDpT_EERKS0_IJDpT0_EE called 53 returned 10
         -: 1910:      using __compare = __tuple_compare<tuple<_TElements...>,
         -: 1911:					tuple<_UElements...>,
         -: 1912:					0, sizeof...(_TElements)>;
-       53: 1913:      return __compare::__eq(__t, __u);
-       53: 1913-block  0
-call    0 returned 53
+    #####: 1913:      return __compare::__eq(__t, __u);
+    %%%%%: 1913-block  0
+call    0 never executed
         -: 1914:    }
         -: 1915:
         -: 1916:#if __cpp_lib_three_way_comparison

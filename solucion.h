@@ -19,6 +19,10 @@ void escribirRecorridos(vector<recorrido> recorridos, string nombreArchivo);
 void completarHuecos(viaje& v, vector<int> faltantes);
 
 //********* Auxiliares **********
+tuple<tiempo, gps> dist_tiempo_proporcional(tuple<tiempo, gps> hueco, tuple<tiempo, gps> anterior,
+                                                 tuple<tiempo, gps> siguiente);
+int obtener_siguiente_hueco(viaje v_ordenado, viaje v_original, int indice_hueco);
+int obtener_anterior_hueco(viaje v_ordenado, viaje v_original, int indice_hueco);
 viaje ordenar_viaje(viaje v);
 int obtener_indice_menor_tiempo(viaje v, int d, int h);
 void swap_elementos_viaje(viaje& v, int i, int j);

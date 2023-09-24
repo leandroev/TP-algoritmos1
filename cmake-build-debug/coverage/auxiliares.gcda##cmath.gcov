@@ -418,12 +418,12 @@
         -:  414:  template<typename _Tp, typename _Up>
         -:  415:    inline _GLIBCXX_CONSTEXPR
         -:  416:    typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
-function _ZSt3powIdiEN9__gnu_cxx11__promote_2IT_T0_NS0_9__promoteIS2_XsrSt12__is_integerIS2_E7__valueEE6__typeENS4_IS3_XsrS5_IS3_E7__valueEE6__typeEE6__typeES2_S3_ called 1210 returned 100% blocks executed 100%
-     1210:  417:    pow(_Tp __x, _Up __y)
+function _ZSt3powIdiEN9__gnu_cxx11__promote_2IT_T0_NS0_9__promoteIS2_XsrSt12__is_integerIS2_E7__valueEE6__typeENS4_IS3_XsrS5_IS3_E7__valueEE6__typeEE6__typeES2_S3_ called 1192 returned 100% blocks executed 100%
+     1192:  417:    pow(_Tp __x, _Up __y)
         -:  418:    {
         -:  419:      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
-     1210:  420:      return pow(__type(__x), __type(__y));
-     1210:  420-block  0
+     1192:  420:      return pow(__type(__x), __type(__y));
+     1192:  420-block  0
         -:  421:    }
         -:  422:
         -:  423:  using ::sin;

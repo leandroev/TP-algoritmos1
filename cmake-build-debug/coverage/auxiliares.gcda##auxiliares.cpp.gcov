@@ -22,18 +22,18 @@ function _Z15obtenerLongitudSt5tupleIJddEE called 4701 returned 100% blocks exec
 call    0 returned 4701
         -:   13:}
         -:   14:
-function _Z15obtenerPosicionSt5tupleIJdS_IJddEEEE called 685 returned 100% blocks executed 100%
-      685:   15:gps obtenerPosicion(tuple<tiempo, gps> medicion) {
-      685:   16:    return get<1>(medicion);
-      685:   16-block  0
-call    0 returned 685
+function _Z15obtenerPosicionSt5tupleIJdS_IJddEEEE called 717 returned 100% blocks executed 100%
+      717:   15:gps obtenerPosicion(tuple<tiempo, gps> medicion) {
+      717:   16:    return get<1>(medicion);
+      717:   16-block  0
+call    0 returned 717
         -:   17:}
         -:   18:
-function _Z13obtenerTiempoSt5tupleIJdS_IJddEEEE called 582 returned 100% blocks executed 100%
-      582:   19:tiempo obtenerTiempo(tuple<tiempo, gps> medicion) {
-      582:   20:    return get<0>(medicion);
-      582:   20-block  0
-call    0 returned 582
+function _Z13obtenerTiempoSt5tupleIJdS_IJddEEEE called 807 returned 100% blocks executed 100%
+      807:   19:tiempo obtenerTiempo(tuple<tiempo, gps> medicion) {
+      807:   20:    return get<0>(medicion);
+      807:   20-block  0
+call    0 returned 807
         -:   21:}
         -:   22:
 function _Z22obtenerEsquinaSuperiorSt5tupleIJS_IJddEES0_S_IJiiEEEE called 603 returned 100% blocks executed 100%
@@ -65,35 +65,35 @@ call    0 returned 578
         -:   37:}
         -:   38:
         -:   39:
-function _Z8distEnKMSt5tupleIJddEES0_ called 605 returned 100% blocks executed 100%
-      605:   40:double distEnKM(gps posicion1, gps posicion2) {
-      605:   41:    double latitud1 = obtenerLatitud(posicion1);
-      605:   41-block  0
-call    0 returned 605
-      605:   42:    double latitud2 = obtenerLatitud(posicion2);
-call    0 returned 605
-      605:   43:    double longitud1 = obtenerLongitud(posicion1);
-call    0 returned 605
-      605:   44:    double longitud2 = obtenerLongitud(posicion2);
-call    0 returned 605
+function _Z8distEnKMSt5tupleIJddEES0_ called 596 returned 100% blocks executed 100%
+      596:   40:double distEnKM(gps posicion1, gps posicion2) {
+      596:   41:    double latitud1 = obtenerLatitud(posicion1);
+      596:   41-block  0
+call    0 returned 596
+      596:   42:    double latitud2 = obtenerLatitud(posicion2);
+call    0 returned 596
+      596:   43:    double longitud1 = obtenerLongitud(posicion1);
+call    0 returned 596
+      596:   44:    double longitud2 = obtenerLongitud(posicion2);
+call    0 returned 596
         -:   45:
         -:   46:    // obtengo la distancia
-      605:   47:    double distanciaLatitud = (latitud2 - latitud1) * pi / 180.0;
-      605:   48:    double distanciaLongitud = (longitud2 - longitud1) * pi / 180.0;
+      596:   47:    double distanciaLatitud = (latitud2 - latitud1) * pi / 180.0;
+      596:   48:    double distanciaLongitud = (longitud2 - longitud1) * pi / 180.0;
         -:   49:
         -:   50:    // paso las latitudes a radianes
-      605:   51:    latitud1 = (latitud1) * pi / 180.0;
-      605:   52:    latitud2 = (latitud2) * pi / 180.0;
+      596:   51:    latitud1 = (latitud1) * pi / 180.0;
+      596:   52:    latitud2 = (latitud2) * pi / 180.0;
         -:   53:
         -:   54:    // aplico la formula
-      605:   55:    double a = pow(sin(distanciaLatitud / 2), 2) +
-call    0 returned 605
-      605:   56:               pow(sin(distanciaLongitud / 2), 2) *
-call    0 returned 605
-      605:   57:               cos(latitud1) * cos(latitud2);
+      596:   55:    double a = pow(sin(distanciaLatitud / 2), 2) +
+call    0 returned 596
+      596:   56:               pow(sin(distanciaLongitud / 2), 2) *
+call    0 returned 596
+      596:   57:               cos(latitud1) * cos(latitud2);
         -:   58:
-      605:   59:    double c = 2 * asin(sqrt(a));
-      605:   60:    return radioTierra * c;
+      596:   59:    double c = 2 * asin(sqrt(a));
+      596:   60:    return radioTierra * c;
         -:   61:}
         -:   62:
 function _Z12desviarPuntoSt5tupleIJddEEdd called 121 returned 100% blocks executed 100%
@@ -114,16 +114,16 @@ call    0 returned 121
         -:   73:}
         -:   74:
         -:   75:
-function _Z8puntoGpsdd called 261 returned 100% blocks executed 100%
-      261:   76:gps puntoGps(double latitud, double longitud) {
-      261:   77:    return make_tuple(latitud, longitud);
-      261:   77-block  0
-call    0 returned 261
+function _Z8puntoGpsdd called 270 returned 100% blocks executed 100%
+      270:   76:gps puntoGps(double latitud, double longitud) {
+      270:   77:    return make_tuple(latitud, longitud);
+      270:   77-block  0
+call    0 returned 270
         -:   78:}
         -:   79:
-function _Z8mediciondSt5tupleIJddEE called 193 returned 100% blocks executed 100%
-      193:   80:tuple<tiempo, gps> medicion(tiempo t, gps g) {
-      193:   81:    return make_tuple(t, g);
-      193:   81-block  0
-call    0 returned 193
+function _Z8mediciondSt5tupleIJddEE called 202 returned 100% blocks executed 100%
+      202:   80:tuple<tiempo, gps> medicion(tiempo t, gps g) {
+      202:   81:    return make_tuple(t, g);
+      202:   81-block  0
+call    0 returned 202
         -:   82:}

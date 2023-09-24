@@ -10,35 +10,35 @@
         -:    6:
         -:    7:const gps hueco = puntoGps(-1000,-1000);
         -:    8:
-function _Z13sin_faltantesSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EES_IiSaIiEE called 1 returned 100% blocks executed 85%
+function _Z13sin_faltantesSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EES_IiSaIiEE called 1 returned 100% blocks executed 92%
         1:    9:bool sin_faltantes(viaje v_viaje, vector<int> faltantes){
-       1*:   10:    for (int i = 0; i < faltantes.size(); ++i) {
+        4:   10:    for (int i = 0; i < faltantes.size(); ++i) {
         1:   10-block  0
-    %%%%%:   10-block  1
-        1:   10-block  2
-call    0 returned 1
-branch  1 taken 1
-branch  2 taken 0 (fallthrough)
-        1:   11:        if(obtenerPosicion(v_viaje[faltantes[i]]) == hueco){
-        1:   11-block  0
-call    0 returned 1
-call    1 returned 1
-call    2 returned 1
-branch  3 taken 1 (fallthrough)
+        3:   10-block  1
+        4:   10-block  2
+call    0 returned 4
+branch  1 taken 3
+branch  2 taken 1 (fallthrough)
+        3:   11:        if(obtenerPosicion(v_viaje[faltantes[i]]) == hueco){
+        3:   11-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+branch  3 taken 3 (fallthrough)
 branch  4 taken 0 (throw)
-        1:   11-block  1
-call    5 returned 1
-branch  6 taken 1 (fallthrough)
+        3:   11-block  1
+call    5 returned 3
+branch  6 taken 3 (fallthrough)
 branch  7 taken 0 (throw)
-        1:   11-block  2
-branch  8 taken 1 (fallthrough)
-branch  9 taken 0
-        1:   12:            return false;
-        1:   12-block  0
+        3:   11-block  2
+branch  8 taken 0 (fallthrough)
+branch  9 taken 3
+    #####:   12:            return false;
+    %%%%%:   12-block  0
         -:   13:        }
         -:   14:    }
-    #####:   15:    return true;
-    %%%%%:   15-block  0
+        1:   15:    return true;
+        1:   15-block  0
         -:   16:}
         -:   17:
 function _Z26obtener_siguiente_de_huecoSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EEi called 3 returned 100% blocks executed 83%
@@ -350,13 +350,13 @@ branch  1 taken 0
         -:   96:
 function _Z10sin_huecosSt6vectorISt5tupleIJdS0_IJddEEEESaIS2_EE called 1 returned 100% blocks executed 92%
         1:   97:bool sin_huecos(viaje v_viaje){
-        3:   98:    for (int i = 0; i < v_viaje.size(); ++i) {
+        4:   98:    for (int i = 0; i < v_viaje.size(); ++i) {
         1:   98-block  0
-        2:   98-block  1
-        3:   98-block  2
-call    0 returned 3
+        3:   98-block  1
+        4:   98-block  2
+call    0 returned 4
 branch  1 taken 3
-branch  2 taken 0 (fallthrough)
+branch  2 taken 1 (fallthrough)
         3:   99:        if(obtenerPosicion(v_viaje[i]) == hueco) {
         3:   99-block  0
 call    0 returned 3
@@ -368,14 +368,14 @@ call    4 returned 3
 branch  5 taken 3 (fallthrough)
 branch  6 taken 0 (throw)
         3:   99-block  2
-branch  7 taken 1 (fallthrough)
-branch  8 taken 2
-        1:  100:            return false;
-        1:  100-block  0
+branch  7 taken 0 (fallthrough)
+branch  8 taken 3
+    #####:  100:            return false;
+    %%%%%:  100-block  0
         -:  101:        }
         -:  102:    }
-    #####:  103:    return true;
-    %%%%%:  103-block  0
+        1:  103:    return true;
+        1:  103-block  0
         -:  104:}
         -:  105:
         -:  106:
@@ -589,11 +589,11 @@ call    0 returned 1
         1:  155:    viaje viaje_sin_huecos = viaje_con_huecos;
         1:  156:    completarHuecos(viaje_sin_huecos,faltantes);
         -:  157:
-        1:  158:    EXPECT_TRUE(sin_faltantes(viaje_sin_huecos,faltantes));
+       1*:  158:    EXPECT_TRUE(sin_faltantes(viaje_sin_huecos,faltantes));
         1:  159:}
 ------------------
 _ZN42completarHuecosTEST_sin_pos_faltantes_Test8TestBodyEv:
-function _ZN42completarHuecosTEST_sin_pos_faltantes_Test8TestBodyEv called 1 returned 100% blocks executed 59%
+function _ZN42completarHuecosTEST_sin_pos_faltantes_Test8TestBodyEv called 1 returned 100% blocks executed 48%
         1:  133:TEST(completarHuecosTEST, sin_pos_faltantes){
         1:  134:    gps p1 = puntoGps(-33, -34);
         1:  134-block  0
@@ -694,7 +694,7 @@ call    6 returned 1
 call    7 never executed
     $$$$$:  156-block  4
         -:  157:
-        1:  158:    EXPECT_TRUE(sin_faltantes(viaje_sin_huecos,faltantes));
+       1*:  158:    EXPECT_TRUE(sin_faltantes(viaje_sin_huecos,faltantes));
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
@@ -714,29 +714,29 @@ branch 11 taken 0 (throw)
 call   12 returned 1
 call   13 returned 1
 call   14 returned 1
-branch 15 taken 1 (fallthrough)
-branch 16 taken 0
-        1:  158-block  4
-call   17 returned 1
-branch 18 taken 1 (fallthrough)
-branch 19 taken 0 (throw)
-        1:  158-block  5
-call   20 returned 1
-branch 21 taken 1 (fallthrough)
-branch 22 taken 0 (throw)
-        1:  158-block  6
-call   23 returned 1
-call   24 returned 1
-branch 25 taken 1 (fallthrough)
-branch 26 taken 0 (throw)
-        1:  158-block  7
-call   27 returned 1
-branch 28 taken 1 (fallthrough)
-branch 29 taken 0 (throw)
-        1:  158-block  8
-call   30 returned 1
-call   31 returned 1
-call   32 returned 1
+branch 15 taken 0 (fallthrough)
+branch 16 taken 1
+    %%%%%:  158-block  4
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  158-block  5
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:  158-block  6
+call   23 never executed
+call   24 never executed
+branch 25 never executed (fallthrough)
+branch 26 never executed (throw)
+    %%%%%:  158-block  7
+call   27 never executed
+branch 28 never executed (fallthrough)
+branch 29 never executed (throw)
+    %%%%%:  158-block  8
+call   30 never executed
+call   31 never executed
+call   32 never executed
         1:  158-block  9
 call   33 returned 1
     $$$$$:  158-block 10
@@ -1379,11 +1379,11 @@ call    0 returned 1
         -:  239:        }
         -:  240:    }
         1:  241:    completarHuecos(viaje_v, faltantes);
-        1:  242:    EXPECT_TRUE(sin_huecos(viaje_v));
+       1*:  242:    EXPECT_TRUE(sin_huecos(viaje_v));
         1:  243:}
 ------------------
 _ZN41completarHuecosTEST_mismos_no_huecos_Test8TestBodyEv:
-function _ZN41completarHuecosTEST_mismos_no_huecos_Test8TestBodyEv called 1 returned 100% blocks executed 59%
+function _ZN41completarHuecosTEST_mismos_no_huecos_Test8TestBodyEv called 1 returned 100% blocks executed 46%
         1:  224:TEST(completarHuecosTEST, mismos_no_huecos){
         1:  225:    gps p1 = puntoGps(-33, -34);
         1:  225-block  0
@@ -1465,7 +1465,7 @@ call    6 returned 1
     $$$$$:  241-block  3
 call    7 never executed
     $$$$$:  241-block  4
-        1:  242:    EXPECT_TRUE(sin_huecos(viaje_v));
+       1*:  242:    EXPECT_TRUE(sin_huecos(viaje_v));
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
@@ -1480,29 +1480,29 @@ branch  8 taken 0 (throw)
         1:  242-block  2
 call    9 returned 1
 call   10 returned 1
-branch 11 taken 1 (fallthrough)
-branch 12 taken 0
-        1:  242-block  3
-call   13 returned 1
-branch 14 taken 1 (fallthrough)
-branch 15 taken 0 (throw)
-        1:  242-block  4
-call   16 returned 1
-branch 17 taken 1 (fallthrough)
-branch 18 taken 0 (throw)
-        1:  242-block  5
-call   19 returned 1
-call   20 returned 1
-branch 21 taken 1 (fallthrough)
-branch 22 taken 0 (throw)
-        1:  242-block  6
-call   23 returned 1
-branch 24 taken 1 (fallthrough)
-branch 25 taken 0 (throw)
-        1:  242-block  7
-call   26 returned 1
-call   27 returned 1
-call   28 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:  242-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  242-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  242-block  5
+call   19 never executed
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:  242-block  6
+call   23 never executed
+branch 24 never executed (fallthrough)
+branch 25 never executed (throw)
+    %%%%%:  242-block  7
+call   26 never executed
+call   27 never executed
+call   28 never executed
         1:  242-block  8
 call   29 returned 1
     $$$$$:  242-block  9
